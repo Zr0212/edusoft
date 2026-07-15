@@ -1,0 +1,202 @@
+/* ===================================================
+                INDEX PAGE SPECIFIC STYLES
+=================================================== */
+
+/* ===== Hero Section ===== */
+.hero{
+    position: relative;
+    background: linear-gradient(120deg, rgba(255, 246, 251, 0.8) 2%, #EDF2FF 41%, #F7FEFF 100%);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    width: 50rem;
+    height: 20rem;
+    background: rgba(0, 143, 255, 0.6);
+    filter: blur(20rem);
+    bottom: -2rem;
+    right: -5rem;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-actions{
+    gap: 1rem;
+}
+
+/* ===== About Section ===== */
+.about-content{
+    gap: 1.5rem;
+}
+
+/* ===== Hero Graphic ===== */
+.hero-graphic-container {
+    width: 100%;
+    max-width: 32rem;
+    aspect-ratio: 1;
+    container-type: inline-size;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-graphic-wrapper {
+    width: 1051em;
+    height: 1051em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(100cqw / 700);
+    overflow: visible;
+}
+
+.hero .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+/* ===== Partners Section ===== */
+.partners {
+    padding: 3rem 0;
+    background: #ffffff;
+}
+
+.partners .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.partners-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.partner-logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%) opacity(60%);
+}
+
+.partner-logo-item:hover {
+    transform: translateY(-2px);
+    filter: grayscale(0%) opacity(100%);
+}
+
+.partner-logo-item img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.features-section {
+    position: relative;
+    background: var(--white);
+    padding: clamp(4rem, 8vw, 8rem) 0;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.features-section::before {
+    content: '';
+    position: absolute;
+    width: 50rem;
+    height: 20rem;
+    background: rgba(0, 143, 255, 0.4);
+    filter: blur(20rem);
+    bottom: 10rem;
+    right: 2rem;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    color: var(--black);
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem;
+    background: var(--white);
+    border-radius: 1.25rem;
+    border: 1.5px solid var(--gray-100);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    gap: 1.25rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #008FFF;
+    box-shadow: 0 10px 40px rgba(0, 143, 255, 0.08);
+}
+
+.feature-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(270deg, #30B3FF 0%, #006BFF 100%);
+    border-radius: 1rem;
+    color: var(--white);
+}
+
+.feature-icon-wrapper iconify-icon {
+    font-size: 1.75rem;
+}
+
+.feature-card-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0;
+}
+
+.feature-card-desc {
+    font-size: 0.9375rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+}
