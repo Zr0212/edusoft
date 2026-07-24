@@ -60,7 +60,18 @@
     overflow: visible;
 }
 
-/* ===== System Module Badges & Floating Dots ===== */
+/* ===== System Module Badges & Floating Dots Orbiting Animation ===== */
+.hero-orbiting-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 526em 526em;
+    animation: rotateOrbit 40s linear infinite;
+    pointer-events: none;
+}
+
 .module-badge {
     position: absolute;
     padding: 16em 24em;
@@ -75,6 +86,16 @@
     align-items: center;
     justify-content: center;
     gap: 10em;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    animation: rotateCounter 40s linear infinite;
+    transition: background 0.3s ease, outline-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-badge:hover {
+    background: linear-gradient(221deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.8) 100%);
+    outline-color: var(--primary);
+    box-shadow: 0px 6em 15em rgba(0, 143, 255, 0.25);
 }
 
 .floating-icon-dot {
@@ -89,6 +110,34 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    animation: rotateCounter 40s linear infinite;
+    transition: background 0.3s ease, outline-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-icon-dot:hover {
+    background: linear-gradient(221deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.8) 100%);
+    outline-color: var(--primary);
+    box-shadow: 0px 6em 15em rgba(0, 143, 255, 0.25);
+}
+
+@keyframes rotateOrbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateCounter {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
 }
 
 .hero .two-column {
@@ -705,12 +754,21 @@
 }
 
 .org-svg-path {
-    stroke: var(--primary);
+    stroke: url(#org-line-flow-grad);
     stroke-width: 1.5px;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
-    opacity: 0.4;
+    opacity: 0.85;
+    stroke-dasharray: 6px 20px;
+    animation: orgPathFlow 1.5s linear infinite;
+    filter: drop-shadow(0 0 1.5px rgba(0, 143, 255, 0.25));
+}
+
+@keyframes orgPathFlow {
+    to {
+        stroke-dashoffset: -26px;
+    }
 }
 
 /* Preview 3: Integration Graphic */
