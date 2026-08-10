@@ -15,42 +15,93 @@
 
 <!-- ================= HEADER ================= -->
 
-<header>
+<header class="floating-header">
 
-    <div class="container flex-between">
+    <div class="floating-header-inner">
 
-        <a href="#" class="logo flex">
-            <img src="images/logo.png" alt="Logo">
-            <div>EDUSOFT</div>
-        </a>
-
-        <nav>
-
-            <ul class="flex nav-list">
-
-                <li><a href="#">Sản phẩm</a></li>
-
-                <li><a href="#">Giải pháp</a></li>
-
-                <li><a href="#">Tri thức số</a></li>
-
-                <li><a href="#">Liên hệ</a></li>
-
-                <li><a href="#">Về chúng tôi</a></li>
-
-            </ul>
-
-        </nav>
-
-        <div class="flex header-actions">
-
-            <a href="#">Cá nhân</a>
-            <a href="#" class="btn">
-                Đăng ký Demo
+        <!-- Left Block: Logo & Typographic Branding -->
+        <div class="header-left-block flex">
+            <a href="#" class="logo flex">
+                <img src="images/logo.png" alt="Logo">
+                <span class="logo-title">EDUSOFT</span>
             </a>
-
         </div>
 
+        <!-- Middle Navigation Block -->
+        <nav class="header-mid-block">
+            <ul class="flex nav-list">
+                <li>
+                    <a href="#" class="active flex-center">
+                        <iconify-icon icon="ph:cube-bold"></iconify-icon>
+                        <span>Sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex-center">
+                        <iconify-icon icon="ph:puzzle-piece-bold"></iconify-icon>
+                        <span>Giải pháp</span>
+                        <iconify-icon icon="ph:caret-down-bold" class="caret-down"></iconify-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex-center">
+                        <iconify-icon icon="ph:book-open-bold"></iconify-icon>
+                        <span>Tri thức số</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex-center">
+                        <iconify-icon icon="ph:phone-bold"></iconify-icon>
+                        <span>Liên hệ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex-center">
+                        <iconify-icon icon="ph:info-bold"></iconify-icon>
+                        <span>Về chúng tôi</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Right Block: Demo Button & Dots menu Toggle -->
+        <div class="header-right-block flex">
+            <a href="#" class="btn btn-contact flex">
+                <span>Đăng ký Demo</span>
+                <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+            </a>
+
+</div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div class="nav-list-mobile">
+        <a href="#" class="active flex">
+            <iconify-icon icon="ph:cube-bold"></iconify-icon>
+            <span>Sản phẩm</span>
+        </a>
+        <a href="#" class="flex">
+            <iconify-icon icon="ph:puzzle-piece-bold"></iconify-icon>
+            <span>Giải pháp</span>
+        </a>
+        <a href="#" class="flex">
+            <iconify-icon icon="ph:book-open-bold"></iconify-icon>
+            <span>Tri thức số</span>
+        </a>
+        <a href="#" class="flex">
+            <iconify-icon icon="ph:phone-bold"></iconify-icon>
+            <span>Liên hệ</span>
+        </a>
+        <a href="#" class="flex">
+            <iconify-icon icon="ph:info-bold"></iconify-icon>
+            <span>Về chúng tôi</span>
+        </a>
+        <div class="mobile-menu-divider"></div>
+        <a href="#" class="btn btn-mobile-demo flex">
+            <span>Đăng ký Demo</span>
+            <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+        </a>
     </div>
 
 </header>
@@ -1297,6 +1348,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.15 });
         screenshotRows.forEach(row => observer.observe(row));
+    }
+    
+    // Floating Header Mobile Menu Toggler
+    const header = document.querySelector('.floating-header');
+    const menuToggle = document.querySelector('.btn-menu-grid');
+    const menuOpenIcon = document.querySelector('.grid-icon');
+    const menuCloseIcon = document.querySelector('.close-icon');
+    
+    if (menuToggle && header) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = header.classList.toggle('menu-open');
+            if (isOpen) {
+                menuOpenIcon.style.display = 'none';
+                menuCloseIcon.style.display = 'flex';
+            } else {
+                menuOpenIcon.style.display = 'flex';
+                menuCloseIcon.style.display = 'none';
+            }
+        });
+
+        // Close menu if user clicks outside the header
+        document.addEventListener('click', (e) => {
+            if (!header.contains(e.target) && header.classList.contains('menu-open')) {
+                header.classList.remove('menu-open');
+                menuOpenIcon.style.display = 'flex';
+                menuCloseIcon.style.display = 'none';
+            }
+        });
+
+        // Close menu when clicking links in mobile menu
+        const mobileLinks = document.querySelectorAll('.nav-list-mobile a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                header.classList.remove('menu-open');
+                menuOpenIcon.style.display = 'flex';
+                menuCloseIcon.style.display = 'none';
+            });
+        });
     }
 });
 </script>
