@@ -363,6 +363,23 @@ section{
     z-index: 10;
 }
 
+.nav-personal {
+    font-size: 0.85rem;
+    font-weight: var(--fw-semibold);
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.6rem 1.1rem;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-personal:hover {
+    color: var(--primary);
+    background: rgba(0, 114, 255, 0.03);
+}
+
 /* Brand Gradient Capsule Contact Button */
 .btn-contact {
     height: 46px;
@@ -379,6 +396,7 @@ section{
     transition: all 0.3s ease;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+    align-self: center;
 }
 
 .btn-contact:hover {

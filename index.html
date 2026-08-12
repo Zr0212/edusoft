@@ -114,19 +114,16 @@
                         <span>Liên hệ</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="flex-center">
-                        <span>Về chúng tôi</span>
-                    </a>
-                </li>
             </ul>
         </nav>
 
         <!-- Right Block: Demo Button -->
-        <div class="header-right-block flex">
+        <div class="header-right-block">
+            <a href="#" class="nav-personal">
+                <span>Cá nhân</span>
+            </a>
             <a href="#" class="btn btn-contact flex">
                 <span>Đăng ký Demo</span>
-                <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
             </a>
         </div>
 
@@ -666,7 +663,7 @@
                         </div>
                         <div class="slide-graphic-right">
                             <div class="image-frame">
-                                <img src="images/slide1.png" alt="Mô hình tổng thể">
+                                <img src="images/slide-graphic-1.png" alt="Mô hình tổng thể">
                             </div>
                         </div>
                     </div>
@@ -681,7 +678,7 @@
                         </div>
                         <div class="slide-graphic-right">
                             <div class="image-frame">
-                                <img src="images/slide2.png" alt="Quản lí Đào tạo">
+                                <img src="images/slide-graphic-2.png" alt="Quản lí Đào tạo">
                             </div>
                         </div>
                     </div>
@@ -696,7 +693,7 @@
                         </div>
                         <div class="slide-graphic-right">
                             <div class="image-frame">
-                                <img src="images/slide3.png" alt="Quản lí Khảo thí">
+                                <img src="images/slide-graphic-3.png" alt="Quản lí Khảo thí">
                             </div>
                         </div>
                     </div>
@@ -711,7 +708,7 @@
                         </div>
                         <div class="slide-graphic-right">
                             <div class="image-frame">
-                                <img src="images/slide4.png" alt="Quản lí Học tập">
+                                <img src="images/slide-graphic-4.png" alt="Quản lí Học tập">
                             </div>
                         </div>
                     </div>
@@ -726,7 +723,7 @@
                         </div>
                         <div class="slide-graphic-right">
                             <div class="image-frame">
-                                <img src="images/slide5.png" alt="Văn bằng Chứng chỉ">
+                                <img src="images/slide-graphic-5.png" alt="Văn bằng Chứng chỉ">
                             </div>
                         </div>
                     </div>
@@ -930,12 +927,52 @@
             </p>
         </div>
         
-        <!-- Right Column: Empty Image Frame -->
+        <!-- Right Column: 3-Column Running App Screenshots Ticker -->
         <div class="mobile-app-graphic">
             <div class="image-frame">
-                <div class="empty-image-placeholder">
-                    <iconify-icon icon="lucide:smartphone"></iconify-icon>
-                    <span>Khung ảnh ứng dụng di động</span>
+                <div class="app-screenshots-ticker">
+                    <!-- Column 1 (Scroll Up) -->
+                    <div class="ticker-column">
+                        <div class="ticker-track">
+                            <img src="images/A4/Dashboard.png" alt="Dashboard">
+                            <img src="images/A4/Bảng điểm.png" alt="Bảng điểm">
+                            <img src="images/A4/Công việc.png" alt="Công việc">
+                            <img src="images/A4/Lớp học giảng dậy.png" alt="Lớp học giảng dạy">
+                            <!-- Duplicate for seamless loop -->
+                            <img src="images/A4/Dashboard.png" alt="Dashboard">
+                            <img src="images/A4/Bảng điểm.png" alt="Bảng điểm">
+                            <img src="images/A4/Công việc.png" alt="Công việc">
+                            <img src="images/A4/Lớp học giảng dậy.png" alt="Lớp học giảng dạy">
+                        </div>
+                    </div>
+                    <!-- Column 2 (Scroll Down) -->
+                    <div class="ticker-column">
+                        <div class="ticker-track ticker-reverse">
+                            <img src="images/A4/Lịch trình.png" alt="Lịch trình">
+                            <img src="images/A4/Lịch học - tuần.png" alt="Lịch học tuần">
+                            <img src="images/A4/Lịch học - tháng.png" alt="Lịch học tháng">
+                            <img src="images/A4/Thông báo.png" alt="Thông báo">
+                            <!-- Duplicate for seamless loop -->
+                            <img src="images/A4/Lịch trình.png" alt="Lịch trình">
+                            <img src="images/A4/Lịch học - tuần.png" alt="Lịch học tuần">
+                            <img src="images/A4/Lịch học - tháng.png" alt="Lịch học tháng">
+                            <img src="images/A4/Thông báo.png" alt="Thông báo">
+                        </div>
+                    </div>
+                    <!-- Column 3 (Scroll Up) -->
+                    <div class="ticker-column">
+                        <div class="ticker-track">
+                            <img src="images/A4/Công việc.png" alt="Công việc">
+                            <img src="images/A4/Lịch học - tuần.png" alt="Lịch học tuần">
+                            <img src="images/A4/Dashboard.png" alt="Dashboard">
+                            <img src="images/A4/Thông báo.png" alt="Thông báo">
+                            <!-- Duplicate for seamless loop -->
+                            <img src="images/A4/Công việc.png" alt="Công việc">
+                            <img src="images/A4/Lịch học - tuần.png" alt="Lịch học tuần">
+                            <img src="images/A4/Dashboard.png" alt="Dashboard">
+                            <img src="images/A4/Thông báo.png" alt="Thông báo">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1308,52 +1345,70 @@ document.addEventListener('DOMContentLoaded', () => {
     const timelineRows = document.querySelectorAll('.timeline-row');
     function updateScrollTimeline() {
         const viewportHeight = window.innerHeight;
-        const cardStartY = viewportHeight * 0.85; // card starts turning blue
-        const cardEndY = viewportHeight * 0.55;   // card fully blue
-        const lineStartY = viewportHeight * 0.55; // vertical line starts growing
-        const lineEndY = viewportHeight * 0.20;   // vertical line fully grown
+        const Y_trigger = viewportHeight * 0.65;
+        const rows = Array.from(timelineRows);
         
-        timelineRows.forEach((row) => {
+        // Calculate center Y for each card relative to viewport
+        const Ys = rows.map(row => {
             const card = row.querySelector('.timeline-number-card');
-            if (!card) return;
-            
-            const cardRect = card.getBoundingClientRect();
-            const currentY = cardRect.top + cardRect.height / 2;
-            
-            // Calculate card progress (0 to 1)
-            let cardP = 0;
-            if (currentY <= cardStartY && currentY >= cardEndY) {
-                cardP = (cardStartY - currentY) / (cardStartY - cardEndY);
-            } else if (currentY < cardEndY) {
-                cardP = 1;
-            }
-            
-            // Calculate vertical connector line progress (0 to 1)
+            if (!card) return null;
+            const rect = card.getBoundingClientRect();
+            return rect.top + rect.height / 2;
+        });
+
+        // 1. Calculate vertical connector line progress for each row
+        const lineProgresses = [];
+        for (let i = 0; i < rows.length; i++) {
             let lineP = 0;
-            if (currentY <= lineStartY && currentY >= lineEndY) {
-                lineP = (lineStartY - currentY) / (lineStartY - lineEndY);
-            } else if (currentY < lineEndY) {
-                lineP = 1;
+            if (i < rows.length - 1 && Ys[i] !== null && Ys[i+1] !== null) {
+                if (Ys[i] <= Y_trigger && Ys[i+1] > Y_trigger) {
+                    lineP = (Y_trigger - Ys[i]) / (Ys[i+1] - Ys[i]);
+                } else if (Ys[i+1] <= Y_trigger) {
+                    lineP = 1;
+                }
             }
+            lineProgresses.push(lineP);
+        }
+
+        // 2. Calculate card progress for each row
+        const cardProgresses = [];
+        for (let i = 0; i < rows.length; i++) {
+            let cardP = 0;
+            if (i === 0) {
+                // First card turns blue as it approaches the viewport trigger line
+                const startY = viewportHeight * 0.85;
+                const endY = Y_trigger;
+                if (Ys[0] !== null) {
+                    if (Ys[0] <= startY && Ys[0] >= endY) {
+                        cardP = (startY - Ys[0]) / (startY - endY);
+                    } else if (Ys[0] < endY) {
+                        cardP = 1;
+                    }
+                }
+            } else {
+                // Subsequent cards turn blue ONLY when the line from the previous card has fully reached them
+                if (lineProgresses[i - 1] === 1) {
+                    cardP = 1;
+                }
+            }
+            cardProgresses.push(cardP);
+        }
+
+        // 3. Apply styles & trigger active states
+        rows.forEach((row, i) => {
+            const maxCardP = Math.max(parseFloat(row.dataset.maxCardP || '0'), cardProgresses[i]);
+            const maxLineP = Math.max(parseFloat(row.dataset.maxLineP || '0'), lineProgresses[i]);
             
-            // Get previous maximum progress values or default to 0
-            const maxCardP = Math.max(parseFloat(row.dataset.maxCardP || '0'), cardP);
-            const maxLineP = Math.max(parseFloat(row.dataset.maxLineP || '0'), lineP);
-            
-            // Store new maximum values
             row.dataset.maxCardP = maxCardP;
             row.dataset.maxLineP = maxLineP;
             
-            // Apply scroll-driven progress as CSS variables
             row.style.setProperty('--card-progress', maxCardP);
             row.style.setProperty('--line-progress', maxLineP);
             
-            // Trigger automatic smooth active transitions for dashed line & badge once card crosses the center of the viewport (50% height)
-            if (currentY <= viewportHeight * 0.5) {
+            if (Ys[i] !== null && Ys[i] <= Y_trigger) {
                 row.classList.add('active');
             }
             
-            // If row has been activated, we lock the card color to blue (1)
             if (row.classList.contains('active')) {
                 row.style.setProperty('--card-progress', '1');
                 row.dataset.maxCardP = '1';
