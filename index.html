@@ -1278,9 +1278,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', (e) => {
+            const isLucideX = e.target.closest('iconify-icon[icon="lucide:x"]') || 
+                              (tab.classList.contains('active') && e.target.closest('.tab-toggle-icon'));
+            
             clearInterval(timer);
-            switchTab(index);
+            if (isLucideX) {
+                let nextIndex = (index + 1) % tabs.length;
+                switchTab(nextIndex);
+            } else {
+                switchTab(index);
+            }
             startTimer();
         });
     });
@@ -1431,6 +1439,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.15 });
         screenshotRows.forEach(row => observer.observe(row));
+    }
+    
+    // CTA Cards Slide-in Observer (one-time trigger)
+    const ctaCards = document.querySelectorAll('.cta-main-card, .cta-side-card');
+    if (ctaCards.length > 0) {
+        const ctaObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    obs.unobserve(entry.target); // trigger only once
+                }
+            });
+        }, { threshold: 0.15 });
+        ctaCards.forEach(card => ctaObserver.observe(card));
     }
     
 });

@@ -1806,6 +1806,10 @@
     letter-spacing: -0.01em;
 }
 
+#cta-section {
+    overflow: hidden;
+}
+
 .edu-digital-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -1822,8 +1826,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
     margin: 64px 0;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.cta-main-card.revealed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .cta-side-stack {
@@ -1843,7 +1854,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.cta-side-card.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cta-side-stack .cta-side-card:nth-child(2) {
+    transition-delay: 0.25s;
 }
 
 .cta-card-header {
