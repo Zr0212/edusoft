@@ -30,78 +30,106 @@
         <!-- Middle Navigation Block -->
         <nav class="header-mid-block">
             <ul class="flex nav-list">
-                <li>
-                    <a href="#" class="active flex-center">
-                        <iconify-icon icon="ph:cube-bold"></iconify-icon>
-                        <span>Sản phẩm</span>
-                    </a>
-                </li>
-                <li>
+                <li class="has-dropdown has-dropdown-products">
                     <a href="#" class="flex-center">
-                        <iconify-icon icon="ph:puzzle-piece-bold"></iconify-icon>
+                        <span>Sản phẩm</span>
+                        <iconify-icon icon="ph:caret-down-bold" class="caret-down"></iconify-icon>
+                    </a>
+                    <!-- Products Hover Dropdown Menu -->
+                    <div class="dropdown-menu dropdown-products">
+                        <div class="dropdown-products-grid">
+                            <a href="#" class="product-item">Quản lý Nhân sự</a>
+                            <a href="#" class="product-item">Quản lý Đào tạo</a>
+                            <a href="#" class="product-item">Quản lý Tuyển sinh</a>
+                            <a href="#" class="product-item">Quản lý Học phí</a>
+                            <a href="#" class="product-item">Quản lý Công việc</a>
+                            <a href="#" class="product-item">Quản lý Học tập</a>
+                            <a href="#" class="product-item">Quản lý Người học</a>
+                            <a href="#" class="product-item">Quản lý Cơ sở vật chất</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown has-dropdown-solutions">
+                    <a href="#" class="flex-center">
                         <span>Giải pháp</span>
                         <iconify-icon icon="ph:caret-down-bold" class="caret-down"></iconify-icon>
                     </a>
+                    <!-- Solutions Hover Dropdown Menu -->
+                    <div class="dropdown-menu dropdown-solutions">
+                        <div class="dropdown-solutions-grid">
+                            <!-- Column 1 -->
+                            <div class="dropdown-col">
+                                <a href="#" class="solution-item">
+                                    <iconify-icon icon="ph:brain-bold"></iconify-icon>
+                                    <div class="item-text">
+                                        <strong>Giáo dục Đại học</strong>
+                                        <span>Giải pháp số hóa toàn diện công tác quản lý đào tạo</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="solution-item">
+                                    <iconify-icon icon="ph:certificate-bold"></iconify-icon>
+                                    <div class="item-text">
+                                        <strong>Trung tâm đào tạo ngắn hạn</strong>
+                                        <span>Nền tảng quản trị hợp nhất cho các mô hình đào tạo phức tạp và linh hoạt</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="dropdown-col">
+                                <a href="#" class="solution-item">
+                                    <iconify-icon icon="ph:eyeglasses-bold"></iconify-icon>
+                                    <div class="item-text">
+                                        <strong>Giáo dục Nghề nghiệp</strong>
+                                        <span>Giải pháp đặc thù đáp ứng mọi nhu cầu vận hành</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="solution-item">
+                                    <iconify-icon icon="ph:notebook-bold"></iconify-icon>
+                                    <div class="item-text">
+                                        <strong>Khối cơ sở Giáo dục K12</strong>
+                                        <span>Nền tảng quản trị hợp nhất cho các mô hình đào tạo phức tạp và linh hoạt</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="dropdown-col">
+                                <a href="#" class="solution-item">
+                                    <iconify-icon icon="ph:globe-bold"></iconify-icon>
+                                    <div class="item-text">
+                                        <strong>Trung tâm ngoại ngữ & kỹ năng</strong>
+                                        <span>Chuẩn hóa quy trình vận hành, tối ưu trải nghiệm</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="#" class="flex-center">
-                        <iconify-icon icon="ph:book-open-bold"></iconify-icon>
                         <span>Tri thức số</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex-center">
-                        <iconify-icon icon="ph:phone-bold"></iconify-icon>
                         <span>Liên hệ</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex-center">
-                        <iconify-icon icon="ph:info-bold"></iconify-icon>
                         <span>Về chúng tôi</span>
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <!-- Right Block: Demo Button & Dots menu Toggle -->
+        <!-- Right Block: Demo Button -->
         <div class="header-right-block flex">
             <a href="#" class="btn btn-contact flex">
                 <span>Đăng ký Demo</span>
                 <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
             </a>
+        </div>
 
-</div>
-
-    </div>
-
-    <!-- Mobile Dropdown Navigation Menu -->
-    <div class="nav-list-mobile">
-        <a href="#" class="active flex">
-            <iconify-icon icon="ph:cube-bold"></iconify-icon>
-            <span>Sản phẩm</span>
-        </a>
-        <a href="#" class="flex">
-            <iconify-icon icon="ph:puzzle-piece-bold"></iconify-icon>
-            <span>Giải pháp</span>
-        </a>
-        <a href="#" class="flex">
-            <iconify-icon icon="ph:book-open-bold"></iconify-icon>
-            <span>Tri thức số</span>
-        </a>
-        <a href="#" class="flex">
-            <iconify-icon icon="ph:phone-bold"></iconify-icon>
-            <span>Liên hệ</span>
-        </a>
-        <a href="#" class="flex">
-            <iconify-icon icon="ph:info-bold"></iconify-icon>
-            <span>Về chúng tôi</span>
-        </a>
-        <div class="mobile-menu-divider"></div>
-        <a href="#" class="btn btn-mobile-demo flex">
-            <span>Đăng ký Demo</span>
-            <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
-        </a>
     </div>
 
 </header>
@@ -1350,44 +1378,6 @@ document.addEventListener('DOMContentLoaded', () => {
         screenshotRows.forEach(row => observer.observe(row));
     }
     
-    // Floating Header Mobile Menu Toggler
-    const header = document.querySelector('.floating-header');
-    const menuToggle = document.querySelector('.btn-menu-grid');
-    const menuOpenIcon = document.querySelector('.grid-icon');
-    const menuCloseIcon = document.querySelector('.close-icon');
-    
-    if (menuToggle && header) {
-        menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isOpen = header.classList.toggle('menu-open');
-            if (isOpen) {
-                menuOpenIcon.style.display = 'none';
-                menuCloseIcon.style.display = 'flex';
-            } else {
-                menuOpenIcon.style.display = 'flex';
-                menuCloseIcon.style.display = 'none';
-            }
-        });
-
-        // Close menu if user clicks outside the header
-        document.addEventListener('click', (e) => {
-            if (!header.contains(e.target) && header.classList.contains('menu-open')) {
-                header.classList.remove('menu-open');
-                menuOpenIcon.style.display = 'flex';
-                menuCloseIcon.style.display = 'none';
-            }
-        });
-
-        // Close menu when clicking links in mobile menu
-        const mobileLinks = document.querySelectorAll('.nav-list-mobile a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                header.classList.remove('menu-open');
-                menuOpenIcon.style.display = 'flex';
-                menuCloseIcon.style.display = 'none';
-            });
-        });
-    }
 });
 </script>
 
