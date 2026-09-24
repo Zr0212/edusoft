@@ -2453,11 +2453,24 @@
     margin-bottom: 1.75rem;
 }
 
-.footer-logo {
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand .footer-logo {
     height: 38px;
     width: auto;
-    display: block;
-    margin-bottom: 1.75rem;
+    margin-bottom: 0;
+}
+
+.footer-brand .logo-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .footer-email-box {
@@ -2614,16 +2627,45 @@
 
 @media (max-width: 1024px) {
     .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2.5rem 2rem !important;
         padding: 4rem 0 3rem;
+    }
+
+    .footer-col.edudigital-col {
+        order: 1 !important;
+        grid-column: span 1 !important;
+    }
+
+    .footer-col.products-col {
+        order: 2 !important;
+        grid-column: span 1 !important;
+    }
+
+    .footer-col.solutions-col {
+        order: 3 !important;
+        grid-column: span 2 !important;
+    }
+
+    .footer-col.brand-col {
+        order: 4 !important;
+        grid-column: span 2 !important;
+        margin-top: 0.5rem;
     }
 }
 
 @media (max-width: 576px) {
     .footer-main {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2.25rem 1.5rem !important;
+    }
+    
+    .download-badges {
+        flex-wrap: wrap;
+    }
+    
+    .footer-address-box {
+        max-width: 100%;
     }
     
     .footer-bottom-inner {
