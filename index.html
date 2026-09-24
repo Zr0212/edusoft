@@ -117,19 +117,84 @@
             </ul>
         </nav>
 
-        <!-- Right Block: Demo Button -->
+        <!-- Right Block: Personal Link & Demo Button -->
         <div class="header-right-block">
-            <a href="#" class="nav-personal">
-                <span>Cá nhân</span>
-            </a>
+            <a href="#" class="nav-personal">Cá nhân</a>
             <a href="#" class="btn btn-contact flex">
                 <span>Đăng ký Demo</span>
             </a>
         </div>
 
+        <!-- Mobile Burger Toggle Button -->
+        <button class="mobile-burger-btn" aria-label="Toggle Navigation">
+            <iconify-icon icon="ph:list-bold"></iconify-icon>
+        </button>
+
     </div>
 
 </header>
+
+<!-- Mobile Menu Drawer & Backdrop -->
+<div class="mobile-drawer-backdrop"></div>
+<div class="mobile-menu-drawer">
+    <div class="mobile-drawer-header">
+        <div class="logo flex">
+            <img src="images/logo.png" alt="Logo">
+            <span class="logo-title">EDUSOFT</span>
+        </div>
+        <button class="mobile-drawer-close" aria-label="Close menu">
+            <iconify-icon icon="ph:x-bold"></iconify-icon>
+        </button>
+    </div>
+    <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item has-accordion">
+                <div class="mobile-nav-link accordion-title">
+                    <span>Sản phẩm</span>
+                    <iconify-icon icon="ph:caret-down-bold"></iconify-icon>
+                </div>
+                <div class="mobile-accordion-content">
+                    <a href="#">Quản lý Nhân sự</a>
+                    <a href="#">Quản lý Đào tạo</a>
+                    <a href="#">Quản lý Tuyển sinh</a>
+                    <a href="#">Quản lý Học phí</a>
+                    <a href="#">Quản lý Công việc</a>
+                    <a href="#">Quản lý Học tập</a>
+                    <a href="#">Quản lý Người học</a>
+                    <a href="#">Quản lý Cơ sở vật chất</a>
+                </div>
+            </li>
+            <li class="mobile-nav-item has-accordion">
+                <div class="mobile-nav-link accordion-title">
+                    <span>Giải pháp</span>
+                    <iconify-icon icon="ph:caret-down-bold"></iconify-icon>
+                </div>
+                <div class="mobile-accordion-content">
+                    <a href="#">Giáo dục Đại học</a>
+                    <a href="#">Giáo dục Nghề nghiệp</a>
+                    <a href="#">Trung tâm đào tạo ngắn hạn</a>
+                    <a href="#">Khối cơ sở Giáo dục K12</a>
+                    <a href="#">Trung tâm ngoại ngữ & kỹ năng</a>
+                </div>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Tri thức số</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Liên hệ</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Cá nhân</a>
+            </li>
+        </ul>
+        <div class="mobile-drawer-footer">
+            <a href="#" class="btn btn-contact flex mobile-demo-btn">
+                <span>Đăng ký Demo</span>
+                <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+            </a>
+        </div>
+    </div>
+</div>
 
 <!-- ================= MAIN ================= -->
 
@@ -519,19 +584,19 @@
                     <div class="org-tree-wrapper">
                         <!-- Sơ đồ tổ chức -->
                         <div class="org-row org-root-row">
-                            <div class="org-node node-root">LÃNH ĐẠO TRƯỜNG</div>
+                            <div class="org-node node-root">LÃNH ĐẠO<br>TRƯỜNG</div>
                         </div>
                         <div class="org-row org-mid-row">
-                            <div class="org-node node-advisors">HỘI ĐỒNG CỐ VẤN</div>
-                            <div class="org-node node-directors">BAN GIÁM HIỆU</div>
+                            <div class="org-node node-advisors">HỘI ĐỒNG<br>CỐ VẤN</div>
+                            <div class="org-node node-directors">BAN GIÁM<br>HIỆU</div>
                             <div class="org-node-stack">
                                 <div class="org-node node-union">CÔNG ĐOÀN</div>
-                                <div class="org-node node-youth">ĐOÀN THANH NIÊN</div>
+                                <div class="org-node node-youth">ĐOÀN THANH<br>NIÊN</div>
                             </div>
                         </div>
                         <div class="org-row org-leaf-row">
                             <div class="org-node-group">
-                                <div class="org-node node-dept">PHÒNG CHỨC NĂNG</div>
+                                <div class="org-node node-dept">PHÒNG CHỨC<br>NĂNG</div>
                                 <div class="node-placeholders">
                                     <div class="placeholder-rect"></div>
                                     <div class="placeholder-rect"></div>
@@ -551,7 +616,7 @@
                                 </div>
                             </div>
                             <div class="org-node-group">
-                                <div class="org-node node-support">ĐƠN VỊ HỖ TRỢ ĐÀO TẠO</div>
+                                <div class="org-node node-support">ĐƠN VỊ HỖ TRỢ<br>ĐÀO TẠO</div>
                                 <div class="node-placeholders">
                                     <div class="placeholder-rect"></div>
                                     <div class="placeholder-rect"></div>
@@ -596,26 +661,26 @@
                         
                         <div class="sub-node crm">
                             <iconify-icon icon="lucide:smile"></iconify-icon>
-                            <span>Hệ thống CRM</span>
+                            <span>Hệ thống<br>CRM</span>
                         </div>
                         <div class="sub-node payment">
                             <iconify-icon icon="lucide:credit-card"></iconify-icon>
-                            <span>Cổng thanh toán</span>
+                            <span>Cổng thanh<br>toán</span>
                         </div>
                         <div class="sub-node attendance">
                             <iconify-icon icon="lucide:fingerprint"></iconify-icon>
-                            <span>Thiết bị điểm danh</span>
+                            <span>Thiết bị<br>điểm danh</span>
                         </div>
                         <div class="sub-node erp">
                             <iconify-icon icon="lucide:cpu"></iconify-icon>
-                            <span>Hệ thống ERP</span>
+                            <span>Hệ thống<br>ERP</span>
                         </div>
                         
-                        <svg class="integration-lines-svg" viewBox="0 0 500 350">
-                            <path d="M 250 175 L 100 80" class="integration-svg-path animate-flow" />
-                            <path d="M 250 175 L 400 80" class="integration-svg-path animate-flow" />
-                            <path d="M 250 175 L 100 270" class="integration-svg-path animate-flow" />
-                            <path d="M 250 175 L 400 270" class="integration-svg-path animate-flow" />
+                        <svg class="integration-lines-svg" viewBox="0 0 500 350" preserveAspectRatio="none">
+                            <path d="M 250 175 L 80 60" class="integration-svg-path animate-flow" />
+                            <path d="M 250 175 L 420 60" class="integration-svg-path animate-flow" />
+                            <path d="M 250 175 L 80 290" class="integration-svg-path animate-flow" />
+                            <path d="M 250 175 L 420 290" class="integration-svg-path animate-flow" />
                         </svg>
                     </div>
                 </div>
@@ -1455,6 +1520,47 @@ document.addEventListener('DOMContentLoaded', () => {
         ctaCards.forEach(card => ctaObserver.observe(card));
     }
     
+    // Mobile Drawer Toggle
+    const burgerBtn = document.querySelector('.mobile-burger-btn');
+    const drawerCloseBtn = document.querySelector('.mobile-drawer-close');
+    const drawer = document.querySelector('.mobile-menu-drawer');
+    const drawerBackdrop = document.querySelector('.mobile-drawer-backdrop');
+    
+    function openDrawer() {
+        if (drawer && drawerBackdrop) {
+            drawer.classList.add('active');
+            drawerBackdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    function closeDrawer() {
+        if (drawer && drawerBackdrop) {
+            drawer.classList.remove('active');
+            drawerBackdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    if (burgerBtn) burgerBtn.addEventListener('click', openDrawer);
+    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+    // Mobile Accordion Toggle
+    const accordionTitles = document.querySelectorAll('.mobile-nav-item.has-accordion .accordion-title');
+    accordionTitles.forEach(title => {
+        title.addEventListener('click', () => {
+            const item = title.parentElement;
+            item.classList.toggle('open');
+        });
+    });
+
+    // Close drawer when clicking a mobile nav link
+    const mobileLinks = document.querySelectorAll('.mobile-accordion-content a, .mobile-nav-item:not(.has-accordion) .mobile-nav-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+
 });
 </script>
 

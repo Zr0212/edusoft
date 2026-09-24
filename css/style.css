@@ -142,7 +142,7 @@ table{
     /* ===== Section Spacing ===== */
 
     --section-padding:
-        clamp(4rem,8vw,8rem);
+        clamp(2.5rem, 5vw, 6rem);
 
 }
 
@@ -570,7 +570,7 @@ section{
 }
 
 /* Responsiveness media queries */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .floating-header {
         top: 1rem;
     }
@@ -580,12 +580,12 @@ section{
         background: var(--white);
         border-radius: 16px;
         padding: 0 1.25rem;
-        justify-content: center; /* Center logo on mobile when toggle is removed */
+        justify-content: space-between;
     }
 
     /* Hide middle navigation and desktop actions on mobile */
     .header-mid-block,
-    .btn-contact {
+    .header-right-block {
         display: none !important;
     }
 
