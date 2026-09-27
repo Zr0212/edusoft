@@ -30,25 +30,6 @@
         <!-- Middle Navigation Block -->
         <nav class="header-mid-block">
             <ul class="flex nav-list">
-                <li class="has-dropdown has-dropdown-products">
-                    <a href="#" class="flex-center">
-                        <span>Sản phẩm</span>
-                        <iconify-icon icon="ph:caret-down-bold" class="caret-down"></iconify-icon>
-                    </a>
-                    <!-- Products Hover Dropdown Menu -->
-                    <div class="dropdown-menu dropdown-products">
-                        <div class="dropdown-products-grid">
-                            <a href="#" class="product-item">Quản lý Nhân sự</a>
-                            <a href="#" class="product-item">Quản lý Đào tạo</a>
-                            <a href="#" class="product-item">Quản lý Tuyển sinh</a>
-                            <a href="#" class="product-item">Quản lý Học phí</a>
-                            <a href="#" class="product-item">Quản lý Công việc</a>
-                            <a href="#" class="product-item">Quản lý Học tập</a>
-                            <a href="#" class="product-item">Quản lý Người học</a>
-                            <a href="#" class="product-item">Quản lý Cơ sở vật chất</a>
-                        </div>
-                    </div>
-                </li>
                 <li class="has-dropdown has-dropdown-solutions">
                     <a href="#" class="flex-center">
                         <span>Giải pháp</span>
@@ -104,10 +85,179 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="has-dropdown has-dropdown-products">
                     <a href="#" class="flex-center">
-                        <span>Tri thức số</span>
+                        <span>Tính năng</span>
+                        <iconify-icon icon="ph:caret-down-bold" class="caret-down"></iconify-icon>
                     </a>
+                    <!-- Products Hover Mega Dropdown Menu -->
+                    <div class="dropdown-menu dropdown-products">
+                        <div class="dropdown-mega-grid">
+                            <!-- Column 1: Quản lý Đào tạo -->
+                            <div class="dropdown-mega-col col-blue">
+                                <div class="col-header">
+                                    <h4 class="col-title text-blue">Quản lý Đào tạo</h4>
+                                    <p class="col-subtitle">Hoạch định & tự động hóa</p>
+                                    <div class="col-bar bar-blue"></div>
+                                </div>
+                                <div class="col-items-list">
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-blue">
+                                            <iconify-icon icon="lucide:graduation-cap"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Chương trình đào tạo</strong>
+                                            <span class="item-desc">Hoạch định & quản lý khung môn</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-cyan">
+                                            <iconify-icon icon="lucide:calendar-range"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Thời khóa biểu</strong>
+                                            <span class="item-desc">Xếp lịch tự động & phân công</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-indigo">
+                                            <iconify-icon icon="lucide:users"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Quản lý Người học</strong>
+                                            <span class="item-desc">Hồ sơ, theo dõi điểm số & tiến độ</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="col-action-link link-blue">
+                                    XEM TẤT CẢ <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                                </a>
+                            </div>
+
+                            <!-- Column 2: Quản lý Khảo thí -->
+                            <div class="dropdown-mega-col col-purple">
+                                <div class="col-header">
+                                    <h4 class="col-title text-purple">Quản lý Khảo thí</h4>
+                                    <p class="col-subtitle">Ngân hàng đề & thi số</p>
+                                    <div class="col-bar bar-purple"></div>
+                                </div>
+                                <div class="col-items-list">
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-purple">
+                                            <iconify-icon icon="lucide:file-question"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Ngân hàng câu hỏi</strong>
+                                            <span class="item-desc">Chuẩn hóa & phân loại đề</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-fuchsia">
+                                            <iconify-icon icon="lucide:laptop"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Thi trực tuyến</strong>
+                                            <span class="item-desc">Tổ chức thi & giám sát bảo mật</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-violet">
+                                            <iconify-icon icon="lucide:check-circle-2"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Chấm thi & Phổ điểm</strong>
+                                            <span class="item-desc">Chấm tự động 100% & rọc phách</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="col-action-link link-purple">
+                                    XEM TẤT CẢ <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                                </a>
+                            </div>
+
+                            <!-- Column 3: Quản lý Học tập -->
+                            <div class="dropdown-mega-col col-teal">
+                                <div class="col-header">
+                                    <h4 class="col-title text-teal">Quản lý Học tập</h4>
+                                    <p class="col-subtitle">Nghiệp vụ & tương tác số</p>
+                                    <div class="col-bar bar-teal"></div>
+                                </div>
+                                <div class="col-items-list">
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-teal">
+                                            <iconify-icon icon="lucide:book-open"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">LMS & Bài giảng</strong>
+                                            <span class="item-desc">Kho bài giảng số & bài tập</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-green">
+                                            <iconify-icon icon="lucide:message-square"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Tương tác trực tuyến</strong>
+                                            <span class="item-desc">Trao đổi giáo viên & học viên</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-emerald">
+                                            <iconify-icon icon="lucide:award"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Văn bằng số</strong>
+                                            <span class="item-desc">Cấp phát & xác thực chống giả</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="col-action-link link-teal">
+                                    XEM TẤT CẢ <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                                </a>
+                            </div>
+
+                            <!-- Column 4: Quản lý Vận hành -->
+                            <div class="dropdown-mega-col col-electric">
+                                <div class="col-header">
+                                    <h4 class="col-title text-electric">Quản lý Vận hành</h4>
+                                    <p class="col-subtitle">Tài chính, CSVC & Nhân sự</p>
+                                    <div class="col-bar bar-electric"></div>
+                                </div>
+                                <div class="col-items-list">
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-electric">
+                                            <iconify-icon icon="lucide:wallet"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Quản lý Học phí</strong>
+                                            <span class="item-desc">Thu học phí & cổng thanh toán</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-blue">
+                                            <iconify-icon icon="lucide:briefcase"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Quản lý Nhân sự</strong>
+                                            <span class="item-desc">Hồ sơ cán bộ & chấm công</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mega-item">
+                                        <div class="item-icon-box icon-cyan">
+                                            <iconify-icon icon="lucide:building-2"></iconify-icon>
+                                        </div>
+                                        <div class="item-content">
+                                            <strong class="item-title">Cơ sở vật chất</strong>
+                                            <span class="item-desc">Phòng học, thiết bị & tài sản</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="col-action-link link-electric">
+                                    XEM TẤT CẢ <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="#" class="flex-center">
@@ -117,9 +267,8 @@
             </ul>
         </nav>
 
-        <!-- Right Block: Personal Link & Demo Button -->
+        <!-- Right Block: Demo Button -->
         <div class="header-right-block">
-            <a href="#" class="nav-personal">Cá nhân</a>
             <a href="#" class="btn btn-contact flex">
                 <span>Đăng ký Demo</span>
             </a>
@@ -150,7 +299,20 @@
         <ul class="mobile-nav-list">
             <li class="mobile-nav-item has-accordion">
                 <div class="mobile-nav-link accordion-title">
-                    <span>Sản phẩm</span>
+                    <span>Giải pháp</span>
+                    <iconify-icon icon="ph:caret-down-bold"></iconify-icon>
+                </div>
+                <div class="mobile-accordion-content">
+                    <a href="#">Giáo dục Đại học</a>
+                    <a href="#">Giáo dục Nghề nghiệp</a>
+                    <a href="#">Trung tâm đào tạo ngắn hạn</a>
+                    <a href="#">Khối cơ sở Giáo dục K12</a>
+                    <a href="#">Trung tâm ngoại ngữ & kỹ năng</a>
+                </div>
+            </li>
+            <li class="mobile-nav-item has-accordion">
+                <div class="mobile-nav-link accordion-title">
+                    <span>Tính năng</span>
                     <iconify-icon icon="ph:caret-down-bold"></iconify-icon>
                 </div>
                 <div class="mobile-accordion-content">
@@ -164,27 +326,8 @@
                     <a href="#">Quản lý Cơ sở vật chất</a>
                 </div>
             </li>
-            <li class="mobile-nav-item has-accordion">
-                <div class="mobile-nav-link accordion-title">
-                    <span>Giải pháp</span>
-                    <iconify-icon icon="ph:caret-down-bold"></iconify-icon>
-                </div>
-                <div class="mobile-accordion-content">
-                    <a href="#">Giáo dục Đại học</a>
-                    <a href="#">Giáo dục Nghề nghiệp</a>
-                    <a href="#">Trung tâm đào tạo ngắn hạn</a>
-                    <a href="#">Khối cơ sở Giáo dục K12</a>
-                    <a href="#">Trung tâm ngoại ngữ & kỹ năng</a>
-                </div>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Tri thức số</a>
-            </li>
             <li class="mobile-nav-item">
                 <a href="#" class="mobile-nav-link">Liên hệ</a>
-            </li>
-            <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Cá nhân</a>
             </li>
         </ul>
         <div class="mobile-drawer-footer">
@@ -340,102 +483,73 @@
         <h3 class="partners-title text-center">
             Đại học, Trung tâm & Tổ chức chuyển đổi số thành công cùng <span class="text-gradient" style="font-weight: var(--fw-bold); white-space: nowrap;">Edu Digital</span>
         </h3>
-        <div class="partners-logos">
-            <div class="partner-logo-item">
-                <img src="images/logo-wenet.png" alt="WENet">
+        <div class="partners-ticker-wrapper">
+            <div class="partners-ticker-track">
+                <!-- Set 1 -->
+                <div class="partner-logo-item">
+                    <img src="images/logo-wenet.png" alt="WENet">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-dlt.png" alt="DLT">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-university.png" alt="University">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-bird.png" alt="EduSoft Bird">
+                </div>
+                <!-- Set 2 -->
+                <div class="partner-logo-item">
+                    <img src="images/logo-wenet.png" alt="WENet">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-dlt.png" alt="DLT">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-university.png" alt="University">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-bird.png" alt="EduSoft Bird">
+                </div>
+                <!-- Set 3 -->
+                <div class="partner-logo-item">
+                    <img src="images/logo-wenet.png" alt="WENet">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-dlt.png" alt="DLT">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-university.png" alt="University">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-bird.png" alt="EduSoft Bird">
+                </div>
+                <!-- Set 4 -->
+                <div class="partner-logo-item">
+                    <img src="images/logo-wenet.png" alt="WENet">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-dlt.png" alt="DLT">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-university.png" alt="University">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo-bird.png" alt="EduSoft Bird">
+                </div>
             </div>
-            <div class="partner-logo-item">
-                <img src="images/logo-dlt.png" alt="DLT">
-            </div>
-            <div class="partner-logo-item">
-                <img src="images/logo-ptemagic.png" alt="PTE Magic">
-            </div>
-            <div class="partner-logo-item">
-                <img src="images/logo-university.png" alt="University">
-            </div>
-            <div class="partner-logo-item">
-                <img src="images/logo-bird.png" alt="EduSoft Bird">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= FEATURES (NỀN TẢNG) ================= -->
-<section class="features-section">
-    <div class="container">
-        <h2 class="text-center section-title">
-            MỘT NỀN TẢNG. <span class="text-gradient-custom">NHIỀU ĐIỂM CHẠM SỐ</span>
-        </h2>
-        <p class="text-center section-subtitle">
-            Thiết kế theo mô-đun để triển khai nhanh, mở rộng linh hoạt và đo lường hiệu quả rõ ràng
-        </p>
-
-        <div class="grid-auto">
-            <!-- Card 1: Tự động hóa quy trình -->
-            <article class="card feature-card">
-                <div class="feature-icon-wrapper">
-                    <iconify-icon icon="lucide:share-2"></iconify-icon>
-                </div>
-                <h3 class="feature-card-title">Tự động hóa quy trình</h3>
-                <p class="feature-card-desc">
-                    Loại bỏ thao tác lặp lại trong bán hàng, chăm sóc khách hàng, phê duyệt nội bộ và báo cáo
-                </p>
-            </article>
-
-            <!-- Card 2: Tích hợp dữ liệu -->
-            <article class="card feature-card">
-                <div class="feature-icon-wrapper">
-                    <iconify-icon icon="lucide:database"></iconify-icon>
-                </div>
-                <h3 class="feature-card-title">Tích hợp dữ liệu</h3>
-                <p class="feature-card-desc">
-                    Tích hợp CRM, ERP, website, app và hệ thống kế toán để tạo một nguồn dữ liệu đáng tin cậy
-                </p>
-            </article>
-
-            <!-- Card 3: Dashboard điều hành -->
-            <article class="card feature-card">
-                <div class="feature-icon-wrapper">
-                    <iconify-icon icon="lucide:trending-up"></iconify-icon>
-                </div>
-                <h3 class="feature-card-title">Dashboard điều hành</h3>
-                <p class="feature-card-desc">
-                    Theo dõi KPI theo thời gian thực, phát hiện điểm nghẽn và ra quyết định dựa trên số liệu.
-                </p>
-            </article>
-
-            <!-- Card 4: Hạ tầng bảo mật -->
-            <article class="card feature-card">
-                <div class="feature-icon-wrapper">
-                    <iconify-icon icon="lucide:shield"></iconify-icon>
-                </div>
-                <h3 class="feature-card-title">Hạ tầng bảo mật</h3>
-                <p class="feature-card-desc">
-                    Phân quyền chi tiết, nhật ký truy cập và tiêu chuẩn bảo vệ dữ liệu phù hợp môi trường B2B
-                </p>
-            </article>
-
-            <!-- Card 5: Thiết kế module -->
-            <article class="card feature-card">
-                <div class="feature-icon-wrapper">
-                    <iconify-icon icon="lucide:puzzle"></iconify-icon>
-                </div>
-                <h3 class="feature-card-title">Thiết kế module</h3>
-                <p class="feature-card-desc">
-                    Bắt đầu từ nhu cầu cấp thiết, sau đó mở rộng sang các phòng ban khác mà không phải làm lại từ đầu
-                </p>
-            </article>
-
-            <!-- Card 6: Đồng hành triển khai -->
-            <article class="card feature-card">
-                <div class="feature-icon-wrapper">
-                    <iconify-icon icon="lucide:headset"></iconify-icon>
-                </div>
-                <h3 class="feature-card-title">Đồng hành triển khai</h3>
-                <p class="feature-card-desc">
-                    Tư vấn quy trình, đào tạo đội ngũ và tối ưu sau go-live để đảm bảo giải pháp thực sự được sử dụng
-                </p>
-            </article>
         </div>
     </div>
 </section>
@@ -689,126 +803,170 @@
     </div>
 </section>
 
-<!-- ================= INTEGRATED PLATFORM SLIDER (TÍCH HỢP PHẦN MỀM) ================= -->
+<!-- ================= FEATURES (NỀN TẢNG) ================= -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="text-center section-title">
+            MỘT NỀN TẢNG. <span class="text-gradient-custom">NHIỀU ĐIỂM CHẠM SỐ</span>
+        </h2>
+        <p class="text-center section-subtitle">
+            Thiết kế theo mô-đun để triển khai nhanh, mở rộng linh hoạt và đo lường hiệu quả rõ ràng
+        </p>
+
+        <div class="grid-auto">
+            <!-- Card 1: Tự động hóa quy trình -->
+            <article class="card feature-card theme-blue">
+                <div class="feature-card-header">
+                    <div class="feature-icon-wrapper">
+                        <iconify-icon icon="lucide:share-2"></iconify-icon>
+                    </div>
+                    <h3 class="feature-card-title">Tự động hóa quy trình</h3>
+                </div>
+                <p class="feature-card-desc">
+                    Loại bỏ thao tác lặp lại trong bán hàng, chăm sóc khách hàng, phê duyệt nội bộ và báo cáo
+                </p>
+                <div class="feature-card-tag">Tự động hóa 100%</div>
+            </article>
+
+            <!-- Card 2: Tích hợp dữ liệu -->
+            <article class="card feature-card theme-cyan">
+                <div class="feature-card-header">
+                    <div class="feature-icon-wrapper">
+                        <iconify-icon icon="lucide:database"></iconify-icon>
+                    </div>
+                    <h3 class="feature-card-title">Tích hợp dữ liệu</h3>
+                </div>
+                <p class="feature-card-desc">
+                    Tích hợp CRM, ERP, website, app và hệ thống kế toán để tạo một nguồn dữ liệu đáng tin cậy
+                </p>
+                <div class="feature-card-tag">Tích hợp Real-time</div>
+            </article>
+
+            <!-- Card 3: Dashboard điều hành -->
+            <article class="card feature-card theme-indigo">
+                <div class="feature-card-header">
+                    <div class="feature-icon-wrapper">
+                        <iconify-icon icon="lucide:trending-up"></iconify-icon>
+                    </div>
+                    <h3 class="feature-card-title">Dashboard điều hành</h3>
+                </div>
+                <p class="feature-card-desc">
+                    Theo dõi KPI theo thời gian thực, phát hiện điểm nghẽn và ra quyết định dựa trên số liệu
+                </p>
+                <div class="feature-card-tag">Dữ liệu thời gian thực</div>
+            </article>
+
+            <!-- Card 4: Hạ tầng bảo mật -->
+            <article class="card feature-card theme-teal">
+                <div class="feature-card-header">
+                    <div class="feature-icon-wrapper">
+                        <iconify-icon icon="lucide:shield"></iconify-icon>
+                    </div>
+                    <h3 class="feature-card-title">Hạ tầng bảo mật</h3>
+                </div>
+                <p class="feature-card-desc">
+                    Phân quyền chi tiết, nhật ký truy cập và tiêu chuẩn bảo vệ dữ liệu phù hợp môi trường B2B
+                </p>
+                <div class="feature-card-tag">Bảo mật chuẩn B2B</div>
+            </article>
+
+            <!-- Card 5: Thiết kế module -->
+            <article class="card feature-card theme-purple">
+                <div class="feature-card-header">
+                    <div class="feature-icon-wrapper">
+                        <iconify-icon icon="lucide:puzzle"></iconify-icon>
+                    </div>
+                    <h3 class="feature-card-title">Thiết kế module</h3>
+                </div>
+                <p class="feature-card-desc">
+                    Bắt đầu từ nhu cầu cấp thiết, sau đó mở rộng sang các phòng ban khác mà không làm lại từ đầu
+                </p>
+                <div class="feature-card-tag">Mở rộng linh hoạt</div>
+            </article>
+
+            <!-- Card 6: Đồng hành triển khai -->
+            <article class="card feature-card theme-electric">
+                <div class="feature-card-header">
+                    <div class="feature-icon-wrapper">
+                        <iconify-icon icon="lucide:headset"></iconify-icon>
+                    </div>
+                    <h3 class="feature-card-title">Đồng hành triển khai</h3>
+                </div>
+                <p class="feature-card-desc">
+                    Tư vấn quy trình, đào tạo đội ngũ và tối ưu sau go-live để đảm bảo giải pháp thực sự hiệu quả
+                </p>
+                <div class="feature-card-tag">Tư vấn & Hỗ trợ 24/7</div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ================= INTEGRATED PLATFORM CARDS (TÍCH HỢP PHẦN MỀM) ================= -->
 <section id="integrated-platform-section">
-    <div class="container" style="position: relative;">
+    <div class="container">
         <p class="text-center section-subtitle text-lightblue" style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
             Nền tảng kết nối nhà trường, giáo viên và học sinh
         </p>
-        <h2 class="text-center section-title">
+        <h2 class="text-center section-title" style="margin-bottom: 3rem;">
             Tích hợp <span class="badge-capsule">30+</span> phần mềm trên một nền tảng duy nhất
         </h2>
         
-        <div class="slider-outer-wrapper">
-            <!-- Left Arrow -->
-            <button class="slider-arrow arrow-prev" aria-label="Previous Slide">
-                <iconify-icon icon="lucide:chevron-left"></iconify-icon>
-            </button>
-            
-            <!-- Main Slider Card -->
-            <div class="slider-container">
-                <div class="slider-track">
-                    <!-- Slide 1: Mô hình tổng thể -->
-                    <div class="slider-slide">
-                        <div class="slide-content-left">
-                            <span class="slide-badge">Edu Digital</span>
-                            <h3 class="slide-title">Mô hình chuyển đổi số tổng thể trong Giáo dục</h3>
-                            <ul class="slide-bullets">
-                                <li>
-                                    Tích hợp và liên thông dữ liệu
-                                </li>
-                                <li>
-                                    Xây dựng cơ sở dữ liệu & hệ thống
-                                </li>
-                                <li>
-                                    An toàn bảo mật thông tin
-                                </li>
-                            </ul>
-                            <a href="#" class="btn">Đăng ký Demo</a>
-                        </div>
-                        <div class="slide-graphic-right">
-                            <div class="image-frame">
-                                <img src="images/slide-graphic-1.png" alt="Mô hình tổng thể">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2: Quản lý đào tạo -->
-                    <div class="slider-slide">
-                        <div class="slide-content-left">
-                            <span class="slide-badge">Edu Digital+</span>
-                            <h3 class="slide-title">Quản lí Đào tạo</h3>
-                            <p class="slide-desc">Bộ tính năng lưu trữ hệ thống quản lý hoạch định nguồn lực cơ sở Giáo dục</p>
-                            <a href="#" class="btn">Đăng ký Demo</a>
-                        </div>
-                        <div class="slide-graphic-right">
-                            <div class="image-frame">
-                                <img src="images/slide-graphic-2.png" alt="Quản lí Đào tạo">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3: Quản lý khảo thí -->
-                    <div class="slider-slide">
-                        <div class="slide-content-left">
-                            <span class="slide-badge">Edu Digital+</span>
-                            <h3 class="slide-title">Quản lí Khảo thí</h3>
-                            <p class="slide-desc">Tổ chức thi trực tuyến, quản lý ngân hàng câu hỏi, chấm thi tự động và bảo mật thông tin tuyệt đối</p>
-                            <a href="#" class="btn">Đăng ký Demo</a>
-                        </div>
-                        <div class="slide-graphic-right">
-                            <div class="image-frame">
-                                <img src="images/slide-graphic-3.png" alt="Quản lí Khảo thí">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4: Quản lý học tập -->
-                    <div class="slider-slide">
-                        <div class="slide-content-left">
-                            <span class="slide-badge">Edu Digital+</span>
-                            <h3 class="slide-title">Quản lí Học tập</h3>
-                            <p class="slide-desc">Bộ tính năng quản lý toàn bộ nghiệp vụ thiết yếu và hỗ trợ trong cơ sở Giáo dục</p>
-                            <a href="#" class="btn">Đăng ký Demo</a>
-                        </div>
-                        <div class="slide-graphic-right">
-                            <div class="image-frame">
-                                <img src="images/slide-graphic-4.png" alt="Quản lí Học tập">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 5: Văn bằng chứng chỉ -->
-                    <div class="slider-slide">
-                        <div class="slide-content-left">
-                            <span class="slide-badge">Edu Digital+</span>
-                            <h3 class="slide-title">Văn bằng Chứng chỉ</h3>
-                            <p class="slide-desc">Bộ tính năng đảm bảo quản lý các văn bằng, chứng chỉ hỗ trợ trong Giáo dục</p>
-                            <a href="#" class="btn">Đăng ký Demo</a>
-                        </div>
-                        <div class="slide-graphic-right">
-                            <div class="image-frame">
-                                <img src="images/slide-graphic-5.png" alt="Văn bằng Chứng chỉ">
-                            </div>
-                        </div>
-                    </div>
+        <div class="integrated-cards-grid">
+            <!-- Card 1: Quản lý Đào tạo -->
+            <div class="integrated-card">
+                <div class="card-icon-pill pill-indigo">
+                    <iconify-icon icon="lucide:graduation-cap"></iconify-icon>
+                </div>
+                <h3 class="integrated-card-title">Quản lý Đào tạo</h3>
+                <p class="integrated-card-desc">Hoạch định nguồn lực & tự động hóa công tác đào tạo</p>
+                <div class="integrated-card-content">
+                    <p>Bộ tính năng lưu trữ hệ thống quản lý hoạch định nguồn lực cơ sở Giáo dục tối ưu.</p>
+                    <p>Xếp thời khóa biểu tự động, phân công giảng dạy và quản lý chương trình học tập linh hoạt.</p>
+                    <p>Theo dõi tiến độ học tập, tổng hợp điểm số và báo cáo học vụ tự động theo thời gian thực.</p>
                 </div>
             </div>
-            
-            <!-- Right Arrow -->
-            <button class="slider-arrow arrow-next" aria-label="Next Slide">
-                <iconify-icon icon="lucide:chevron-right"></iconify-icon>
-            </button>
-        </div>
-        
-        <!-- Pagination Dots -->
-        <div class="slider-dots">
-            <span class="slider-dot active" data-slide="0"></span>
-            <span class="slider-dot" data-slide="1"></span>
-            <span class="slider-dot" data-slide="2"></span>
-            <span class="slider-dot" data-slide="3"></span>
-            <span class="slider-dot" data-slide="4"></span>
-        </div>
+
+            <!-- Card 2: Quản lý Khảo thí -->
+            <div class="integrated-card">
+                <div class="card-icon-pill pill-purple">
+                    <iconify-icon icon="lucide:clipboard-check"></iconify-icon>
+                </div>
+                <h3 class="integrated-card-title">Quản lý Khảo thí</h3>
+                <p class="integrated-card-desc">Ngân hàng câu hỏi, thi trực tuyến & chấm thi tự động</p>
+                <div class="integrated-card-content">
+                    <p>Tổ chức thi trực tuyến bảo mật, quản lý ngân hàng câu hỏi chuẩn hóa và phân loại câu hỏi.</p>
+                    <p>Chấm thi tự động 100% chính xác, tự động rọc phách và xuất kết quả thi ngay sau khi nộp bài.</p>
+                    <p>Thống kê chất lượng câu hỏi, phân tích phổ điểm và đánh giá năng lực người học chi tiết.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Quản lý Học tập -->
+            <div class="integrated-card">
+                <div class="card-icon-pill pill-amber">
+                    <iconify-icon icon="lucide:book-open"></iconify-icon>
+                </div>
+                <h3 class="integrated-card-title">Quản lý Học tập</h3>
+                <p class="integrated-card-desc">Nghiệp vụ học tập thiết yếu & tương tác trực tuyến</p>
+                <div class="integrated-card-content">
+                    <p>Bộ tính năng quản lý toàn bộ nghiệp vụ thiết yếu và hỗ trợ trong cơ sở Giáo dục.</p>
+                    <p>Theo dõi sát sao tương tác giữa giáo viên và học sinh trên môi trường số hóa hiện đại.</p>
+                    <p>Tối ưu trải nghiệm giảng dạy, học tập trực tuyến và trao đổi tri thức số linh hoạt.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Văn bằng và Chứng chỉ -->
+            <div class="integrated-card">
+                <div class="card-icon-pill pill-emerald">
+                    <iconify-icon icon="lucide:award"></iconify-icon>
+                </div>
+                <h3 class="integrated-card-title">Văn bằng và Chứng chỉ</h3>
+                <p class="integrated-card-desc">Quản lý, cấp phát & xác thực văn bằng chứng chỉ số</p>
+                <div class="integrated-card-content">
+                    <p>Bộ tính năng đảm bảo quản lý các văn bằng, chứng chỉ hỗ trợ trong Giáo dục.</p>
+                    <p>Cấp phát, lưu trữ và xác thực văn bằng, chứng chỉ số trên nền tảng an toàn, chống giả mạo.</p>
+                    <p>Hỗ trợ học viên, giảng viên và nhà trường tra cứu thông tin chứng chỉ nhanh chóng mọi lúc.</p>
+                </div>
+            </div>        </div>
     </div>
 </section>
 
@@ -847,6 +1005,7 @@
                     <p class="solution-card-desc">
                         Giải pháp quản lý đào tạo đặc thù đáp ứng mọi nhu cầu vận hành và lộ trình thay đổi quy chế quản lý
                     </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
                 </div>
                 <!-- Card: Cơ sở Giáo dục K12 -->
                 <div class="solution-card">
@@ -857,6 +1016,7 @@
                     <p class="solution-card-desc">
                         Được thiết kế nhằm số hóa toàn diện công tác quản lý đào tạo, nghiên cứu và hoạt động của học sinh
                     </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
                 </div>
             </div>
             
@@ -871,6 +1031,7 @@
                     <p class="solution-card-desc">
                         Chuẩn hóa quy trình vận hành, tối ưu trải nghiệm học viên và tạo đà phát triển bền vững
                     </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
                 </div>
                 <!-- Card: Trung tâm Đào tạo -->
                 <div class="solution-card">
@@ -881,6 +1042,7 @@
                     <p class="solution-card-desc">
                         Nền tảng quản trị hợp nhất cho các mô hình đào tạo phức tạp và linh hoạt của đào tạo liên tục
                     </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
                 </div>
             </div>
         </div>
@@ -1365,57 +1527,58 @@ document.addEventListener('DOMContentLoaded', () => {
     switchTab(0);
     startTimer();
     
-    // Integrated Platform Slider Controller
+    // Integrated Platform Slider Controller (if slider present)
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slider-slide');
     const dots = document.querySelectorAll('.slider-dot');
     const prevBtn = document.querySelector('.arrow-prev');
     const nextBtn = document.querySelector('.arrow-next');
     
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    let sliderAutoplay = null;
-    
-    function updateSlider(index) {
-        currentSlide = index;
-        track.style.transform = `translateX(-${currentSlide * 20}%)`;
+    if (track && slides.length > 0 && prevBtn && nextBtn) {
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        let sliderAutoplay = null;
         
-        dots.forEach(d => d.classList.remove('active'));
-        dots[currentSlide].classList.add('active');
-    }
-    
-    function startSliderAutoplay() {
-        if (sliderAutoplay) clearInterval(sliderAutoplay);
-        sliderAutoplay = setInterval(() => {
-            let nextIndex = (currentSlide + 1) % totalSlides;
-            updateSlider(nextIndex);
-        }, 8000); // cycle slides every 8 seconds
-    }
-    
-    prevBtn.addEventListener('click', () => {
-        clearInterval(sliderAutoplay);
-        let index = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateSlider(index);
-        startSliderAutoplay();
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        clearInterval(sliderAutoplay);
-        let index = (currentSlide + 1) % totalSlides;
-        updateSlider(index);
-        startSliderAutoplay();
-    });
-    
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
+        function updateSlider(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 20}%)`;
+            
+            dots.forEach(d => d.classList.remove('active'));
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        }
+        
+        function startSliderAutoplay() {
+            if (sliderAutoplay) clearInterval(sliderAutoplay);
+            sliderAutoplay = setInterval(() => {
+                let nextIndex = (currentSlide + 1) % totalSlides;
+                updateSlider(nextIndex);
+            }, 8000);
+        }
+        
+        prevBtn.addEventListener('click', () => {
             clearInterval(sliderAutoplay);
+            let index = (currentSlide - 1 + totalSlides) % totalSlides;
             updateSlider(index);
             startSliderAutoplay();
         });
-    });
-    
-    // Start slider autoplay initial run
-    startSliderAutoplay();
+        
+        nextBtn.addEventListener('click', () => {
+            clearInterval(sliderAutoplay);
+            let index = (currentSlide + 1) % totalSlides;
+            updateSlider(index);
+            startSliderAutoplay();
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(sliderAutoplay);
+                updateSlider(index);
+                startSliderAutoplay();
+            });
+        });
+        
+        startSliderAutoplay();
+    }
     
     // Roadmap Scroll-Driven Timeline Controller
     const timelineRows = document.querySelectorAll('.timeline-row');
