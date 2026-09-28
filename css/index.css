@@ -1532,6 +1532,11 @@
     background-clip: text;
     color: transparent;
     display: inline-block;
+    padding-top: 0.12em;
+    padding-bottom: 0.12em;
+    margin-top: -0.12em;
+    margin-bottom: -0.12em;
+    line-height: 1.35;
 }
 
 .solutions-desc {
