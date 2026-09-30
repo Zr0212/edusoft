@@ -1526,7 +1526,7 @@
 }
 
 .text-gradient-custom {
-    background: linear-gradient(90deg, #0056CD 0%, #003ECD 50%, #08DCFF 100%);
+    background: linear-gradient(90deg, #0170F0 0%, #30B3FF 50%, #00DBFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -3446,7 +3446,436 @@
 .link-teal { color: #059669; }
 .link-electric { color: #008FFF; }
 
+/* ===== LMS & QUESTION BANK SHARED BACKGROUND WRAPPER ===== */
+.lms-qb-unified-wrapper {
+    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 45%, #F8FAFC 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== LMS SECTION (PHẦN MỀM LMS GIẢNG DẠY) ===== */
+.lms-section {
+    padding: 5rem 0 2rem;
+    background: transparent;
+    position: relative;
+    overflow: visible;
+}
+
+.lms-header {
+    margin-bottom: 2rem;
+}
+
+.lms-stream-viewport {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.lms-stream-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.lms-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    margin-left: -190px;
+    margin-top: -210px;
+    background: #FFFFFF;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2.25rem;
+    border: none;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    will-change: transform, opacity;
+    user-select: none;
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Featured active focal card styling - Borderless with soft top-right blue accent */
+.lms-card.is-featured {
+    background: linear-gradient(225deg, #D4EBFF 0%, #EBF5FF 35%, #FFFFFF 75%);
+    border: none;
+    box-shadow: 0 25px 60px rgba(14, 165, 233, 0.18);
+}
+
+.lms-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    background: #008FFF;
+    color: #FFFFFF;
+    border-radius: 0.85rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 143, 255, 0.28);
+}
+
+.lms-card-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.lms-card-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.68;
+    margin: 0 0 1.75rem 0;
+    flex: 1;
+}
+
+.lms-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+}
+
+.lms-tag {
+    display: inline-block;
+    padding: 0.4rem 1.1rem;
+    border-radius: 99px;
+    background: #FFFFFF;
+    color: #008FFF;
+    font-size: 0.84rem;
+    font-weight: 600;
+    border: 1px solid #008FFF;
+    box-shadow: 0 2px 6px rgba(0, 143, 255, 0.05);
+}
+
+.lms-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #008FFF;
+    text-decoration: none;
+    margin-top: auto;
+    transition: gap 0.2s ease;
+}
+
+.lms-card-link:hover {
+    gap: 0.75rem;
+}
+
+/* Single Pill/Capsule Nav Button matching sample image */
+.lms-nav-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2.5rem;
+    display: flex;
+    z-index: 200;
+}
+
+.lms-btn-nav {
+    width: 4.75rem;
+    height: 2.65rem;
+    border-radius: 99px;
+    background: #008FFF;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(0, 143, 255, 0.35);
+    transition: all 0.3s ease;
+}
+
+.lms-btn-nav:hover {
+    background: #0066CC;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 143, 255, 0.45);
+}
+
+@media (max-width: 768px) {
+    .lms-stream-viewport {
+        height: 500px;
+    }
+    .lms-card {
+        width: 300px;
+        margin-left: -150px;
+    }
+    .lms-nav-controls {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 1rem;
+    }
+}
+
 .col-action-link:hover {
     gap: 0.65rem;
     background: rgba(0, 0, 0, 0.03);
+}
+
+/* ================= QUESTION BANK SECTION (NGÂN HÀNG NỘI DUNG & CÂU HỎI) ================= */
+.question-bank-section {
+    padding: 1.5rem 0 5rem;
+    background: transparent;
+    position: relative;
+}
+
+.question-bank-section .container {
+    width: min(1200px, 92%);
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.question-bank-card {
+    background: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Left Column: Content */
+.question-bank-content {
+    flex: 1 1 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.75rem 2rem 2.75rem 3.5rem;
+    z-index: 2;
+}
+
+.question-bank-title {
+    font-size: clamp(1.65rem, 2.15vw, 2.15rem);
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.question-bank-desc {
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.65;
+    margin: 0 0 1.85rem 0;
+    max-width: 580px;
+}
+
+.question-bank-desc strong {
+    color: #0F172A;
+    font-weight: 700;
+}
+
+.btn-question-bank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #00A6FF 0%, #0066FF 100%);
+    color: #FFFFFF;
+    font-size: 0.92rem;
+    font-weight: 700;
+    padding: 0.7rem 1.6rem;
+    border-radius: 0.55rem;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(0, 115, 255, 0.38);
+    transition: all 0.25s ease;
+}
+
+.btn-question-bank:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 115, 255, 0.48);
+}
+
+/* Right Column: Mockup wrapper */
+.question-bank-mockup-wrapper {
+    flex: 0 0 430px;
+    max-width: 430px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 2.75rem;
+    padding-top: 1.55rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.question-bank-mockup {
+    width: 100%;
+    max-width: 395px;
+    background: #FFFFFF;
+    border: 2px solid #0080FF;
+    border-bottom: none;
+    border-radius: 1.35rem 1.35rem 0 0;
+    padding: 1.15rem 1.15rem 0 1.15rem;
+    box-shadow: 0 -4px 25px rgba(0, 128, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: -3rem;
+}
+
+/* Search Bar */
+.qb-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.55rem;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 0.95rem;
+    background: #FFFFFF;
+}
+
+.qb-search-icon {
+    font-size: 1rem;
+    color: #94A3B8;
+}
+
+.qb-search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.82rem;
+    color: #334155;
+    background: transparent;
+    font-family: inherit;
+}
+
+.qb-search-input::placeholder {
+    color: #94A3B8;
+    font-weight: 400;
+}
+
+/* Tabs */
+.qb-tabs-wrapper {
+    margin-bottom: 0.95rem;
+}
+
+.qb-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.4rem;
+}
+
+.qb-tab {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 0.82rem;
+    color: #475569;
+    font-weight: 500;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.qb-tab.active {
+    background: #EBF5FF;
+    color: #0080FF;
+    font-weight: 600;
+    border-radius: 99px;
+    padding: 0.38rem 1.15rem;
+}
+
+/* Subhead */
+.qb-list-title {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.65rem;
+}
+
+/* Subject items list */
+.qb-subject-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.48rem;
+}
+
+.qb-subject-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F8FAFC;
+    border-radius: 0.55rem;
+    padding: 0.62rem 0.9rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #1E293B;
+    transition: background 0.2s ease;
+}
+
+.qb-subject-item:hover {
+    background: #F1F5F9;
+}
+
+.qb-chevron-icon {
+    color: #0080FF;
+    font-size: 1.05rem;
+}
+
+/* The clipped 4th item */
+.qb-subject-item-empty {
+    height: 3rem;
+    background: #F8FAFC;
+    border-radius: 0.55rem 0.55rem 0 0;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .question-bank-card {
+        flex-direction: column;
+        border-radius: 1.5rem;
+    }
+    .question-bank-content {
+        padding: 2.25rem 1.75rem 1.25rem 1.75rem;
+    }
+    .question-bank-title {
+        white-space: normal;
+        font-size: 1.85rem;
+    }
+    .qb-desc-br {
+        display: none;
+    }
+    .question-bank-mockup-wrapper {
+        flex: 1 1 auto;
+        max-width: 100%;
+        padding-right: 1.75rem;
+        padding-left: 1.75rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .question-bank-content {
+        padding: 1.75rem 1.25rem 1rem 1.25rem;
+    }
+    .question-bank-mockup-wrapper {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+    .qb-tabs {
+        gap: 0.85rem;
+    }
 }
