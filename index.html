@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css?v=1.3">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -989,7 +989,7 @@
                     </div>
                     <h3 class="lms-card-title">Khảo thí</h3>
                     <p class="lms-card-desc">
-                        <strong style="color: #2563EB;">Tổ chức thi, kiểm tra và đánh giá</strong>, từ xây dựng đề, lập lịch thi đến chấm điểm và tổng hợp kết quả. Giúp quy trình khảo thí minh bạch, chính xác và hiệu quả.
+                        Tổ chức thi, kiểm tra và đánh giá, từ xây dựng đề, lập lịch thi đến chấm điểm và tổng hợp kết quả. Giúp quy trình khảo thí minh bạch, chính xác và hiệu quả.
                     </p>
                     <div class="lms-card-tags">
                         <span class="lms-tag">Phân tích phản hồi</span>
@@ -1932,11 +1932,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 2:  // farRight (Top-Right offscreen)
                     return { x: xSpacing * 1.95, y: -ySpacing * 1.95, scale: 0.50, opacity: 0, zIndex: 1 };
                 case 1:  // right (Top-Right waiting slot)
-                    return { x: xSpacing * 1.0, y: -ySpacing * 1.0, scale: 0.78, opacity: 1, zIndex: 10 };
+                    return { x: xSpacing * 1.0, y: -ySpacing * 1.0, scale: 0.74, opacity: 1, zIndex: 10 };
                 case 0:  // center (Active focal slot)
                     return { x: 0, y: 0, scale: 1.0, opacity: 1, zIndex: 50 };
                 case -1: // left (Bottom-Left exit slot)
-                    return { x: -xSpacing * 1.0, y: ySpacing * 1.0, scale: 0.78, opacity: 1, zIndex: 10 };
+                    return { x: -xSpacing * 1.0, y: ySpacing * 1.0, scale: 0.74, opacity: 1, zIndex: 10 };
                 case -2: // farLeft (Bottom-Left offscreen)
                     return { x: -xSpacing * 1.95, y: ySpacing * 1.95, scale: 0.50, opacity: 0, zIndex: 1 };
                 default:
