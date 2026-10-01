@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css?v=1.3">
+    <link rel="stylesheet" href="css/index.css?v=2.6">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -107,7 +107,7 @@
                                 <div class="col-items-list">
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-blue">
-                                            <iconify-icon icon="lucide:graduation-cap"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-graduation-cap"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Chương trình đào tạo</strong>
@@ -116,7 +116,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-cyan">
-                                            <iconify-icon icon="lucide:calendar-range"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-calendar-check"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Thời khóa biểu</strong>
@@ -125,7 +125,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-indigo">
-                                            <iconify-icon icon="lucide:users"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-users"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Quản lý Người học</strong>
@@ -145,7 +145,7 @@
                                 <div class="col-items-list">
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-purple">
-                                            <iconify-icon icon="lucide:file-question"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-question"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Ngân hàng câu hỏi</strong>
@@ -154,7 +154,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-fuchsia">
-                                            <iconify-icon icon="lucide:laptop"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-laptop"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Thi trực tuyến</strong>
@@ -163,7 +163,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-violet">
-                                            <iconify-icon icon="lucide:check-circle-2"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-chart-bar"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Chấm thi & Phổ điểm</strong>
@@ -183,7 +183,7 @@
                                 <div class="col-items-list">
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-teal">
-                                            <iconify-icon icon="lucide:book-open"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-book-open"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">LMS & Bài giảng</strong>
@@ -192,7 +192,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-green">
-                                            <iconify-icon icon="lucide:message-square"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-chats-teardrop"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Tương tác trực tuyến</strong>
@@ -201,7 +201,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-emerald">
-                                            <iconify-icon icon="lucide:award"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-seal-check"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Văn bằng số</strong>
@@ -221,7 +221,7 @@
                                 <div class="col-items-list">
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-electric">
-                                            <iconify-icon icon="lucide:wallet"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-wallet"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Quản lý Học phí</strong>
@@ -230,7 +230,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-blue">
-                                            <iconify-icon icon="lucide:briefcase"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-briefcase"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Quản lý Nhân sự</strong>
@@ -239,7 +239,7 @@
                                     </a>
                                     <a href="#" class="mega-item">
                                         <div class="item-icon-box icon-cyan">
-                                            <iconify-icon icon="lucide:building-2"></iconify-icon>
+                                            <span class="gradient-icon icon-ph-buildings"></span>
                                         </div>
                                         <div class="item-content">
                                             <strong class="item-title">Cơ sở vật chất</strong>
@@ -337,133 +337,37 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="hero hero-new-style">
 
-    <div class="container two-column">
+    <div class="container hero-container">
 
-        <div class="flex-column hero-content">
+        <!-- Top Header Grid: Title Left, Text & CTA Right -->
+        <div class="hero-top-grid">
+            <div class="hero-title-col">
+                <h1>
+                    Nền tảng chuyển đổi số<br>
+                    toàn diện cho <span class="text-blue-gradient">Giáo dục</span>
+                </h1>
+            </div>
 
-            <h1>
-                Nền tảng chuyển đổi số toàn diện cho <span class="text-gradient">Giáo dục</span>
-            </h1>
-
-            <p>
-                Hỗ trợ nhà trường, giáo viên & học sinh<br>dạy – học – quản lý hiệu quả hơn với công nghệ
-            </p>
-            <a href="#" class="btn" style="width: fit-content;">
-                Đăng ký Demo
-            </a>
-
+            <div class="hero-desc-col">
+                <p>
+                    Kết nối <span class="text-blue-bold">nhà trường</span>, <span class="text-blue-bold">giáo viên</span>, <span class="text-blue-bold">học sinh</span> và <span class="text-blue-bold">phụ huynh</span>, tối ưu quản lý và học tập trên một hệ sinh thái thống nhất.
+                </p>
+                <a href="#" class="btn btn-contact flex btn-hero-cta">
+                    <span>Đăng ký Demo</span>
+                </a>
+            </div>
         </div>
 
-        <div class="hero-graphic-container">
-            <div class="hero-graphic-wrapper">
-                <!-- ================= SYSTEM ORBITING GROUP (Vòng tròn & Badges & Dots xoay cùng nhau) ================= -->
-                <div class="hero-orbiting-group">
-                    <!-- ================= BACKGROUND RINGS (VÒNG TRÒN NỀN) ================= -->
-                    <!-- Vòng tròn nét liền ngoài cùng -->
-                    <div class="graphic-ring-outer" style="width: 812.30em; height: 812.30em; left: 350.03em; top: -20em; position: absolute; transform: rotate(27deg); transform-origin: top left; background: rgba(255, 255, 255, 0.20); box-shadow: 0px 4em 4em rgba(203.51, 203.51, 203.51, 0.25); border-radius: 50%; border: 1.50em #008FFF solid"></div>
-                    <!-- Vòng tròn nét đứt trong cùng -->
-                    <div class="graphic-ring-inner" style="width: 482.84em; height: 482.84em; left: 420.36em; top: 201em; position: absolute; transform: rotate(27deg); transform-origin: top left; background: rgba(255, 255, 255, 0.20); box-shadow: 0px 4em 4em rgba(203.51, 203.51, 203.51, 0.25); border-radius: 50%; border: 1.50em rgba(0, 143, 255, 0.80) solid"></div>
-
-                    <!-- ================= SYSTEM MODULE BADGES (CÁC BADGE PHÂN HỆ) ================= -->
-                    <!-- Phân hệ: Tài chính -->
-                    <div class="module-badge badge-finance" style="left: 310.9em; top: 181.5em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 28em; font-family: Inter; font-weight: 400; word-wrap: break-word">Tài chính</div>
-                        <iconify-icon icon="lucide:wallet" style="font-size: 28em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Tuyển sinh -->
-                    <div class="module-badge badge-admissions" style="left: 789em; top: 835.5em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 28em; font-family: Inter; font-weight: 400; word-wrap: break-word">Tuyển sinh</div>
-                        <iconify-icon icon="lucide:user-plus" style="font-size: 28em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Đào tạo -->
-                    <div class="module-badge badge-training" style="left: 509.1em; top: 285.2em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 28em; font-family: Inter; font-weight: 400; word-wrap: break-word">Đào tạo</div>
-                        <iconify-icon icon="lucide:graduation-cap" style="font-size: 28em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Chứng chỉ -->
-                    <div class="module-badge badge-certificates" style="left: 509.1em; top: 766.8em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 28em; font-family: Inter; font-weight: 400; word-wrap: break-word">Chứng chỉ</div>
-                        <iconify-icon icon="lucide:award" style="font-size: 28em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Học tập -->
-                    <div class="module-badge badge-learning" style="left: 767.3em; top: 520.1em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 20em; font-family: Inter; font-weight: 400; word-wrap: break-word">Học tập</div>
-                        <iconify-icon icon="lucide:book-open" style="font-size: 20em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Tài sản -->
-                    <div class="module-badge badge-assets" style="left: 849.3em; top: 280.1em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 20em; font-family: Inter; font-weight: 400; word-wrap: break-word">Tài sản</div>
-                        <iconify-icon icon="lucide:package" style="font-size: 20em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Nhân sự -->
-                    <div class="module-badge badge-hr" style="left: 128.9em; top: 611.4em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 20em; font-family: Inter; font-weight: 400; word-wrap: break-word">Nhân sự</div>
-                        <iconify-icon icon="lucide:users" style="font-size: 20em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Phân hệ: Khảo thí -->
-                    <div class="module-badge badge-exams" style="left: 284.7em; top: 519.8em;">
-                        <div style="text-align: center; color: #008FFF; font-size: 20em; font-family: Inter; font-weight: 400; word-wrap: break-word">Khảo thí</div>
-                        <iconify-icon icon="lucide:clipboard-check" style="font-size: 20em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- ================= FLOATING CIRCULAR DOTS (CÁC ICON HÌNH TRÒN TRÔI NỔI) ================= -->
-                    <!-- Icon trôi nổi 1 -->
-                    <div class="floating-icon-dot dot-1" style="width: 70em; height: 70em; left: 720.7em; top: 668.7em;">
-                        <iconify-icon icon="lucide:bell" style="font-size: 32em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 2 -->
-                    <div class="floating-icon-dot dot-2" style="width: 80em; height: 80em; left: 736.9em; top: 408.6em;">
-                        <iconify-icon icon="lucide:help-circle" style="font-size: 36em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 3 -->
-                    <div class="floating-icon-dot dot-3" style="width: 70em; height: 70em; left: 333.6em; top: 380.2em;">
-                        <iconify-icon icon="lucide:file-text" style="font-size: 30em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 4 -->
-                    <div class="floating-icon-dot dot-4" style="width: 80em; height: 79em; left: 344.3em; top: 684.9em;">
-                        <iconify-icon icon="lucide:award" style="font-size: 32em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 5 -->
-                    <div class="floating-icon-dot dot-5" style="width: 94em; height: 94em; left: 926.4em; top: 594.4em;">
-                        <iconify-icon icon="lucide:school" style="font-size: 44em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 6 -->
-                    <div class="floating-icon-dot dot-6" style="width: 106em; height: 106em; left: 179em; top: 315em;">
-                        <iconify-icon icon="lucide:medal" style="font-size: 50em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 7 -->
-                    <div class="floating-icon-dot dot-7" style="width: 105em; height: 105em; left: 320em; top: 876.1em;">
-                        <iconify-icon icon="lucide:phone" style="font-size: 48em; color: #008FFF;"></iconify-icon>
-                    </div>
-
-                    <!-- Icon trôi nổi 8 -->
-                    <div class="floating-icon-dot dot-8" style="width: 86em; height: 86em; left: 644.6em; top: 137.6em;">
-                        <iconify-icon icon="lucide:book" style="font-size: 40em; color: #008FFF;"></iconify-icon>
-                    </div>
-                </div>
-
-                <!-- ================= CENTER LOGO (LOGO TRUNG TÂM) ================= -->
-                <!-- Vòng tròn nền logo trung tâm -->
-                <div class="center-logo-bg" style="width: 180em; height: 180em; left: 436em; top: 436em; position: absolute; background: linear-gradient(180deg, white 0%, white 100%); border-radius: 50%; border: 3em rgba(0, 73, 175, 0.80) solid; backdrop-filter: blur(50em)"></div>
-                <!-- Ảnh logo trung tâm -->
-                <img class="center-logo-img" style="width: 109em; height: 114em; left: 471em; top: 469em; position: absolute;" src="images/logo.png" />
+        <!-- Bottom Showcase: 3D Layered Mockups (hero_1, hero_2, hero_3) -->
+        <div class="hero-mockup-wrapper">
+            <div class="hero-mockup-container">
+                <img src="images/hero_2.png" alt="EduSoft System Dashboard" class="mockup-img mockup-center">
+                <img src="images/hero_1.png" alt="Hoạt động giảng dạy" class="mockup-img mockup-left">
+                <img src="images/hero_3.png" alt="Lịch công tác" class="mockup-img mockup-right">
             </div>
-    </div>
+        </div>
 
     </div>
 
@@ -473,73 +377,84 @@
 <section class="partners">
     <div class="container">
         <h3 class="partners-title text-center">
-            Đại học, Trung tâm & Tổ chức chuyển đổi số thành công cùng <span class="text-gradient" style="font-weight: var(--fw-bold); white-space: nowrap;">Edu Digital</span>
+            Đại học, Trung tâm & Tổ chức chuyển đổi số thành công cùng <span class="text-gradient" style="font-weight: var(--fw-bold); white-space: nowrap;">EduSoft</span>
         </h3>
         <div class="partners-ticker-wrapper">
             <div class="partners-ticker-track">
                 <!-- Set 1 -->
                 <div class="partner-logo-item">
-                    <img src="images/logo-wenet.png" alt="WENet">
+                    <img src="images/logo/logo-truong-dai-hoc-cong-nghe-giao-thong-van-tai-inkythuatso-01 1.png" alt="ĐH Công nghệ Giao thông Vận tải">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-dlt.png" alt="DLT">
+                    <img src="images/logo/logo-truong-dai-hoc-thu-do-ha-noi-inkythuatso-01 1.png" alt="ĐH Thủ đô Hà Nội">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                    <img src="images/logo/logo-dai-hoc-hang-hai-inkythuatso 1.png" alt="Đại học Hàng Hải">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-university.png" alt="University">
+                    <img src="images/logo/Logo ĐH Quảng Bình - QBU 1.png" alt="Đại học Quảng Bình">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-bird.png" alt="EduSoft Bird">
-                </div>
-                <!-- Set 2 -->
-                <div class="partner-logo-item">
-                    <img src="images/logo-wenet.png" alt="WENet">
+                    <img src="images/logo/Logo Đại Học Tân Trào 1.png" alt="Đại học Tân Trào">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-dlt.png" alt="DLT">
+                    <img src="images/logo/THCS xuân đỉnh 1.png" alt="THCS Xuân Đỉnh">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                    <img src="images/logo/bactuliemlogo 1.png" alt="Bắc Từ Liêm">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-university.png" alt="University">
+                    <img src="images/logo/Wenet 1.png" alt="WENet">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-bird.png" alt="EduSoft Bird">
-                </div>
-                <!-- Set 3 -->
-                <div class="partner-logo-item">
-                    <img src="images/logo-wenet.png" alt="WENet">
+                    <img src="images/logo/logo-pte-magic 1.png" alt="PTE Magic">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-dlt.png" alt="DLT">
+                    <img src="images/logo/Victoria HoaBinh logo 14sep[47]-1 1.png" alt="Victoria Hòa Bình">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                    <img src="images/logo/Logo chon.png" alt="Logo Chơn">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-university.png" alt="University">
+                    <img src="images/logo/lam hồng.png" alt="Lam Hồng">
+                </div>
+
+                <!-- Set 2 (Duplicate for Seamless Loop) -->
+                <div class="partner-logo-item">
+                    <img src="images/logo/logo-truong-dai-hoc-cong-nghe-giao-thong-van-tai-inkythuatso-01 1.png" alt="ĐH Công nghệ Giao thông Vận tải">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-bird.png" alt="EduSoft Bird">
-                </div>
-                <!-- Set 4 -->
-                <div class="partner-logo-item">
-                    <img src="images/logo-wenet.png" alt="WENet">
+                    <img src="images/logo/logo-truong-dai-hoc-thu-do-ha-noi-inkythuatso-01 1.png" alt="ĐH Thủ đô Hà Nội">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-dlt.png" alt="DLT">
+                    <img src="images/logo/logo-dai-hoc-hang-hai-inkythuatso 1.png" alt="Đại học Hàng Hải">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-ptemagic.png" alt="PTE Magic">
+                    <img src="images/logo/Logo ĐH Quảng Bình - QBU 1.png" alt="Đại học Quảng Bình">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-university.png" alt="University">
+                    <img src="images/logo/Logo Đại Học Tân Trào 1.png" alt="Đại học Tân Trào">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/logo-bird.png" alt="EduSoft Bird">
+                    <img src="images/logo/THCS xuân đỉnh 1.png" alt="THCS Xuân Đỉnh">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo/bactuliemlogo 1.png" alt="Bắc Từ Liêm">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo/Wenet 1.png" alt="WENet">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo/logo-pte-magic 1.png" alt="PTE Magic">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo/Victoria HoaBinh logo 14sep[47]-1 1.png" alt="Victoria Hòa Bình">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo/Logo chon.png" alt="Logo Chơn">
+                </div>
+                <div class="partner-logo-item">
+                    <img src="images/logo/lam hồng.png" alt="Lam Hồng">
                 </div>
             </div>
         </div>
@@ -953,7 +868,7 @@
                     </div>
                     <h3 class="lms-card-title">Khóa học đa dạng</h3>
                     <p class="lms-card-desc">
-                        Tích hợp học liệu, khảo sát và bài kiểm tra. Nhắc nhở học viên, bình luận và theo dõi tiến độ. Đáp ứng nhu cầu của từng chương trình, môn học và đối tượng học viên. Dễ dàng lựa chọn, chủ động học tập và nâng cao kiến thức, kỹ năng.
+                        Tích hợp học liệu, khảo sát và bài kiểm tra. Đáp ứng nhu cầu từng chương trình, môn học và đối tượng học viên. Dễ dàng lựa chọn, chủ động học tập và nâng cao kiến thức, kỹ năng.
                     </p>
                     <div class="lms-card-tags">
                         <span class="lms-tag">Đa dạng chủ đề</span>

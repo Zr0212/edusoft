@@ -223,7 +223,7 @@
     align-items: center;
     gap: 4.5rem;
     width: max-content;
-    animation: partners-marquee 22s linear infinite;
+    animation: partners-marquee 32s linear infinite;
 }
 
 .partners-ticker-wrapper:hover .partners-ticker-track {
@@ -256,6 +256,7 @@
 
 .partner-logo-item img {
     max-height: 100%;
+    max-width: 180px;
     width: auto;
     object-fit: contain;
 }
@@ -1378,15 +1379,6 @@
     font-size: 1.1rem;
     line-height: 1;
 }
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
 
 .slider-arrow iconify-icon {
     font-size: 1.5rem;
@@ -1649,7 +1641,7 @@
 
 /* ===== Roadmap Section (Lộ trình chuyển đổi số) ===== */
 #roadmap-section {
-    background: var(--white);
+    background: #F1F1F1;
     padding: var(--section-padding) 0;
     position: relative;
 }
@@ -3291,6 +3283,230 @@
     }
 }
 
+/* ===== New Hero Section Style matching Reference ===== */
+.hero.hero-new-style {
+    padding-top: calc(90px + 6rem);
+    padding-bottom: 0 !important;
+    background: linear-gradient(180deg, #F0F7FF 0%, #F8FAFC 60%, #FFFFFF 100%);
+    overflow: hidden;
+}
+
+.hero-new-style .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hero-top-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 3.5rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.hero-title-col h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin: 0;
+    text-align: left;
+}
+
+.text-blue-gradient {
+    background: linear-gradient(135deg, #0072FF 0%, #00C6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-desc-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding-top: 0.4rem;
+    text-align: left;
+}
+
+.hero-desc-col p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+}
+
+.hero-desc-col p .text-blue-bold {
+    color: #0072FF;
+    font-weight: 600;
+}
+
+.btn-hero-cta,
+.hero-desc-col .btn-contact {
+    align-self: flex-start;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.75rem;
+    background: var(--gradient);
+    color: var(--white, #fff) !important;
+    border-radius: 99px;
+    font-weight: var(--fw-bold, 700);
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+}
+
+.btn-hero-cta:hover,
+.hero-desc-col .btn-contact:hover {
+    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.35);
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+/* Mockup 3D Showcase (hero_1, hero_2, hero_3) - Kéo âm xuống dưới đáy */
+.hero-mockup-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: -5.5rem; /* Kéo âm xuống phía dưới đáy hero */
+}
+
+.hero-mockup-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-mockup-container .mockup-img {
+    display: block;
+    height: auto;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Center Screenshot (hero_2) */
+.hero-mockup-container .mockup-center {
+    width: 80%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Chart Card (hero_1) - Nâng lên top một tý */
+.hero-mockup-container .mockup-left {
+    position: absolute;
+    left: -1%;
+    top: 20%;
+    width: 30%;
+    z-index: 3;
+}
+
+/* Right Calendar Card (hero_3) */
+.hero-mockup-container .mockup-right {
+    position: absolute;
+    right: -1%;
+    top: 10%;
+    width: 37%;
+    z-index: 3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .hero.hero-new-style {
+        padding-top: calc(75px + 2.5rem);
+        padding-bottom: 3rem;
+    }
+    .hero-top-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .hero-title-col h1 {
+        font-size: 2.25rem;
+    }
+    .hero-mockup-container .mockup-center {
+        width: 88%;
+    }
+    .hero-mockup-container .mockup-left {
+        width: 34%;
+        left: 0;
+        top: 36%;
+    }
+    .hero-mockup-container .mockup-right {
+        width: 38%;
+        right: 0;
+        top: 26%;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title-col h1 {
+        font-size: 1.75rem;
+    }
+    .hero-mockup-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-mockup-container .mockup-center {
+        width: 100%;
+    }
+    .hero-mockup-container .mockup-left,
+    .hero-mockup-container .mockup-right {
+        position: relative;
+        width: 90%;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin: -1rem auto 0 auto;
+    }
+}
+
+/* ===== Dropdown for Giải Pháp (Solutions) ===== */
+.dropdown-solutions .solution-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+    padding: 0.75rem 0.85rem !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+}
+
+.dropdown-solutions .solution-item:hover {
+    background: rgba(0, 114, 255, 0.05) !important;
+}
+
+.dropdown-solutions .solution-item iconify-icon {
+    font-size: 1.4rem !important;
+    color: #0072FF !important; /* Để sẵn màu xanh cho icon */
+    background: rgba(0, 114, 255, 0.08) !important;
+    padding: 0.55rem !important;
+    border-radius: 10px !important;
+    flex-shrink: 0 !important;
+    align-self: flex-start !important; /* Căn lên top */
+    margin-top: 0.1rem !important;
+    transition: all 0.25s ease !important;
+}
+
+.dropdown-solutions .solution-item:hover iconify-icon {
+    color: #FFFFFF !important;
+    background: linear-gradient(135deg, #0072FF 0%, #00C6FF 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3) !important;
+    transform: scale(1.05) !important;
+}
+
 /* ===== Mega Dropdown for Tính Năng ===== */
 .nav-list li.has-dropdown-products {
     position: static !important;
@@ -3385,26 +3601,89 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.35rem;
-    height: 2.35rem;
-    border-radius: 10px; /* khung icon bo góc nhẹ */
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 12px;
     flex-shrink: 0;
+    border: 1.5px solid transparent;
+    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, var(--icon-grad) border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item-icon-box iconify-icon {
-    font-size: 1.25rem;
+.item-icon-box .gradient-icon {
+    display: inline-block;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: var(--icon-grad);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 
-.icon-blue { background: #EFF6FF; color: #2563EB; }
-.icon-cyan { background: #F0F9FF; color: #0284C7; }
-.icon-indigo { background: #F5F3FF; color: #7C3AED; }
-.icon-purple { background: #F5F3FF; color: #7C3AED; }
-.icon-fuchsia { background: #FDF4FF; color: #C026D3; }
-.icon-violet { background: #F5F3FF; color: #6D28D9; }
-.icon-teal { background: #ECFDF5; color: #059669; }
-.icon-green { background: #F0FDF4; color: #16A34A; }
-.icon-emerald { background: #ECFDF5; color: #059669; }
-.icon-electric { background: #F4F8FF; color: #008FFF; }
+.icon-ph-graduation-cap { -webkit-mask-image: url('https://api.iconify.design/ph/graduation-cap-fill.svg'); mask-image: url('https://api.iconify.design/ph/graduation-cap-fill.svg'); }
+.icon-ph-calendar-check { -webkit-mask-image: url('https://api.iconify.design/ph/calendar-check-fill.svg'); mask-image: url('https://api.iconify.design/ph/calendar-check-fill.svg'); }
+.icon-ph-users          { -webkit-mask-image: url('https://api.iconify.design/ph/users-fill.svg'); mask-image: url('https://api.iconify.design/ph/users-fill.svg'); }
+.icon-ph-question       { -webkit-mask-image: url('https://api.iconify.design/ph/question-fill.svg'); mask-image: url('https://api.iconify.design/ph/question-fill.svg'); }
+.icon-ph-laptop         { -webkit-mask-image: url('https://api.iconify.design/ph/laptop-fill.svg'); mask-image: url('https://api.iconify.design/ph/laptop-fill.svg'); }
+.icon-ph-chart-bar      { -webkit-mask-image: url('https://api.iconify.design/ph/chart-bar-fill.svg'); mask-image: url('https://api.iconify.design/ph/chart-bar-fill.svg'); }
+.icon-ph-book-open      { -webkit-mask-image: url('https://api.iconify.design/ph/book-open-fill.svg'); mask-image: url('https://api.iconify.design/ph/book-open-fill.svg'); }
+.icon-ph-chats-teardrop { -webkit-mask-image: url('https://api.iconify.design/ph/chats-teardrop-fill.svg'); mask-image: url('https://api.iconify.design/ph/chats-teardrop-fill.svg'); }
+.icon-ph-seal-check     { -webkit-mask-image: url('https://api.iconify.design/ph/seal-check-fill.svg'); mask-image: url('https://api.iconify.design/ph/seal-check-fill.svg'); }
+.icon-ph-wallet         { -webkit-mask-image: url('https://api.iconify.design/ph/wallet-fill.svg'); mask-image: url('https://api.iconify.design/ph/wallet-fill.svg'); }
+.icon-ph-briefcase      { -webkit-mask-image: url('https://api.iconify.design/ph/briefcase-fill.svg'); mask-image: url('https://api.iconify.design/ph/briefcase-fill.svg'); }
+.icon-ph-buildings      { -webkit-mask-image: url('https://api.iconify.design/ph/buildings-fill.svg'); mask-image: url('https://api.iconify.design/ph/buildings-fill.svg'); }
+
+.mega-item:hover .item-icon-box {
+    transform: translateY(-2px) scale(1.08);
+    background: linear-gradient(#F8FAFC, #F8FAFC) padding-box, var(--icon-grad) border-box;
+    box-shadow: 0 6px 16px var(--icon-shadow);
+}
+
+/* Vibrant 3-Stop Multi-Color Gradients per theme */
+.icon-blue {
+    --icon-grad: linear-gradient(135deg, #1E40AF 0%, #0072FF 50%, #00F2FE 100%);
+    --icon-shadow: rgba(0, 114, 255, 0.38);
+}
+.icon-cyan {
+    --icon-grad: linear-gradient(135deg, #0284C7 0%, #00D2FF 50%, #34D399 100%);
+    --icon-shadow: rgba(0, 210, 255, 0.38);
+}
+.icon-indigo {
+    --icon-grad: linear-gradient(135deg, #3730A3 0%, #7C3AED 50%, #F472B6 100%);
+    --icon-shadow: rgba(124, 58, 237, 0.38);
+}
+.icon-purple {
+    --icon-grad: linear-gradient(135deg, #6B21A8 0%, #C084FC 50%, #F43F5E 100%);
+    --icon-shadow: rgba(192, 132, 252, 0.38);
+}
+.icon-fuchsia {
+    --icon-grad: linear-gradient(135deg, #9D174D 0%, #EC4899 50%, #FFB199 100%);
+    --icon-shadow: rgba(236, 72, 153, 0.38);
+}
+.icon-violet {
+    --icon-grad: linear-gradient(135deg, #5B21B6 0%, #A855F7 50%, #38BDF8 100%);
+    --icon-shadow: rgba(168, 85, 247, 0.38);
+}
+.icon-teal {
+    --icon-grad: linear-gradient(135deg, #065F46 0%, #14B8A6 50%, #A3E635 100%);
+    --icon-shadow: rgba(20, 184, 166, 0.38);
+}
+.icon-green {
+    --icon-grad: linear-gradient(135deg, #14532D 0%, #22C55E 50%, #FACC15 100%);
+    --icon-shadow: rgba(34, 197, 94, 0.38);
+}
+.icon-emerald {
+    --icon-grad: linear-gradient(135deg, #064E3B 0%, #10B981 50%, #00F2FE 100%);
+    --icon-shadow: rgba(16, 185, 129, 0.38);
+}
+.icon-electric {
+    --icon-grad: linear-gradient(135deg, #0052CC 0%, #7C3AED 50%, #00F2FE 100%);
+    --icon-shadow: rgba(0, 114, 255, 0.38);
+}
 
 .item-content {
     display: flex;
