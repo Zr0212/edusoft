@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css?v=2.6">
+    <link rel="stylesheet" href="css/index.css?v=3.0">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -456,7 +456,7 @@
 </section>
 
 <!-- ================= CUSTOMIZED PLATFORM (NỀN TẢNG SỐ HÓA) ================= -->
-<section id="customized-platform-section">
+<section id="customized-platform-section" style="display: none;">
     <div class="container">
         <h2 class="text-center section-title">
             NỀN TẢNG SỐ HÓA <span class="text-gradient-custom">ĐẶC THÙ & ƯU VIỆT</span>
@@ -784,6 +784,196 @@
     </div>
 </section>
 
+
+<!-- ================= INTEGRATED PLATFORM CARDS (TÍCH HỢP PHẦN MỀM) ================= -->
+<section id="integrated-platform-section">
+    <div class="container">
+        <p class="text-center section-subtitle text-lightblue" style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
+            Nền tảng kết nối nhà trường, giáo viên và học sinh
+        </p>
+        <h2 class="text-center section-title" style="margin-bottom: 2.5rem;">
+            TÍCH HỢP <span class="badge-capsule">30+</span> PHẦN MỀM TRÊN MỘT NỀN TẢNG
+        </h2>
+        
+        <div class="integrated-carousel-container" id="integratedCarousel">
+            <!-- Active Main Card Slot (Top Area) -->
+            <div class="integrated-main-slot" id="integratedMainSlot">
+                <!-- Card 1: Quản lý Đào tạo (Active Main Card) -->
+                <div class="integrated-card is-main" data-card-id="card-1">
+                    <div class="integrated-card-inner">
+                        <div class="integrated-card-media">
+                            <img src="images/slide_1.jpg" alt="Quản lý đào tạo" onerror="this.onerror=null; this.src='images/slide_1.png';">
+                        </div>
+                        <div class="integrated-card-info">
+                            <h3 class="integrated-card-title">Quản lý đào tạo</h3>
+                            <p class="integrated-card-desc">Hoạch định nguồn lực &amp; tự động hóa công tác đào tạo</p>
+                            
+                            <ul class="integrated-card-bullets">
+                                <li>Bộ tính năng lưu trữ hệ thống quản lý hoạch định nguồn lực cơ sở Giáo dục tối ưu</li>
+                                <li>Xếp thời khóa biểu tự động, phân công giảng dạy và quản lý chương trình học tập linh hoạt</li>
+                                <li>Theo dõi tiến độ học tập, tổng hợp điểm số và báo cáo học vụ tự động theo thời gian thực</li>
+                            </ul>
+
+                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="integrated-thumb-pill">Quản lý Đào tạo</div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Cards Area (Bottom 3 Thumbnails Row) -->
+            <div class="integrated-thumbs-row" id="integratedThumbsRow">
+                <!-- Card 2: Quản lý Khảo thí -->
+                <div class="integrated-card is-thumb" data-card-id="card-2">
+                    <div class="integrated-card-inner">
+                        <div class="integrated-card-media">
+                            <img src="images/slide_2.jpg" alt="Quản lý khảo thí" onerror="this.onerror=null; this.src='images/slide_2.png';">
+                        </div>
+                        <div class="integrated-card-info">
+                            <h3 class="integrated-card-title">Quản lý khảo thí</h3>
+                            <p class="integrated-card-desc">Ngân hàng câu hỏi, thi trực tuyến &amp; chấm thi tự động</p>
+                            
+                            <ul class="integrated-card-bullets">
+                                <li>Tổ chức thi trực tuyến bảo mật, quản lý ngân hàng câu hỏi chuẩn hóa và phân loại câu hỏi</li>
+                                <li>Chấm thi tự động 100% chính xác, tự động rọc phách và xuất kết quả thi ngay sau khi nộp bài</li>
+                                <li>Thống kê chất lượng câu hỏi, phân tích phổ điểm và đánh giá năng lực người học chi tiết</li>
+                            </ul>
+
+                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="integrated-thumb-pill">Quản lý Khảo thí</div>
+                </div>
+
+                <!-- Card 3: Quản lý Học tập -->
+                <div class="integrated-card is-thumb" data-card-id="card-3">
+                    <div class="integrated-card-inner">
+                        <div class="integrated-card-media">
+                            <img src="images/slide_3.png" alt="Quản lý học tập" onerror="this.onerror=null; this.src='images/slide_3.jpg';">
+                        </div>
+                        <div class="integrated-card-info">
+                            <h3 class="integrated-card-title">Quản lý học tập</h3>
+                            <p class="integrated-card-desc">Nghiệp vụ học tập thiết yếu &amp; tương tác trực tuyến</p>
+                            
+                            <ul class="integrated-card-bullets">
+                                <li>Bộ tính năng quản lý toàn bộ nghiệp vụ thiết yếu và hỗ trợ trong cơ sở Giáo dục</li>
+                                <li>Theo dõi sát sao tương tác giữa giáo viên và học sinh trên môi trường số hóa hiện đại</li>
+                                <li>Tối ưu trải nghiệm giảng dạy, học tập trực tuyến và trao đổi tri thức số linh hoạt</li>
+                            </ul>
+
+                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="integrated-thumb-pill">Quản lý Học tập</div>
+                </div>
+
+                <!-- Card 4: Văn bằng - chứng chỉ -->
+                <div class="integrated-card is-thumb" data-card-id="card-4">
+                    <div class="integrated-card-inner">
+                        <div class="integrated-card-media">
+                            <img src="images/slide_4.jpg" alt="Văn bằng - chứng chỉ" onerror="this.onerror=null; this.src='images/slide_4.png';">
+                        </div>
+                        <div class="integrated-card-info">
+                            <h3 class="integrated-card-title">Văn bằng - chứng chỉ</h3>
+                            <p class="integrated-card-desc">Quản lý, cấp phát &amp; xác thực văn bằng chứng chỉ số</p>
+                            
+                            <ul class="integrated-card-bullets">
+                                <li>Bộ tính năng đảm bảo quản lý các văn bằng, chứng chỉ hỗ trợ trong Giáo dục</li>
+                                <li>Cấp phát, lưu trữ và xác thực văn bằng, chứng chỉ số trên nền tảng an toàn, chống giả mạo</li>
+                                <li>Hỗ trợ học viên, giảng viên và nhà trường tra cứu thông tin chứng chỉ nhanh chóng mọi lúc</li>
+                            </ul>
+
+                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="integrated-thumb-pill">Văn bằng Chứng chỉ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SOLUTIONS SECTION (GIẢI PHÁP NGHIỆP VỤ) ================= -->
+<section id="solutions-section">
+    <div class="container">
+        <div class="solutions-header">
+            <h2 class="solutions-title">
+                GIẢI PHÁP QUẢN LÝ NGHIỆP VỤ<br>
+                <span class="text-gradient-custom">TOÀN DIỆN TRONG GIÁO DỤC</span>
+            </h2>
+            <p class="solutions-desc">Tự động hóa – Minh bạch – Hiệu quả cho mọi cấp bậc giáo dục</p>
+        </div>
+        
+        <div class="solutions-wrapper">
+            <!-- Row 1: 2 Cards (Đại học & K12) -->
+            <div class="solutions-row-top">
+                <!-- Card 1: Giáo dục Đại học -->
+                <div class="solution-card">
+                    <div class="solution-icon-wrapper">
+                        <iconify-icon icon="ph:brain-bold"></iconify-icon>
+                    </div>
+                    <h3 class="solution-card-title">Giáo dục Đại học</h3>
+                    <p class="solution-card-desc">
+                        Được thiết kế nhằm số hóa toàn diện công tác quản lý đào tạo, nghiên cứu và hoạt động sinh viên
+                    </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                </div>
+
+                <!-- Card 2: Cơ sở Giáo dục K12 -->
+                <div class="solution-card">
+                    <div class="solution-icon-wrapper">
+                        <iconify-icon icon="ph:notebook-bold"></iconify-icon>
+                    </div>
+                    <h3 class="solution-card-title">Cơ sở Giáo dục K12</h3>
+                    <p class="solution-card-desc">
+                        Được thiết kế nhằm số hóa toàn diện công tác quản lý đào tạo, nghiên cứu và hoạt động của học sinh
+                    </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                </div>
+            </div>
+
+            <!-- Row 2: 3 Cards (Nghề nghiệp, Ngoại ngữ, Trung tâm Đào tạo) -->
+            <div class="solutions-row-bottom">
+                <!-- Card 3: Cơ sở giáo dục nghề nghiệp -->
+                <div class="solution-card">
+                    <div class="solution-icon-wrapper">
+                        <iconify-icon icon="ph:eyeglasses-bold"></iconify-icon>
+                    </div>
+                    <h3 class="solution-card-title">Cơ sở giáo dục nghề nghiệp</h3>
+                    <p class="solution-card-desc">
+                        Giải pháp quản lý đào tạo đặc thù đáp ứng mọi nhu cầu vận hành và lộ trình thay đổi quy chế quản lý
+                    </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                </div>
+
+                <!-- Card 4: Trung tâm ngoại ngữ & kĩ năng -->
+                <div class="solution-card">
+                    <div class="solution-icon-wrapper">
+                        <iconify-icon icon="ph:globe-bold"></iconify-icon>
+                    </div>
+                    <h3 class="solution-card-title">Trung tâm ngoại ngữ & kĩ năng</h3>
+                    <p class="solution-card-desc">
+                        Chuẩn hóa quy trình vận hành, tối ưu trải nghiệm học viên và tạo đà phát triển bền vững
+                    </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                </div>
+
+                <!-- Card 5: Trung tâm Đào tạo -->
+                <div class="solution-card">
+                    <div class="solution-icon-wrapper">
+                        <iconify-icon icon="ph:certificate-bold"></iconify-icon>
+                    </div>
+                    <h3 class="solution-card-title">Trung tâm Đào tạo</h3>
+                    <p class="solution-card-desc">
+                        Nền tảng quản trị hợp nhất cho các mô hình đào tạo phức tạp và linh hoạt của đào tạo liên tục
+                    </p>
+                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ================= LMS & QUESTION BANK SHARED BACKGROUND WRAPPER ================= -->
 <div class="lms-qb-unified-wrapper">
     <!-- ================= LMS SECTION (PHẦN MỀM LMS GIẢNG DẠY) ================= -->
@@ -960,193 +1150,6 @@
 </section>
 </div>
 
-<!-- ================= INTEGRATED PLATFORM CARDS (TÍCH HỢP PHẦN MỀM) ================= -->
-<section id="integrated-platform-section">
-    <div class="container">
-        <p class="text-center section-subtitle text-lightblue" style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem;">
-            Nền tảng kết nối nhà trường, giáo viên và học sinh
-        </p>
-        <h2 class="text-center section-title" style="margin-bottom: 2.5rem;">
-            TÍCH HỢP <span class="badge-capsule">30+</span> PHẦN MỀM TRÊN MỘT NỀN TẢNG
-        </h2>
-        
-        <div class="integrated-carousel-container" id="integratedCarousel">
-            <!-- Active Main Card Slot (Top Area) -->
-            <div class="integrated-main-slot" id="integratedMainSlot">
-                <!-- Card 1: Quản lý Đào tạo (Active Main Card) -->
-                <div class="integrated-card is-main" data-card-id="card-1">
-                    <div class="integrated-card-inner">
-                        <div class="integrated-card-media">
-                            <img src="images/slide_1.jpg" alt="Quản lý đào tạo" onerror="this.onerror=null; this.src='images/slide_1.png';">
-                        </div>
-                        <div class="integrated-card-info">
-                            <h3 class="integrated-card-title">Quản lý đào tạo</h3>
-                            <p class="integrated-card-desc">Hoạch định nguồn lực &amp; tự động hóa công tác đào tạo</p>
-                            
-                            <ul class="integrated-card-bullets">
-                                <li>Bộ tính năng lưu trữ hệ thống quản lý hoạch định nguồn lực cơ sở Giáo dục tối ưu</li>
-                                <li>Xếp thời khóa biểu tự động, phân công giảng dạy và quản lý chương trình học tập linh hoạt</li>
-                                <li>Theo dõi tiến độ học tập, tổng hợp điểm số và báo cáo học vụ tự động theo thời gian thực</li>
-                            </ul>
-
-                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
-                        </div>
-                    </div>
-                    <div class="integrated-thumb-pill">Quản lý Đào tạo</div>
-                </div>
-            </div>
-
-            <!-- Thumbnail Cards Area (Bottom 3 Thumbnails Row) -->
-            <div class="integrated-thumbs-row" id="integratedThumbsRow">
-                <!-- Card 2: Quản lý Khảo thí -->
-                <div class="integrated-card is-thumb" data-card-id="card-2">
-                    <div class="integrated-card-inner">
-                        <div class="integrated-card-media">
-                            <img src="images/slide_2.jpg" alt="Quản lý khảo thí" onerror="this.onerror=null; this.src='images/slide_2.png';">
-                        </div>
-                        <div class="integrated-card-info">
-                            <h3 class="integrated-card-title">Quản lý khảo thí</h3>
-                            <p class="integrated-card-desc">Ngân hàng câu hỏi, thi trực tuyến &amp; chấm thi tự động</p>
-                            
-                            <ul class="integrated-card-bullets">
-                                <li>Tổ chức thi trực tuyến bảo mật, quản lý ngân hàng câu hỏi chuẩn hóa và phân loại câu hỏi</li>
-                                <li>Chấm thi tự động 100% chính xác, tự động rọc phách và xuất kết quả thi ngay sau khi nộp bài</li>
-                                <li>Thống kê chất lượng câu hỏi, phân tích phổ điểm và đánh giá năng lực người học chi tiết</li>
-                            </ul>
-
-                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
-                        </div>
-                    </div>
-                    <div class="integrated-thumb-pill">Quản lý Khảo thí</div>
-                </div>
-
-                <!-- Card 3: Quản lý Học tập -->
-                <div class="integrated-card is-thumb" data-card-id="card-3">
-                    <div class="integrated-card-inner">
-                        <div class="integrated-card-media">
-                            <img src="images/slide_3.png" alt="Quản lý học tập" onerror="this.onerror=null; this.src='images/slide_3.jpg';">
-                        </div>
-                        <div class="integrated-card-info">
-                            <h3 class="integrated-card-title">Quản lý học tập</h3>
-                            <p class="integrated-card-desc">Nghiệp vụ học tập thiết yếu &amp; tương tác trực tuyến</p>
-                            
-                            <ul class="integrated-card-bullets">
-                                <li>Bộ tính năng quản lý toàn bộ nghiệp vụ thiết yếu và hỗ trợ trong cơ sở Giáo dục</li>
-                                <li>Theo dõi sát sao tương tác giữa giáo viên và học sinh trên môi trường số hóa hiện đại</li>
-                                <li>Tối ưu trải nghiệm giảng dạy, học tập trực tuyến và trao đổi tri thức số linh hoạt</li>
-                            </ul>
-
-                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
-                        </div>
-                    </div>
-                    <div class="integrated-thumb-pill">Quản lý Học tập</div>
-                </div>
-
-                <!-- Card 4: Văn bằng - chứng chỉ -->
-                <div class="integrated-card is-thumb" data-card-id="card-4">
-                    <div class="integrated-card-inner">
-                        <div class="integrated-card-media">
-                            <img src="images/slide_4.jpg" alt="Văn bằng - chứng chỉ" onerror="this.onerror=null; this.src='images/slide_4.png';">
-                        </div>
-                        <div class="integrated-card-info">
-                            <h3 class="integrated-card-title">Văn bằng - chứng chỉ</h3>
-                            <p class="integrated-card-desc">Quản lý, cấp phát &amp; xác thực văn bằng chứng chỉ số</p>
-                            
-                            <ul class="integrated-card-bullets">
-                                <li>Bộ tính năng đảm bảo quản lý các văn bằng, chứng chỉ hỗ trợ trong Giáo dục</li>
-                                <li>Cấp phát, lưu trữ và xác thực văn bằng, chứng chỉ số trên nền tảng an toàn, chống giả mạo</li>
-                                <li>Hỗ trợ học viên, giảng viên và nhà trường tra cứu thông tin chứng chỉ nhanh chóng mọi lúc</li>
-                            </ul>
-
-                            <a href="#" class="btn-integrated-cta">Xem chi tiết</a>
-                        </div>
-                    </div>
-                    <div class="integrated-thumb-pill">Văn bằng Chứng chỉ</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= SOLUTIONS SECTION (GIẢI PHÁP NGHIỆP VỤ) ================= -->
-<section id="solutions-section">
-    <div class="container">
-        <div class="solutions-header">
-            <h2 class="solutions-title">
-                GIẢI PHÁP QUẢN LÝ NGHIỆP VỤ<br>
-                <span class="text-gradient-custom">TOÀN DIỆN TRONG GIÁO DỤC</span>
-            </h2>
-            <p class="solutions-desc">Tự động hóa – Minh bạch – Hiệu quả cho mọi cấp bậc giáo dục</p>
-        </div>
-        
-        <div class="solutions-grid">
-            <!-- Column 1: Giáo dục Đại học (Tall Card) -->
-            <div class="solution-card tall-card">
-                <div class="solution-icon-wrapper">
-                    <iconify-icon icon="ph:brain-bold"></iconify-icon>
-                </div>
-                <h3 class="solution-card-title">Giáo dục Đại học</h3>
-                <p class="solution-card-desc">
-                    Được thiết kế nhằm số hóa toàn diện công tác quản lý đào tạo, nghiên cứu và hoạt động sinh viên
-                </p>
-                <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
-            </div>
-            
-            <!-- Column 2 (Middle) -->
-            <div class="solutions-col-stack">
-                <!-- Card: Cơ sở giáo dục nghề nghiệp -->
-                <div class="solution-card">
-                    <div class="solution-icon-wrapper">
-                        <iconify-icon icon="ph:eyeglasses-bold"></iconify-icon>
-                    </div>
-                    <h3 class="solution-card-title">Cơ sở giáo dục nghề nghiệp</h3>
-                    <p class="solution-card-desc">
-                        Giải pháp quản lý đào tạo đặc thù đáp ứng mọi nhu cầu vận hành và lộ trình thay đổi quy chế quản lý
-                    </p>
-                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
-                </div>
-                <!-- Card: Cơ sở Giáo dục K12 -->
-                <div class="solution-card">
-                    <div class="solution-icon-wrapper">
-                        <iconify-icon icon="ph:notebook-bold"></iconify-icon>
-                    </div>
-                    <h3 class="solution-card-title">Cơ sở Giáo dục K12</h3>
-                    <p class="solution-card-desc">
-                        Được thiết kế nhằm số hóa toàn diện công tác quản lý đào tạo, nghiên cứu và hoạt động của học sinh
-                    </p>
-                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
-                </div>
-            </div>
-            
-            <!-- Column 3 (Right) -->
-            <div class="solutions-col-stack">
-                <!-- Card: Trung tâm ngoại ngữ & kĩ năng -->
-                <div class="solution-card">
-                    <div class="solution-icon-wrapper">
-                        <iconify-icon icon="ph:globe-bold"></iconify-icon>
-                    </div>
-                    <h3 class="solution-card-title">Trung tâm ngoại ngữ & kĩ năng</h3>
-                    <p class="solution-card-desc">
-                        Chuẩn hóa quy trình vận hành, tối ưu trải nghiệm học viên và tạo đà phát triển bền vững
-                    </p>
-                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
-                </div>
-                <!-- Card: Trung tâm Đào tạo -->
-                <div class="solution-card">
-                    <div class="solution-icon-wrapper">
-                        <iconify-icon icon="ph:certificate-bold"></iconify-icon>
-                    </div>
-                    <h3 class="solution-card-title">Trung tâm Đào tạo</h3>
-                    <p class="solution-card-desc">
-                        Nền tảng quản trị hợp nhất cho các mô hình đào tạo phức tạp và linh hoạt của đào tạo liên tục
-                    </p>
-                    <a href="#" class="solution-card-link">Tìm hiểu thêm <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- ================= MOBILE APP SECTION (ỨNG DỤNG DI ĐỘNG) ================= -->
 <section id="mobile-app-section">
     <div class="container two-column">
@@ -1215,7 +1218,7 @@
 </section>
 
 <!-- ================= APP SCREENSHOTS SECTION (GIAO DIỆN ỨNG DỤNG) ================= -->
-<section id="app-screenshots-section">
+<section id="app-screenshots-section" style="display: none;">
     <div class="container">
         <!-- Row 1: Top Cards -->
         <div class="screenshots-row">
@@ -1243,28 +1246,29 @@
 <section id="roadmap-section">
     <div class="container">
         <div class="text-center roadmap-header">
-            <span class="roadmap-subtitle">Lộ trình chuyển đổi số</span>
+            <span class="roadmap-subtitle">Phương pháp luận chuyển đổi số</span>
             <h2 class="roadmap-title">
                 TỪ HIỆN TRẠNG ĐẾN <span class="text-gradient-custom">VẬN HÀNH THÔNG MINH</span>
             </h2>
             <p class="roadmap-desc">
-                Lộ trình được thiết kế theo năng lực thực tế của từng đơn vị, giúp chuyển đổi có kiểm soát,<br>
+                Phương pháp luận được thiết kế theo năng lực thực tế của từng đơn vị, giúp chuyển đổi có kiểm soát,<br>
                 đo lường được và không gây gián đoạn hoạt động đào tạo.
             </p>
         </div>
         
         <div class="roadmap-timeline">
-            <!-- Row 1: Step 1 (Left) -->
+            <!-- Step 1: Tiêu chuẩn hóa (Left) -->
             <div class="timeline-row">
                 <div class="timeline-content-left">
                     <div class="timeline-badge-container">
-                        <span class="timeline-badge">EDU DIGITAL</span>
+                        <span class="timeline-badge">BƯỚC 1</span>
                         <div class="timeline-dashed-line"></div>
                     </div>
-                    <h3 class="timeline-title">Đánh giá mức độ</h3>
-                    <p class="timeline-desc">
-                        Khảo sát quy trình, hạ tầng, dữ liệu, năng lực đội ngũ và mục tiêu quản trị giáo dục.
-                    </p>
+                    <h3 class="timeline-title">TIÊU CHUẨN HÓA</h3>
+                    <ul class="timeline-bullets">
+                        <li>Khảo sát toàn diện, chuẩn hóa hệ thống danh mục dữ liệu dùng chung, biểu mẫu</li>
+                        <li>Quy định luồng công việc trước khi đưa vào phần mềm</li>
+                    </ul>
                 </div>
                 <div class="timeline-center">
                     <div class="timeline-number-card">1</div>
@@ -1272,7 +1276,7 @@
                 <div class="timeline-content-right empty"></div>
             </div>
             
-            <!-- Row 2: Step 2 (Right) -->
+            <!-- Step 2: Số hóa (Right) -->
             <div class="timeline-row">
                 <div class="timeline-content-left empty"></div>
                 <div class="timeline-center">
@@ -1281,26 +1285,28 @@
                 <div class="timeline-content-right">
                     <div class="timeline-badge-container right">
                         <div class="timeline-dashed-line"></div>
-                        <span class="timeline-badge">EDU DIGITAL</span>
+                        <span class="timeline-badge">BƯỚC 2</span>
                     </div>
-                    <h3 class="timeline-title">Thiết kế kiến trúc số</h3>
-                    <p class="timeline-desc">
-                        Xây dựng bản đồ hệ thống LMS, SIS, CRM tuyển sinh, cổng phụ huynh, kho học liệu và dữ liệu tập trung.
-                    </p>
+                    <h3 class="timeline-title">SỐ HÓA</h3>
+                    <ul class="timeline-bullets">
+                        <li>Số hóa toàn bộ tài liệu giấy, dữ liệu quản lý</li>
+                        <li>Chuyển đổi quy trình tác nghiệp thủ công lên phần mềm tập trung trên Cloud/Web/Mobile</li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Row 3: Step 3 (Left) -->
+            <!-- Step 3: Tích hợp (Left) -->
             <div class="timeline-row">
                 <div class="timeline-content-left">
                     <div class="timeline-badge-container">
-                        <span class="timeline-badge">EDU DIGITAL</span>
+                        <span class="timeline-badge">BƯỚC 3</span>
                         <div class="timeline-dashed-line"></div>
                     </div>
-                    <h3 class="timeline-title">Triển khai & hướng dẫn</h3>
-                    <p class="timeline-desc">
-                        Ưu tiên các quy trình tạo tác động nhanh: tuyển sinh, điểm danh, học phí, lớp học số và báo cáo quản trị.
-                    </p>
+                    <h3 class="timeline-title">TÍCH HỢP</h3>
+                    <ul class="timeline-bullets">
+                        <li>Đấu nối liên thông phần mềm với thiết bị phần cứng</li>
+                        <li>Tích hợp Cổng Dịch vụ công, trục chia sẻ dữ liệu Tỉnh/Bộ, hệ thống hóa đơn/thanh toán</li>
+                    </ul>
                 </div>
                 <div class="timeline-center">
                     <div class="timeline-number-card">3</div>
@@ -1308,7 +1314,7 @@
                 <div class="timeline-content-right empty"></div>
             </div>
             
-            <!-- Row 4: Step 4 (Right) -->
+            <!-- Step 4: Tối ưu hóa (Right) -->
             <div class="timeline-row">
                 <div class="timeline-content-left empty"></div>
                 <div class="timeline-center">
@@ -1317,13 +1323,33 @@
                 <div class="timeline-content-right">
                     <div class="timeline-badge-container right">
                         <div class="timeline-dashed-line"></div>
-                        <span class="timeline-badge">EDU DIGITAL</span>
+                        <span class="timeline-badge">BƯỚC 4</span>
                     </div>
-                    <h3 class="timeline-title">Tối ưu dữ liệu</h3>
-                    <p class="timeline-desc">
-                        Chuẩn hóa dashboard, cảnh báo sớm rủi ro học tập và cải tiến liên tục dựa trên chỉ số vận hành.
-                    </p>
+                    <h3 class="timeline-title">TỐI ƯU HÓA</h3>
+                    <ul class="timeline-bullets">
+                        <li>Tự động hóa các khâu xét duyệt trung gian, loại bỏ trùng lặp dữ liệu</li>
+                        <li>Giảm thiểu sai sót do yếu tố thủ công và tối đa hóa năng suất</li>
+                    </ul>
                 </div>
+            </div>
+
+            <!-- Step 5: Thông minh hóa (Left) -->
+            <div class="timeline-row">
+                <div class="timeline-content-left">
+                    <div class="timeline-badge-container">
+                        <span class="timeline-badge">BƯỚC 5</span>
+                        <div class="timeline-dashed-line"></div>
+                    </div>
+                    <h3 class="timeline-title">THÔNG MINH HÓA</h3>
+                    <ul class="timeline-bullets">
+                        <li>Tích hợp trợ lý AI và biểu đồ quản trị Dashboard thông minh</li>
+                        <li>Chủ động phân tích dữ liệu, tự động cảnh báo rủi ro và hỗ trợ Lãnh đạo ra quyết định</li>
+                    </ul>
+                </div>
+                <div class="timeline-center">
+                    <div class="timeline-number-card">5</div>
+                </div>
+                <div class="timeline-content-right empty"></div>
             </div>
         </div>
     </div>
@@ -1377,6 +1403,101 @@
                     <p class="cta-card-desc">
                         Hỗ trợ giải đáp thắc mắc và tư vấn giúp người dùng có nhiều góc nhìn khác nhau về nền tảng.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FAQ SECTION (HỎI & ĐÁP) ================= -->
+<section id="faq-section" class="faq-section">
+    <div class="container">
+        <div class="text-center faq-header">
+            <span class="faq-subtitle">Hỏi & Đáp</span>
+            <h2 class="faq-title">
+                CÂU HỎI THƯỜNG GẶP VỀ <span class="text-gradient-custom">EDUSOFT</span>
+            </h2>
+            <p class="faq-desc">
+                Giải đáp chi tiết mọi thắc mắc của bạn về nền tảng chuyển đổi số giáo dục EduSoft
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item active">
+                <button class="faq-question" aria-expanded="true">
+                    <span>EduSoft phù hợp với những cơ sở giáo dục nào?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="faq-icon"></iconify-icon>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        EduSoft được thiết kế tối ưu linh hoạt cho mọi mô hình giáo dục: Trường Đại học, Cao đẳng, Cơ sở Giáo dục Nghề nghiệp, Trường phổ thông K12, cũng như các Trung tâm ngoại ngữ, tin học và đào tạo ngắn hạn.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Nền tảng EduSoft có tích hợp được với các ứng dụng hiện có của nhà trường không?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="faq-icon"></iconify-icon>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Có. EduSoft hỗ trợ hệ thống API chuẩn hóa giúp kết nối liên thông dữ liệu với phần mềm kế toán, ERP, Cổng Dịch vụ công, các thiết bị phần cứng điểm danh/thiết bị trường học và hệ thống hóa đơn điện tử.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Thời gian triển khai hệ thống mất bao lâu?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="faq-icon"></iconify-icon>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Tùy thuộc vào quy mô và nhu cầu của từng đơn vị. Thông thường quy trình chuẩn hóa và đưa vào vận hành thực tế chỉ kéo dài từ 2 đến 4 tuần nhờ kiến trúc mô-đun hóa độc lập và linh hoạt.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Dữ liệu của nhà trường được bảo mật như thế nào trên Cloud?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="faq-icon"></iconify-icon>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        EduSoft áp dụng tiêu chuẩn bảo mật dữ liệu cấp cao phù hợp môi trường B2B/Giáo dục, sao lưu dữ liệu tự động định kỳ, phân quyền truy cập chi tiết và mã hóa dữ liệu đường truyền an toàn 100%.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Nhà trường có được dùng thử hệ thống trước khi quyết định ký hợp đồng không?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="faq-icon"></iconify-icon>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Hoàn toàn có. Chúng tôi cung cấp chương trình trải nghiệm dùng thử miễn phí trong vòng 30 ngày kèm sự hỗ trợ và tư vấn 1-1 trực tiếp từ đội ngũ chuyên gia của EduSoft.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Giáo viên và học sinh có thể sử dụng EduSoft trên điện thoại di động không?</span>
+                    <iconify-icon icon="lucide:chevron-down" class="faq-icon"></iconify-icon>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Có. EduSoft cung cấp đầy đủ ứng dụng Mobile trên cả iOS và Android, giúp giáo viên điểm danh, quản lý lớp học, và học sinh xem thời khóa biểu, nộp bài tập, tra cứu điểm số mọi lúc mọi nơi.
+                    </div>
                 </div>
             </div>
         </div>
@@ -2116,6 +2237,33 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start auto play
         startAutoPlay();
     })();
+
+    /* ===== FAQ ACCORDION TOGGLE ===== */
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        if (!questionBtn) return;
+        questionBtn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Optional: Close other active items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const btn = otherItem.querySelector('.faq-question');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            if (isActive) {
+                item.classList.remove('active');
+                questionBtn.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                questionBtn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
 
 });
 </script>
