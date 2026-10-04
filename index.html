@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css?v=3.0">
+    <link rel="stylesheet" href="css/index.css?v=20.0">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -337,12 +337,12 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero hero-new-style">
+<section class="hero hero-new-style hero-side-by-side">
 
-    <div class="container hero-container">
+    <div class="container hero-container hero-grid">
 
-        <!-- Hero Header Stacked: Title, Subtitle, CTA Button -->
-        <div class="hero-header-stacked">
+        <!-- Left Column: Content (Text & CTA Button) -->
+        <div class="hero-content-left">
             <h1>
                 Nền tảng chuyển đổi số toàn diện cho <span class="text-blue-gradient">Giáo dục</span>
             </h1>
@@ -354,10 +354,10 @@
             </a>
         </div>
 
-        <!-- Bottom Showcase: 3D Layered Mockups (hero_1, hero_2, hero_3) -->
-        <div class="hero-mockup-wrapper">
+        <!-- Right Column: 3D Layered Mockup Showcase -->
+        <div class="hero-mockup-right">
             <div class="hero-mockup-container">
-                <img src="images/hero_2.png" alt="EduSoft System Dashboard" class="mockup-img mockup-center">
+                <img src="images/hero_2.png?v=9.0" alt="EduSoft System Dashboard" class="mockup-img mockup-center">
                 <img src="images/hero_1.png" alt="Hoạt động giảng dạy" class="mockup-img mockup-left">
                 <img src="images/hero_3.png" alt="Lịch công tác" class="mockup-img mockup-right">
             </div>
@@ -1409,6 +1409,60 @@
     </div>
 </section>
 
+<!-- ================= NEWSLETTER SECTION (ĐĂNG KÝ NHẬN TIN) ================= -->
+<section id="newsletter-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="newsletter-header">
+            <h2 class="newsletter-title">
+                Nhận thông mới nhất về <span class="text-gradient">Edu Digital</span>
+            </h2>
+            <p class="newsletter-subtitle">
+                Đăng ký nhận thông tin về công nghệ giáo dục và các giải pháp chuyển đổi số
+            </p>
+        </div>
+        
+        <!-- Form Container -->
+        <div class="newsletter-form-container">
+            <form action="#" class="newsletter-form">
+                <!-- Input Group 1: Email -->
+                <div class="input-group">
+                    <label for="newsletter-email">Email</label>
+                    <input 
+                        type="email" 
+                        id="newsletter-email" 
+                        placeholder="infor@edusoft.vn" 
+                        required
+                    >
+                </div>
+                
+                <!-- Input Group 2: Organization -->
+                <div class="input-group">
+                    <label for="newsletter-org">Tên tổ chức</label>
+                    <input 
+                        type="text" 
+                        id="newsletter-org" 
+                        placeholder="Tên trường Đại học" 
+                        required
+                    >
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="newsletter-submit-btn btn">
+                    Gửi yêu cầu tư vấn
+                    <iconify-icon icon="lucide:send"></iconify-icon>
+                </button>
+            </form>
+            
+            <!-- Footnotes -->
+            <div class="newsletter-footnotes">
+                <p>Chúng tôi phản hồi trong vòng 1 ngày làm việc. Thông tin của bạn được bảo mật.</p>
+                <p>Xem <a href="#" class="privacy-link text-gradient">Chính sách Quyền riêng tư</a> của chúng tôi để biết thêm thông tin</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ================= FAQ SECTION (HỎI & ĐÁP) ================= -->
 <section id="faq-section" class="faq-section">
     <div class="container">
@@ -1499,60 +1553,6 @@
                         Có. EduSoft cung cấp đầy đủ ứng dụng Mobile trên cả iOS và Android, giúp giáo viên điểm danh, quản lý lớp học, và học sinh xem thời khóa biểu, nộp bài tập, tra cứu điểm số mọi lúc mọi nơi.
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= NEWSLETTER SECTION (ĐĂNG KÝ NHẬN TIN) ================= -->
-<section id="newsletter-section">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="newsletter-header">
-            <h2 class="newsletter-title">
-                Nhận thông mới nhất về <span class="text-gradient">Edu Digital</span>
-            </h2>
-            <p class="newsletter-subtitle">
-                Đăng ký nhận thông tin về công nghệ giáo dục và các giải pháp chuyển đổi số
-            </p>
-        </div>
-        
-        <!-- Form Container -->
-        <div class="newsletter-form-container">
-            <form action="#" class="newsletter-form">
-                <!-- Input Group 1: Email -->
-                <div class="input-group">
-                    <label for="newsletter-email">Email</label>
-                    <input 
-                        type="email" 
-                        id="newsletter-email" 
-                        placeholder="infor@edusoft.vn" 
-                        required
-                    >
-                </div>
-                
-                <!-- Input Group 2: Organization -->
-                <div class="input-group">
-                    <label for="newsletter-org">Tên tổ chức</label>
-                    <input 
-                        type="text" 
-                        id="newsletter-org" 
-                        placeholder="Tên trường Đại học" 
-                        required
-                    >
-                </div>
-                
-                <!-- Submit Button -->
-                <button type="submit" class="newsletter-submit-btn btn">
-                    Gửi yêu cầu tư vấn
-                    <iconify-icon icon="lucide:send"></iconify-icon>
-                </button>
-            </form>
-            
-            <!-- Footnotes -->
-            <div class="newsletter-footnotes">
-                <p>Chúng tôi phản hồi trong vòng 1 ngày làm việc. Thông tin của bạn được bảo mật.</p>
-                <p>Xem <a href="#" class="privacy-link text-gradient">Chính sách Quyền riêng tư</a> của chúng tôi để biết thêm thông tin</p>
             </div>
         </div>
     </div>
