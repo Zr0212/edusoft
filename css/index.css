@@ -1245,30 +1245,34 @@
 }
 
 .integrated-v2-title {
-    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-    font-weight: 800;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
     color: #0F172A;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.85rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.28;
+    letter-spacing: -0.015em;
+    text-transform: none;
 }
 
 .badge-capsule-v2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.35rem 1.4rem;
-    border-radius: 99px;
-    background: linear-gradient(135deg, #00A3FF 0%, #0072FF 100%);
-    color: #FFFFFF;
-    font-size: 1.6rem;
-    font-weight: 900;
-    box-shadow: 0 8px 24px rgba(0, 114, 255, 0.32);
-    letter-spacing: 0.02em;
+    padding: 0.16em 0.78em;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #32A5FF 0%, #057BFE 100%);
+    color: #FFFFFF !important;
+    font-size: 0.96em;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 14px rgba(5, 123, 254, 0.28);
+    vertical-align: middle;
 }
 
 .integrated-v2-slider-viewport {
@@ -2528,12 +2532,13 @@
 }
 
 .solutions-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.25;
-    color: var(--black);
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.28;
+    color: #0F172A;
     margin-bottom: 1.25rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    text-transform: none;
 }
 
 .text-gradient-custom {
@@ -2650,7 +2655,7 @@
 
 /* ===== Roadmap Section (Lộ trình chuyển đổi số) ===== */
 #roadmap-section {
-    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 15%, #F1F5F9 50%, #F8FAFC 85%, #FFFFFF 100%);
+    background: #FFFFFF;
     padding: var(--section-padding) 0;
     position: relative;
 }
@@ -2669,11 +2674,13 @@
 }
 
 .roadmap-title {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.01em;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
+    color: #0F172A;
+    margin-bottom: 1.25rem;
+    line-height: 1.28;
+    letter-spacing: -0.015em;
+    text-transform: none;
 }
 
 .roadmap-desc {
@@ -2804,11 +2811,12 @@
 }
 
 .timeline-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--black);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #0F172A;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    text-transform: none;
     opacity: 0;
     transform: translateY(15px);
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -3234,13 +3242,14 @@
 }
 
 .mobile-v2-title {
-    font-size: clamp(1.85rem, 2.5vw, 2.45rem);
-    font-weight: 800;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
     color: #0F172A;
     line-height: 1.28;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
     margin: 0;
     max-width: 500px;
+    text-transform: none;
 }
 
 .mobile-v2-title-main {
@@ -3278,9 +3287,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 145%;
-    height: 125%;
-    background: radial-gradient(ellipse at center, rgba(48, 179, 255, 0.60) 0%, rgba(0, 107, 255, 0.20) 45%, rgba(0, 107, 255, 0) 72%);
+    width: 180%;
+    height: 150%;
+    background: radial-gradient(ellipse at center, rgba(48, 179, 255, 0.36) 0%, rgba(0, 107, 255, 0.08) 45%, rgba(0, 107, 255, 0) 72%);
     filter: blur(80px);
     border-radius: 50%;
     z-index: -1;
@@ -3545,12 +3554,13 @@
 }
 
 .edu-digital-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--black);
-    line-height: 1.25;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.28;
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    text-transform: none;
 }
 
 #cta-section {
@@ -3696,12 +3706,13 @@
 }
 
 .newsletter-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--black);
-    line-height: 1.25;
-    margin-bottom: 1.35rem;
-    letter-spacing: -0.01em;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.28;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.015em;
+    text-transform: none;
 }
 
 .newsletter-subtitle {
@@ -3892,12 +3903,13 @@
 }
 
 .cta-banner-title {
-    font-size: 2.75rem;
-    font-weight: 800;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
     color: var(--white);
-    line-height: 1.25;
+    line-height: 1.28;
     margin-bottom: 1.25rem;
     letter-spacing: -0.015em;
+    text-transform: none;
 }
 
 .cta-banner-desc {
@@ -4728,10 +4740,10 @@
 
 .hero-content-left h1 {
     font-size: clamp(2.35rem, 3.8vw, 3.4rem);
-    font-weight: 800;
+    font-weight: 600;
     color: #0F172A;
-    line-height: 1.22;
-    letter-spacing: -0.025em;
+    line-height: 1.24;
+    letter-spacing: -0.02em;
     margin: 0;
 }
 
@@ -5544,12 +5556,13 @@
 
 .question-bank-title {
     font-size: clamp(1.65rem, 2.15vw, 2.15rem);
-    font-weight: 800;
+    font-weight: 600;
     color: #0F172A;
     margin: 0 0 1rem 0;
-    letter-spacing: -0.02em;
-    line-height: 1.25;
+    letter-spacing: -0.015em;
+    line-height: 1.28;
     white-space: nowrap;
+    text-transform: none;
 }
 
 .question-bank-desc {
@@ -5782,18 +5795,20 @@
 .faq-subtitle {
     display: inline-block;
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #0072FF;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     margin-bottom: 0.5rem;
 }
 
 .faq-title {
-    font-size: clamp(1.75rem, 3.5vw, 2.35rem);
-    font-weight: 800;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
     color: #0F172A;
-    margin-bottom: 1.15rem;
+    line-height: 1.28;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.25rem;
+    text-transform: none;
 }
 
 .faq-desc {
@@ -6049,12 +6064,13 @@ html, body {
 
 
 .lms-v2-title {
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
-    font-weight: 800;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600;
     color: #0F172A;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    line-height: 1.28;
+    letter-spacing: -0.015em;
     margin: 0 0 1.25rem;
+    text-transform: none;
 }
 
 .lms-v2-title .text-blue {
@@ -6070,14 +6086,68 @@ html, body {
     font-weight: 450;
 }
 
-/* Showcase Grid */
-.lms-v2-showcase {
+/* Showcase Unified Slider Container */
+.lms-v2-showcase-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    width: 100%;
+}
+
+/* Top Bar: Aligns Step Nav with the right content column */
+.lms-v2-top-bar {
     display: grid;
     grid-template-columns: 1.18fr 1fr;
     gap: 5.5rem;
     align-items: center;
-    max-width: 1200px;
-    margin-inline: auto;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+    transform: translateY(57px);
+}
+
+.lms-v2-top-spacer {
+    width: 100%;
+}
+
+/* Unified Slider Viewport & Track (Exact same physics as integrated-platform-section-v2) */
+.lms-v2-slider-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    margin: -20px 0;
+}
+
+.lms-v2-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+    align-items: center;
+}
+
+.lms-v2-slide {
+    width: 100%;
+    flex-shrink: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.55s ease, visibility 0.55s ease;
+    pointer-events: none;
+}
+
+.lms-v2-slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Slide Grid: Both Left Media and Right Content move synchronously together */
+.lms-v2-slide-grid {
+    display: grid;
+    grid-template-columns: 1.18fr 1fr;
+    gap: 5.5rem;
+    align-items: center;
+    width: 100%;
 }
 
 /* Left Media Column */
@@ -6086,44 +6156,8 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.lms-v2-media-window {
-    position: relative;
     width: 100%;
     max-width: 580px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.lms-v2-media-track {
-    display: flex;
-    width: 500%;
-    transform: translateX(0%);
-    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
-}
-
-.lms-v2-media-slide {
-    width: 20%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0.5rem;
-    opacity: 0.3;
-    filter: blur(2px);
-    transform: scale(0.97);
-    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.lms-v2-media-slide.active {
-    opacity: 1;
-    filter: blur(0px);
-    transform: scale(1);
 }
 
 .lms-v2-img {
@@ -6145,109 +6179,16 @@ html, body {
 .lms-v2-col-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 480px;
-}
-
-/* Top Step Nav */
-.lms-v2-step-nav {
-    display: flex;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 480px;
-    margin-bottom: 2.75rem;
-}
-
-.lms-v2-step-btn {
-    background: transparent;
-    border: none;
-    padding: 0.2rem 0.35rem;
-    font-family: inherit;
-    font-size: 1.08rem;
-    font-weight: 500;
-    color: #94A3B8;
-    cursor: pointer;
-    transition: color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
-    line-height: 1;
-    flex-shrink: 0;
-}
-
-.lms-v2-step-btn:hover:not(.active) {
-    color: #008FFF;
-    transform: translateY(-1px);
-}
-
-.lms-v2-step-btn.active {
-    color: #0F172A;
-    font-weight: 800;
-    cursor: default;
-    transform: scale(1.04);
-}
-
-.lms-v2-step-divider {
-    height: 1.5px;
-    background: #CBD5E1;
-    border-radius: 2px;
-    width: 0;
-    opacity: 0;
-    margin: 0;
-    flex-shrink: 0;
-    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                margin 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.3s ease;
-}
-
-.lms-v2-step-divider.active {
-    width: 68px;
-    opacity: 1;
-    margin: 0 0.75rem;
-}
-
-/* Content Panels Sliding Window */
-.lms-v2-panels-window {
-    overflow: hidden;
-    width: 100%;
-    max-width: 480px;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.lms-v2-panels-track {
-    display: flex;
-    width: 500%;
-    transform: translateX(0%);
-    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
-}
-
-.lms-v2-panel {
-    width: 20%;
-    flex-shrink: 0;
-    padding-right: 1.5rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    opacity: 0.2;
-    filter: blur(2px);
-    transform: scale(0.98);
-    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-    pointer-events: none;
-}
-
-.lms-v2-panel.active {
-    opacity: 1;
-    filter: blur(0px);
-    transform: scale(1);
-    pointer-events: auto;
 }
 
 .lms-v2-desc {
     font-size: 1rem;
     color: #334155;
     line-height: 1.7;
-    margin: 0 0 3.25rem;
+    margin: 0 0 2.75rem;
     font-weight: 450;
     min-height: 84px;
 }
@@ -6273,7 +6214,7 @@ html, body {
     color: #0F172A;
     line-height: 1.24;
     letter-spacing: -0.02em;
-    margin: 0 0 2.5rem;
+    margin: 0 0 2.25rem;
     min-height: 64px;
     display: flex;
     align-items: flex-start;
@@ -6321,6 +6262,77 @@ html, body {
     background: #0070F0;
 }
 
+/* Top Step Nav */
+.lms-v2-step-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    pointer-events: auto;
+}
+
+.lms-v2-step-btn {
+    background: transparent;
+    border: none;
+    padding: 0.2rem 0.35rem;
+    font-family: inherit;
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: #94A3B8;
+    cursor: pointer;
+    transition: color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.lms-v2-step-btn:hover:not(.active) {
+    color: #008FFF;
+    transform: translateY(-1px);
+}
+
+.lms-v2-step-btn.active {
+    color: #0F172A;
+    font-weight: 800;
+    cursor: default;
+    transform: scale(1.04);
+}
+
+.lms-v2-step-divider {
+    height: 1.5px;
+    background: #CBD5E1;
+    border-radius: 2px;
+    width: 0;
+    opacity: 0;
+    margin: 0;
+    flex-shrink: 0;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                margin 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.3s ease;
+}
+
+.lms-v2-step-divider.active {
+    width: 68px;
+    opacity: 1;
+    margin: 0 0.75rem;
+}
+
+/* Bottom Bar: Aligns Controls with right column */
+.lms-v2-bottom-bar {
+    display: grid;
+    grid-template-columns: 1.18fr 1fr;
+    gap: 5.5rem;
+    align-items: center;
+    margin-top: 2.25rem;
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+    transform: translateY(-85px);
+}
+
+.lms-v2-bottom-spacer {
+    width: 100%;
+}
+
 /* Bottom Controls */
 .lms-v2-controls {
     display: flex;
@@ -6328,7 +6340,7 @@ html, body {
     justify-content: space-between;
     width: 100%;
     max-width: 480px;
-    margin-top: 3.5rem;
+    pointer-events: auto;
 }
 
 .lms-v2-ctrl-btn {
@@ -6388,15 +6400,16 @@ html, body {
         padding: 5rem 0 4.5rem;
     }
 
-    .lms-v2-showcase {
+    .lms-v2-top-bar {
         grid-template-columns: 1fr;
-        gap: 3.5rem;
-        text-align: center;
+        margin-bottom: 1.5rem;
+        transform: none;
+        pointer-events: auto;
     }
 
-    .lms-v2-col-content {
-        align-items: center;
-        min-height: auto;
+    .lms-v2-top-spacer,
+    .lms-v2-bottom-spacer {
+        display: none;
     }
 
     .lms-v2-step-nav {
@@ -6404,20 +6417,45 @@ html, body {
         justify-content: center;
     }
 
-    .lms-v2-panels {
+    .lms-v2-slide-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .lms-v2-col-media {
         margin-inline: auto;
+    }
+
+    .lms-v2-col-content {
+        margin-inline: auto;
+        align-items: center;
     }
 
     .lms-v2-desc {
         text-align: center;
+        margin-bottom: 2rem;
     }
 
     .lms-v2-meta {
         align-items: center;
     }
 
+    .lms-v2-panel-title {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .lms-v2-bottom-bar {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+        transform: none;
+        pointer-events: auto;
+    }
+
     .lms-v2-controls {
         margin-inline: auto;
+        justify-content: center;
     }
 }
 
@@ -6524,11 +6562,12 @@ html, body {
 
 .demo-heading {
     font-size: clamp(2.2rem, 3.2vw, 3.15rem);
-    font-weight: 800;
+    font-weight: 600;
     color: #0F172A;
     line-height: 1.25;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
     margin: 0 0 1.25rem;
+    text-transform: none;
 }
 
 .demo-heading .text-blue-gradient {
@@ -6872,4 +6911,54 @@ html, body {
         width: 100%;
         padding: 0 1.5rem;
     }
+}
+
+/* ========================================================
+   UNIFIED TYPOGRAPHY SYSTEM: SYNCHRONIZED SECTION TITLES
+   - Consistent font-size, line-height & margin
+   - Refined, clean font-weight (600)
+   - Strict Sentence Case (no all-caps)
+   ======================================================== */
+.section-title,
+.solutions-title,
+.integrated-v2-title,
+.lms-v2-title,
+.mobile-v2-title,
+.roadmap-title,
+.edu-digital-title,
+.newsletter-title,
+.faq-title,
+.mobile-app-title {
+    font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.28 !important;
+    letter-spacing: -0.015em !important;
+    color: #0F172A !important;
+    text-transform: none !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.cta-banner-title {
+    font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.28 !important;
+    letter-spacing: -0.015em !important;
+    color: #FFFFFF !important;
+    text-transform: none !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.hero-content-left h1,
+.demo-heading {
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* Ensure gradient text clips properly on 600 font-weight */
+.text-gradient-custom,
+.text-blue-gradient,
+.text-gradient {
+    font-weight: 600 !important;
+    text-transform: none !important;
 }
