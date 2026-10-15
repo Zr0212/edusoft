@@ -2044,7 +2044,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     margin-top: 56px;
 }
 
@@ -2120,27 +2120,32 @@
 }
 
 .v2-arrow-btn {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 132, 255, 0.18);
+    border: 1px solid #E2E8F0;
     background: #FFFFFF;
-    color: #008FFF;
+    color: #0F172A;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.1rem;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    flex-shrink: 0;
 }
 
 .v2-arrow-btn:hover {
     background: #008FFF;
     color: #FFFFFF;
     border-color: #008FFF;
-    box-shadow: 0 4px 12px rgba(0, 132, 255, 0.3);
-    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 143, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.v2-arrow-btn:active {
+    transform: translateY(0);
 }
 
 /* Responsive adjustments for Integrated V2 */
@@ -4733,13 +4738,13 @@
     align-items: flex-start;
     text-align: left;
     gap: 2rem;
-    max-width: 580px;
+    max-width: 600px;
     position: relative;
     z-index: 2;
 }
 
 .hero-content-left h1 {
-    font-size: clamp(2.35rem, 3.8vw, 3.4rem);
+    font-size: clamp(2.3rem, 3.7vw, 3.3rem);
     font-weight: 600;
     color: #0F172A;
     line-height: 1.24;

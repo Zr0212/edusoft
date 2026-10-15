@@ -1098,8 +1098,11 @@
             </div>
         </div>
 
-        <!-- Bottom Pagination Controls (Dash - Dot - Dot - Dot) -->
+        <!-- Bottom Pagination Controls (Dash - Dot - Dot - Dot) with Prev / Next -->
         <div class="integrated-v2-pagination">
+            <button type="button" class="v2-arrow-btn v2-prev" id="v2PrevBtn" aria-label="Slide trước">
+                <iconify-icon icon="ph:arrow-left-bold"></iconify-icon>
+            </button>
             <div class="v2-dots-container" id="v2DotsContainer">
                 <button class="v2-dot active" data-slide="0" aria-label="Slide 1: Quản lý đào tạo">
                     <span class="v2-dot-tooltip">Quản lý đào tạo</span>
@@ -1114,6 +1117,9 @@
                     <span class="v2-dot-tooltip">Văn bằng – chứng chỉ</span>
                 </button>
             </div>
+            <button type="button" class="v2-arrow-btn v2-next" id="v2NextBtn" aria-label="Slide tiếp theo">
+                <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+            </button>
         </div>
     </div>
 </section>
@@ -2612,6 +2618,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainTrack = document.getElementById('v2MainTrack');
         const slides = section.querySelectorAll('.integrated-v2-slide');
         const dots = section.querySelectorAll('.v2-dot');
+        const prevBtn = section.querySelector('#v2PrevBtn') || section.querySelector('.v2-prev');
+        const nextBtn = section.querySelector('#v2NextBtn') || section.querySelector('.v2-next');
 
         if (!slides.length || !mainTrack) return;
 
@@ -2662,13 +2670,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        function resetAutoPlay() {
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
         // Dots click
         dots.forEach((dot, i) => {
             dot.addEventListener('click', () => {
                 goToSlide(i);
-                startAutoPlay();
+                resetAutoPlay();
             });
         });
+
+        // Prev / Next button click
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+                resetAutoPlay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+                resetAutoPlay();
+            });
+        }
 
         // Pause on hover
         section.addEventListener('mouseenter', stopAutoPlay);
