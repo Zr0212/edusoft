@@ -2991,6 +2991,243 @@
     }
 }
 
+
+/* ===== ROADMAP SECTION V2 (LỘ TRÌNH CHUYỂN ĐỔI SỐ) ===== */
+.roadmap-v2-section {
+    background: #FFFFFF;
+    padding: 5.5rem 0 5.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ambient Radial Glow Behind Section */
+.roadmap-v2-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 820px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(0, 114, 255, 0.05) 0%, rgba(0, 198, 255, 0.02) 45%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.roadmap-v2-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header with Entrance Animation */
+.roadmap-v2-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.roadmap-v2-section.roadmap-v2-animated .roadmap-v2-header {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-header {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.roadmap-v2-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 1.2rem;
+    background: #EAF5FF;
+    color: #0075FF;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border-radius: 99px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+}
+
+.roadmap-v2-title {
+    font-size: clamp(1.75rem, 2.3vw, 2.25rem);
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.95rem;
+}
+
+.roadmap-v2-title .text-blue {
+    color: #0066FF;
+    font-weight: 700;
+}
+
+.roadmap-v2-desc {
+    font-size: 0.95rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 620px;
+}
+
+.roadmap-v2-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row Layout */
+.roadmap-v2-row {
+    display: grid;
+    grid-template-columns: 32% 34% 34%;
+    align-items: center;
+    padding: 1.85rem 0;
+    border-bottom: 1px solid #EAEFF5;
+    position: relative;
+}
+
+.roadmap-v2-row:last-child {
+    border-bottom: none;
+}
+
+/* Scroll-triggered Entrance Animation */
+.roadmap-v2-section.roadmap-v2-animated .roadmap-v2-row {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(1) { transition-delay: 0.08s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(2) { transition-delay: 0.18s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(3) { transition-delay: 0.28s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(4) { transition-delay: 0.38s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(5) { transition-delay: 0.48s; }
+
+/* Number Badge */
+.roadmap-v2-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #0066FF;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(0, 102, 255, 0.25);
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.roadmap-v2-section.roadmap-v2-animated .roadmap-v2-number {
+    transform: scale(0.75);
+}
+
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row .roadmap-v2-number {
+    transform: scale(1);
+}
+
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(1) .roadmap-v2-number { transition-delay: 0.15s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(2) .roadmap-v2-number { transition-delay: 0.25s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(3) .roadmap-v2-number { transition-delay: 0.35s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(4) .roadmap-v2-number { transition-delay: 0.45s; }
+.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row:nth-child(5) .roadmap-v2-number { transition-delay: 0.55s; }
+
+/* Step Title */
+.roadmap-v2-step-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+/* Bullets */
+.roadmap-v2-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.roadmap-v2-bullets li {
+    position: relative;
+    padding-left: 1.15rem;
+    font-size: 0.86rem;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.roadmap-v2-bullets li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: #0066FF;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .roadmap-v2-row {
+        grid-template-columns: 44px 200px 1fr;
+        gap: 2rem;
+        padding: 1.85rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .roadmap-v2-section {
+        padding: 4.5rem 0 4rem;
+    }
+    
+    .roadmap-v2-header {
+        margin-bottom: 3rem;
+    }
+    
+    .roadmap-v2-row {
+        grid-template-columns: 40px 1fr;
+        gap: 1rem 1.25rem;
+        padding: 1.75rem 0;
+    }
+    
+    .roadmap-v2-number {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+    
+    .roadmap-v2-step-title {
+        font-size: 1.15rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .roadmap-v2-bullets {
+        grid-column: 2 / -1;
+        margin-top: 0.25rem;
+    }
+    
+    .roadmap-v2-bullets li {
+        font-size: 0.88rem;
+    }
+}
+
 /* ===== Mobile App Section (Ứng dụng di động) ===== */
 #mobile-app-section {
     background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 15%, #F1F5F9 50%, #F8FAFC 85%, #FFFFFF 100%);
@@ -3594,7 +3831,6 @@
 
 /* ===== Edu Digital CTA Section (Công nghệ nâng tầm giáo dục) ===== */
 #edu-digital-section {
-    background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 15%, #E6F2FF 50%, #F0F7FF 85%, #FFFFFF 100%);
     padding: var(--section-padding) 0;
     position: relative;
 }
@@ -3635,11 +3871,11 @@
 }
 
 .cta-main-card {
-    background: var(--white);
+    background: #0072FF;
     border-radius: 1.75rem;
     padding: 4rem 3.5rem;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 114, 255, 0.04);
+    box-shadow: 0 15px 45px rgba(0, 114, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -3736,6 +3972,35 @@
     transform: translateY(-6px);
     box-shadow: 0 25px 50px rgba(0, 114, 255, 0.06);
     border-color: rgba(0, 114, 255, 0.15);
+}
+
+/* Màu sắc cho cta-main-card (giữ nguyên kích thước và cỡ chữ bản cũ) */
+.cta-main-card .cta-card-header iconify-icon {
+    color: #FFFFFF !important;
+}
+
+.cta-main-card .cta-card-header h3 {
+    color: #FFFFFF !important;
+}
+
+.cta-main-card .cta-card-desc {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.cta-main-card .cta-button {
+    background: #FFFFFF !important;
+    color: #0072FF !important;
+    border: none !important;
+}
+
+.cta-main-card .cta-button:hover {
+    background: #F8FAFC !important;
+    color: #005ce6 !important;
+}
+
+.cta-main-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 114, 255, 0.32);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -6003,68 +6268,84 @@
 
 /* ================= FAQ SECTION (HỎI & ĐÁP) ================= */
 .faq-section {
-    padding: clamp(6rem, 8.5vw, 9rem) 0;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 15%, #F1F5F9 50%, #F8FAFC 85%, #FFFFFF 100%);
+    padding: clamp(5rem, 7vw, 7.5rem) 0;
+    background: #FFFFFF;
     position: relative;
     border-top: none;
 }
 
-.faq-header {
-    margin-bottom: 4.75rem;
+.faq-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 4.5rem;
+    align-items: start;
 }
 
-.faq-subtitle {
-    display: inline-block;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #0072FF;
-    letter-spacing: 0.04em;
-    margin-bottom: 0.5rem;
+.faq-left {
+    position: sticky;
+    top: 6rem;
+}
+
+.faq-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.28rem 1rem;
+    background: #EAF5FF;
+    color: #0075FF;
+    font-size: 0.78rem;
+    font-weight: 500;
+    border-radius: 99px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
 }
 
 .faq-title {
-    font-size: clamp(1.9rem, 3vw, 2.5rem);
-    font-weight: 600;
+    font-size: clamp(1.4rem, 1.9vw, 1.75rem);
+    font-weight: 700;
     color: #0F172A;
-    line-height: 1.28;
-    letter-spacing: -0.015em;
-    margin-bottom: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0;
     text-transform: none;
 }
 
-.faq-desc {
-    font-size: 1.05rem;
-    color: #64748B;
-    max-width: 650px;
-    margin-inline: auto;
+.faq-title .text-blue,
+.faq-title .faq-highlight {
+    color: #0066FF;
+    font-weight: 700;
 }
 
 .faq-container {
-    max-width: 860px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.65rem;
+    gap: 0.75rem;
 }
 
 .faq-item {
     background: #FFFFFF;
-    border: 1.5px solid #E2E8F0;
-    border-radius: 1.25rem;
+    border: 1px solid #EEF2F6;
+    border-radius: 14px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.025);
 }
 
-.faq-item.active,
 .faq-item:hover {
-    border-color: #0072FF;
-    box-shadow: 0 10px 30px rgba(0, 114, 255, 0.08);
+    border-color: #E2E8F0;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.045);
+}
+
+.faq-item.active {
+    border-color: #CBD5E1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 .faq-question {
     width: 100%;
-    padding: 1.5rem 1.75rem;
+    padding: 0.95rem 1.35rem;
     background: transparent;
     border: none;
     display: flex;
@@ -6072,54 +6353,80 @@
     align-items: center;
     gap: 1rem;
     text-align: left;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 0.88rem;
+    font-weight: 600;
     color: #0F172A;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
+    font-family: inherit;
+}
+
+.faq-question:hover {
+    color: #0066FF;
 }
 
 .faq-item.active .faq-question {
-    color: #0072FF;
+    color: #0066FF;
 }
 
 .faq-icon {
-    font-size: 1.35rem;
-    color: #64748B;
-    transition: transform 0.35s ease, color 0.3s ease;
+    font-size: 1.05rem;
+    color: #94A3B8;
+    transition: transform 0.3s ease, color 0.2s ease;
     flex-shrink: 0;
 }
 
 .faq-item.active .faq-icon {
     transform: rotate(180deg);
-    color: #0072FF;
+    color: #0066FF;
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-item.active .faq-answer {
-    max-height: 250px;
+    max-height: 300px;
 }
 
 .faq-answer-content {
-    padding: 0 1.75rem 1.5rem 1.75rem;
-    font-size: 0.98rem;
+    padding: 0 1.35rem 1.15rem 1.35rem;
+    font-size: 0.85rem;
     color: #475569;
-    line-height: 1.7;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .faq-left {
+        position: static;
+        text-align: left;
+    }
+
+    .faq-title br {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
-    .faq-question {
-        padding: 1.25rem 1.25rem;
-        font-size: 1rem;
+    .faq-section {
+        padding: 4.5rem 0;
     }
+
+    .faq-question {
+        padding: 0.85rem 1.15rem;
+        font-size: 0.84rem;
+    }
+
     .faq-answer-content {
-        padding: 0 1.25rem 1.25rem 1.25rem;
-        font-size: 0.92rem;
+        padding: 0 1.15rem 0.95rem 1.15rem;
+        font-size: 0.82rem;
     }
 }
 
@@ -7144,7 +7451,6 @@ html, body {
 .roadmap-title,
 .edu-digital-title,
 .newsletter-title,
-.faq-title,
 .mobile-app-title {
     font-size: clamp(1.8rem, 2.8vw, 2.4rem) !important;
     font-weight: 600 !important;
