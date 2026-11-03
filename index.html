@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css?v=86.0">
+    <link rel="stylesheet" href="css/index.css?v=93.0">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -2424,22 +2424,106 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateScrollTimeline);
     updateScrollTimeline(); // run once on load
     
-    // ===== ROADMAP V2 SCROLL-TRIGGERED ENTRANCE ANIMATION =====
+    // ===== ROADMAP V2 SCROLL-TRIGGERED PROGRESSIVE ITEM REVEAL =====
     const roadmapV2Section = document.querySelector('.roadmap-v2-section');
     if (roadmapV2Section) {
+        const header = roadmapV2Section.querySelector('.roadmap-v2-header');
+        const rows = roadmapV2Section.querySelectorAll('.roadmap-v2-row');
+
         if (!('IntersectionObserver' in window)) {
-            roadmapV2Section.classList.add('is-revealed');
+            if (header) header.classList.add('is-revealed');
+            rows.forEach(r => r.classList.add('is-revealed'));
         } else {
             roadmapV2Section.classList.add('roadmap-v2-animated');
-            const roadmapObserver = new IntersectionObserver((entries, obs) => {
+
+            // Header reveal
+            if (header) {
+                const headerObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-revealed');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+                headerObserver.observe(header);
+            }
+
+            // Each row reveals progressively as user scrolls down to it
+            const rowObserver = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        roadmapV2Section.classList.add('is-revealed');
-                        obs.unobserve(roadmapV2Section);
+                        entry.target.classList.add('is-revealed');
+                        obs.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.12 });
-            roadmapObserver.observe(roadmapV2Section);
+            }, { 
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            rows.forEach(row => rowObserver.observe(row));
+        }
+    }
+
+    // ===== MOBILE APP V2 PROGRESSIVE SCROLL-TRIGGERED ITEM REVEAL =====
+    const mobileAppV2Section = document.getElementById('mobile-app-section-v2');
+    if (mobileAppV2Section) {
+        const headerBlock = mobileAppV2Section.querySelector('.mobile-v2-header-block');
+        const topDesc = mobileAppV2Section.querySelector('.mobile-v2-top-desc');
+        const mockupWrapper = mobileAppV2Section.querySelector('.mobile-v2-mockup-wrapper');
+        const featureItems = mobileAppV2Section.querySelectorAll('.mobile-v2-feature-item');
+
+        const elementsToReveal = [headerBlock, topDesc, mockupWrapper, ...featureItems].filter(Boolean);
+
+        if (!('IntersectionObserver' in window)) {
+            elementsToReveal.forEach(el => el.classList.add('is-revealed'));
+        } else {
+            mobileAppV2Section.classList.add('mobile-app-v2-animated');
+
+            const mobileItemObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            elementsToReveal.forEach(el => mobileItemObserver.observe(el));
+        }
+    }
+
+    // ===== FAQ SECTION SCROLL-TRIGGERED ENTRANCE & INTERACTION ANIMATION =====
+    const faqSection = document.getElementById('faq-section');
+    if (faqSection) {
+        const faqItemsList = faqSection.querySelectorAll('.faq-item');
+        if (!('IntersectionObserver' in window)) {
+            faqSection.classList.add('is-revealed');
+            faqItemsList.forEach(item => item.classList.add('is-revealed'));
+        } else {
+            faqSection.classList.add('faq-animated');
+            const faqObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        obs.unobserve(entry.target);
+
+                        setTimeout(() => {
+                            faqItemsList.forEach(item => {
+                                item.style.transitionDelay = '0s';
+                            });
+                        }, 900);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+            faqObserver.observe(faqSection);
         }
     }
     
@@ -2907,29 +2991,65 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoPlay();
     })();
 
-    /* ===== FAQ ACCORDION TOGGLE ===== */
+    /* ===== FAQ ACCORDION TOGGLE (FLAWLESS & EXACT HEIGHT) ===== */
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const questionBtn = item.querySelector('.faq-question');
-        if (!questionBtn) return;
+        const answer = item.querySelector('.faq-answer');
+        if (!questionBtn || !answer) return;
+
+        if (item.classList.contains('active')) {
+            answer.style.height = 'auto';
+            questionBtn.setAttribute('aria-expanded', 'true');
+        } else {
+            answer.style.height = '0px';
+            questionBtn.setAttribute('aria-expanded', 'false');
+        }
+
         questionBtn.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
-            // Optional: Close other active items
+
+            // Close all other active items
             faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherBtn = otherItem.querySelector('.faq-question');
                     otherItem.classList.remove('active');
-                    const btn = otherItem.querySelector('.faq-question');
-                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                    if (otherAnswer) {
+                        const curH = otherAnswer.getBoundingClientRect().height;
+                        otherAnswer.style.height = curH + 'px';
+                        otherAnswer.offsetHeight; // reflow
+                        otherAnswer.style.height = '0px';
+                    }
                 }
             });
 
             if (isActive) {
+                // Collapse current item
+                const curH = answer.getBoundingClientRect().height;
+                answer.style.height = curH + 'px';
+                answer.offsetHeight; // reflow
+                answer.style.height = '0px';
                 item.classList.remove('active');
                 questionBtn.setAttribute('aria-expanded', 'false');
             } else {
+                // Expand current item
                 item.classList.add('active');
                 questionBtn.setAttribute('aria-expanded', 'true');
+                const curH = answer.getBoundingClientRect().height;
+                answer.style.height = curH + 'px';
+                answer.offsetHeight; // reflow
+                answer.style.height = answer.scrollHeight + 'px';
+
+                const onEnd = (e) => {
+                    if (e.target !== answer) return;
+                    if (item.classList.contains('active')) {
+                        answer.style.height = 'auto';
+                    }
+                    answer.removeEventListener('transitionend', onEnd);
+                };
+                answer.addEventListener('transitionend', onEnd);
             }
         });
     });
