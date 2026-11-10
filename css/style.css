@@ -94,24 +94,59 @@ table{
     --gray-700:#374151;
     --gray-900:#111827;
 
-    /* ===== Font ===== */
+    /* ===== 1. Base Typography Scale ===== */
+    --font-xs: 0.75rem;     /* 12px - Caption, Tag nhỏ, Badge phụ */
+    --font-sm: 0.875rem;    /* 14px - Small body, Metadata, Secondary text */
+    --font-base: 1rem;      /* 16px - Body chính, Form input, Button chuẩn */
+    --font-lg: 1.125rem;    /* 18px - Lead paragraph, Subtitle nổi bật */
+    --font-xl: 1.25rem;     /* 20px - Subtitle lớn, Minor heading */
 
-    --fs-xs:.75rem;
-    --fs-sm:.875rem;
-    --fs-base:1rem;
-    --fs-lg:1.125rem;
-    --fs-xl:1.25rem;
-    --fs-2xl:1.5rem;
-    --fs-3xl:2rem;
-    --fs-4xl:3rem;
+    /* ===== 2. Responsive Headings ===== */
+    --h1: clamp(1.875rem, 4vw, 3rem);      /* 30px -> 48px: Page Title / Hero Main Title */
+    --h2: clamp(1.5rem, 3vw, 2.25rem);      /* 24px -> 36px: Section Titles */
+    --h3: clamp(1.25rem, 2.5vw, 1.75rem);  /* 20px -> 28px: Subsection Titles */
+    --h4: clamp(1.125rem, 2vw, 1.5rem);    /* 18px -> 24px: Feature Titles, Module Header */
+    --h5: 1rem;                             /* 16px: Mobile (<= 767px) Card Titles */
 
-    /* ===== Weight ===== */
+    /* ===== 3. Semantic Role Aliases ===== */
+    --font-body: var(--font-base);         /* 16px */
+    --font-body-lg: var(--font-lg);        /* 18px */
+    --font-small: var(--font-sm);          /* 14px */
+    --font-caption: var(--font-xs);        /* 12px */
+    --font-button: var(--font-small);      /* 14px - Chuẩn hóa Small button */
+    --font-input: var(--font-base);        /* 16px */
+    --font-nav: var(--font-sm);            /* 14px */
+    --font-kpi: clamp(1.6rem, 3.2vw, 2.5rem); /* 25px -> 40px: Dashboard Metric Values */
 
-    --fw-light:300;
-    --fw-normal:400;
-    --fw-medium:500;
-    --fw-semibold:600;
-    --fw-bold:700;
+    /* ===== 4. Font Weights ===== */
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* ===== 5. Line Heights ===== */
+    --lh-tight: 1.15;
+    --lh-heading: 1.28;
+    --lh-body: 1.6;
+    --lh-relaxed: 1.7;
+
+    /* ===== 6. Letter Spacing ===== */
+    --ls-tight: -0.02em;
+    --ls-heading: -0.015em;
+    --ls-normal: 0;
+    --ls-wide: 0.02em;
+    --ls-uppercase: 0.05em;
+
+    /* ===== 7. Backward Compatibility Tokens ===== */
+    --fs-xs: var(--font-xs);
+    --fs-sm: var(--font-sm);
+    --fs-base: var(--font-base);
+    --fs-lg: var(--font-lg);
+    --fs-xl: var(--font-xl);
+    --fs-2xl: var(--h3);
+    --fs-3xl: var(--h2);
+    --fs-4xl: var(--h1);
 
     /* ===== Radius ===== */
 
@@ -144,6 +179,19 @@ table{
     --section-padding:
         clamp(2.5rem, 5vw, 6rem);
 
+}
+
+/* Responsive H5 Token Step Scale */
+@media (min-width: 768px) {
+    :root {
+        --h5: 1.125rem; /* 18px: Tablet (768px - 1023px) & Laptop (1024px - 1279px) */
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --h5: 1.25rem;  /* 20px: Desktop (>= 1280px) */
+    }
 }
 
 /* ===================================================
@@ -305,7 +353,7 @@ section{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-size: var(--font-nav);
     font-weight: var(--fw-semibold);
     color: var(--gray-700);
     text-decoration: none;
@@ -364,7 +412,7 @@ section{
 }
 
 .nav-personal {
-    font-size: 0.85rem;
+    font-size: var(--font-nav);
     font-weight: var(--fw-semibold);
     color: var(--gray-700);
     text-decoration: none;
@@ -390,8 +438,8 @@ section{
     background: var(--gradient);
     color: var(--white) !important;
     border-radius: 99px;
-    font-weight: var(--fw-bold);
-    font-size: 0.9rem;
+    font-weight: var(--fw-semibold);
+    font-size: var(--font-button);
     gap: 0.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -498,7 +546,7 @@ section{
 
 .product-item {
     display: block;
-    font-size: 0.92rem;
+    font-size: var(--font-small);
     font-weight: var(--fw-semibold);
     color: var(--gray-800);
     text-decoration: none;
@@ -558,13 +606,13 @@ section{
 }
 
 .solution-item .item-text strong {
-    font-size: 0.88rem;
+    font-size: var(--font-small);
     font-weight: var(--fw-bold);
     color: var(--gray-900);
 }
 
 .solution-item .item-text span {
-    font-size: 0.76rem;
+    font-size: var(--font-caption);
     color: var(--gray-500);
     line-height: 1.4;
 }
@@ -615,22 +663,43 @@ section{
                     TYPOGRAPHY
 =================================================== */
 
-h1{
-    font-size:clamp(2.5rem,6vw,4rem);
-    line-height:1.1;
+h1 {
+    font-size: var(--h1);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+    font-weight: var(--fw-semibold);
 }
 
-h2{
-    font-size:clamp(2rem,4vw,3rem);
-    line-height:1.2;
+h2 {
+    font-size: var(--h2);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-weight: var(--fw-semibold);
 }
 
-h3{
-    font-size:1.5rem;
+h3 {
+    font-size: var(--h3);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-weight: var(--fw-bold);
 }
 
-p{
-    color:var(--gray-700);
+h4 {
+    font-size: var(--h4);
+    line-height: 1.35;
+    font-weight: var(--fw-semibold);
+}
+
+h5 {
+    font-size: var(--h5);
+    line-height: 1.4;
+    font-weight: var(--fw-semibold);
+}
+
+p {
+    color: var(--gray-700);
+    font-size: var(--font-body);
+    line-height: var(--lh-body);
 }
 
 /* ===================================================
@@ -642,7 +711,7 @@ p{
     justify-content:center;
     align-items:center;
     gap:.5rem;
-    padding:.9rem 1.7rem;
+    padding:.85rem 1.7rem;
     border-radius:var(--radius-full);
     border:2px solid transparent;
     background: 
@@ -650,7 +719,9 @@ p{
         linear-gradient(135deg, rgba(153, 153, 153, 0.1), rgba(255, 255, 255, 1)) border-box;
     color:var(--white);
     transition:var(--transition);
-    font-weight: var(--fw-bold);
+    font-size: var(--font-button);
+    font-weight: var(--fw-semibold);
+    line-height: 1.2;
     align-self: flex-start;
 }
 
