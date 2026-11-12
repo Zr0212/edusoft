@@ -1374,7 +1374,7 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    padding: 1.25rem 0 0.5rem 0;
+    padding: 0.5rem 0;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black clamp(40px, 6vw, 110px), black calc(100% - clamp(40px, 6vw, 110px)), transparent 100%);
     mask-image: linear-gradient(to right, transparent 0%, black clamp(40px, 6vw, 110px), black calc(100% - clamp(40px, 6vw, 110px)), transparent 100%);
 }
@@ -2191,7 +2191,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     position: relative;
     z-index: 2;
 }
