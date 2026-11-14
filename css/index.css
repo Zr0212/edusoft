@@ -7884,21 +7884,21 @@ html, body {
     gap: 0.85rem;
     padding: 0.45rem 0.55rem 0.45rem 1.6rem;
     border-radius: 99px;
-    border: 1.5px solid #008FFF;
+    border: 1.5px solid #0F172A;
     background: #FFFFFF;
-    color: #008FFF;
+    color: #0F172A;
     font-size: var(--font-button);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 6px rgba(0, 143, 255, 0.06);
+    box-shadow: none;
 }
 
 .lms-v2-btn:hover {
     background: #F0F7FF;
     border-color: #0070F0;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 143, 255, 0.18);
+    box-shadow: none;
     color: #0070F0;
 }
 
@@ -7906,7 +7906,7 @@ html, body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #008FFF;
+    background: #0F172A;
     color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -7915,9 +7915,18 @@ html, body {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
 }
 
+.lms-v2-btn-arrow iconify-icon {
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .lms-v2-btn:hover .lms-v2-btn-arrow {
-    transform: translateX(3px);
     background: #0070F0;
+    transform: translate(2px, -2px);
+}
+
+.lms-v2-btn:hover .lms-v2-btn-arrow iconify-icon {
+    transform: rotate(-45deg);
 }
 
 /* Top Step Nav */
