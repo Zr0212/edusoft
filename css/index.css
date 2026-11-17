@@ -8017,6 +8017,116 @@ html, body {
     box-shadow: none;
 }
 
+/* ==========================================================================
+   LMS SECTION V2 SCROLL REVEAL ENTRANCE ANIMATIONS
+   ========================================================================== */
+/* 1. Header scroll reveal */
+.lms-v2-header.lms-v2-header-animated {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.lms-v2-header.lms-v2-header-animated.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. Slide Showcase scroll reveal (triggers specifically when user scrolls to the slide) */
+.lms-v2-showcase-container.lms-v2-showcase-animated {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-step-nav {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    will-change: opacity, transform;
+}
+
+.lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-col-media {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.16s,
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.16s;
+    will-change: opacity, transform;
+}
+
+.lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-col-content {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.26s,
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.26s;
+    will-change: opacity, transform;
+}
+
+.lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-controls {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.36s,
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.36s;
+    will-change: opacity, transform;
+}
+
+/* Revealed states for showcase */
+.lms-v2-showcase-container.lms-v2-showcase-animated.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lms-v2-showcase-container.lms-v2-showcase-animated.is-revealed .lms-v2-step-nav,
+.lms-v2-showcase-container.lms-v2-showcase-animated.is-revealed .lms-v2-col-media,
+.lms-v2-showcase-container.lms-v2-showcase-animated.is-revealed .lms-v2-col-content,
+.lms-v2-showcase-container.lms-v2-showcase-animated.is-revealed .lms-v2-controls {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* 3. In-slide micro-motion when switching active slide */
+.lms-v2-slide .lms-v2-col-media .lms-v2-img {
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+    transform: scale(0.96) translateY(8px);
+}
+
+.lms-v2-slide.active .lms-v2-col-media .lms-v2-img {
+    transform: scale(1) translateY(0);
+}
+
+.lms-v2-slide.active .lms-v2-col-media .lms-v2-img:hover {
+    transform: scale(1) translateY(-4px);
+}
+
+.lms-v2-slide .lms-v2-col-content {
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(10px);
+}
+
+.lms-v2-slide.active .lms-v2-col-content {
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lms-v2-header.lms-v2-header-animated,
+    .lms-v2-showcase-container.lms-v2-showcase-animated,
+    .lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-step-nav,
+    .lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-col-media,
+    .lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-col-content,
+    .lms-v2-showcase-container.lms-v2-showcase-animated .lms-v2-controls,
+    .lms-v2-slide .lms-v2-col-media .lms-v2-img,
+    .lms-v2-slide .lms-v2-col-content {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 /* Responsive */
 @media (max-width: 991px) {
     .lms-v2-section {
