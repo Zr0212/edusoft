@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css?v=2.2">
-    <link rel="stylesheet" href="css/index.css?v=135.0">
+    <link rel="stylesheet" href="css/index.css?v=137.0">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -419,8 +419,9 @@
 
         <!-- Hero 3D Interactive Stage -->
         <div class="hero-v3-stage">
-            
-            <!-- 1. Left Mockup: Hoạt động giảng dạy (kèm Khung Glass riêng) -->
+            <div class="hero-v3-stage-inner">
+                
+                <!-- 1. Left Mockup: Hoạt động giảng dạy (kèm Khung Glass riêng) -->
             <div class="hero-mockup-glass-wrap hero-glass-left">
                 <div class="hero-card hero-card-left" id="heroCardLeft">
                     <div class="hero-card-left-header">
@@ -782,6 +783,7 @@
                 </div>
             </div>
 
+            </div><!-- /.hero-v3-stage-inner -->
         </div>
     </div>
 
@@ -4232,6 +4234,34 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             setTimeout(triggerHeroAnimations, 120);
         }
+    })();
+
+    /* ===== HERO MOCKUP STAGE FLUID SCALER ===== */
+    (function initHeroStageScaler() {
+        const stage = document.querySelector('.hero-v3-stage');
+        const inner = document.querySelector('.hero-v3-stage-inner');
+        if (!stage || !inner) return;
+
+        const baseWidth = 1140;
+        const baseHeight = 540;
+
+        function updateScale() {
+            const container = stage.closest('.hero-v3-container') || stage.parentElement;
+            const containerWidth = container ? container.clientWidth : window.innerWidth;
+            const availableWidth = Math.max(280, containerWidth);
+            const scale = Math.min(1, availableWidth / baseWidth);
+            stage.style.setProperty('--hero-scale', scale.toFixed(4));
+            stage.style.height = `${Math.round(baseHeight * scale)}px`;
+        }
+
+        window.addEventListener('resize', updateScale, { passive: true });
+        window.addEventListener('orientationchange', updateScale, { passive: true });
+        if (window.ResizeObserver) {
+            new ResizeObserver(updateScale).observe(stage.parentElement || document.body);
+        }
+        updateScale();
+        setTimeout(updateScale, 60);
+        setTimeout(updateScale, 300);
     })();
 
 </script>

@@ -5505,13 +5505,28 @@
 
 /* ================= 3D MOCKUP STAGE ================= */
 .hero-v3-stage {
+    --hero-scale: 1;
     position: relative;
     width: 100%;
     max-width: 1340px;
     margin: 2rem auto 0 auto;
-    min-height: 540px;
-    padding: 0 1rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(540px * var(--hero-scale, 1));
     perspective: 1200px;
+    overflow: visible;
+}
+
+.hero-v3-stage-inner {
+    position: relative;
+    width: 1140px;
+    height: 540px;
+    flex-shrink: 0;
+    transform-origin: top center;
+    transform: scale(var(--hero-scale, 1));
+    pointer-events: auto;
 }
 
 /* Individual Frosted Glass Wrapper (Mỗi mockup một khung glass riêng) */
@@ -5550,11 +5565,11 @@
     background: #FFFFFF;
 }
 
-/* 2. Left Floating Glass Card (Hoạt động giảng dạy) - Dài hơn header, đẩy sang trái và nâng cao lên */
+/* 2. Left Floating Glass Card (Hoạt động giảng dạy) - Giữ nguyên bố cục gốc chồng lên main card */
 .hero-glass-left {
     position: absolute;
-    left: clamp(0px, 1.2vw, 15px);
-    bottom: clamp(120px, 10.5vw, 145px);
+    left: 15px;
+    bottom: 130px;
     width: 320px;
     z-index: 5;
     border-radius: 24px;
@@ -5575,11 +5590,11 @@
     transform: none;
 }
 
-/* 3. Right Floating Glass Card (Lịch công tác) - Dài hơn header, đẩy sang phải và lên trên */
+/* 3. Right Floating Glass Card (Lịch công tác) - Giữ nguyên bố cục gốc chồng lên main card */
 .hero-glass-right {
     position: absolute;
-    right: clamp(0px, 1.2vw, 15px);
-    top: clamp(-72px, -5.5vw, -55px);
+    right: 15px;
+    top: -60px;
     width: 285px;
     z-index: 6;
     border-radius: 24px;
@@ -6269,26 +6284,7 @@
 /* Tablet & Smaller Desktop (max-width: 1199px) */
 @media (max-width: 1199px) {
     .hero-v3-stage {
-        max-width: 960px;
-        min-height: 480px;
-        padding: 0 1rem;
-    }
-    
-    .hero-glass-main {
-        width: 720px;
-        left: -15px;
-    }
-
-    .hero-glass-left {
-        width: 270px;
-        left: 10px;
-        bottom: 50px;
-    }
-
-    .hero-glass-right {
-        width: 240px;
-        right: 10px;
-        top: -45px;
+        --hero-scale: 0.84;
     }
 }
 
@@ -6305,43 +6301,14 @@
     }
 
     .hero-v3-stage {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        min-height: auto;
-        perspective: none;
+        --hero-scale: 0.68;
     }
+}
 
-    .hero-glass-main {
-        width: 100% !important;
-        max-width: 680px !important;
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        order: 1;
-    }
-
-    .hero-glass-left,
-    .hero-glass-right {
-        position: relative !important;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-        animation: none !important;
-        width: 100% !important;
-        max-width: 680px !important;
-    }
-
-    .hero-glass-left {
-        order: 2;
-    }
-
-    .hero-glass-right {
-        order: 3;
+/* Mobile Landscape & Small Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-v3-stage {
+        --hero-scale: 0.54;
     }
 }
 
@@ -6354,9 +6321,8 @@
         padding-bottom: 4rem !important;
     }
 
-    .hero-mockup-glass-wrap {
-        padding: 8px !important;
-        border-radius: 22px !important;
+    .hero-v3-stage {
+        --hero-scale: 0.42;
     }
 
     .hero-v3-title {
@@ -6374,31 +6340,22 @@
         display: none;
     }
 
-    .hero-dash-sidebar {
-        display: none;
-    }
-
-    .hero-dash-body {
-        padding: 1.1rem 1rem;
-    }
-
-    .hero-metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.6rem;
-    }
-
-    .hero-charts-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .hero-card-left,
-    .hero-card-right {
-        padding: 1rem;
-    }
-
     .hero-cloud-img {
         min-width: 900px;
+    }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-v3-stage {
+        --hero-scale: 0.35;
+    }
+}
+
+/* Extra Small Phones (max-width: 380px) */
+@media (max-width: 380px) {
+    .hero-v3-stage {
+        --hero-scale: 0.30;
     }
 }
 
@@ -8117,6 +8074,18 @@ html, body {
         margin-top: 2rem;
         transform: none;
         pointer-events: auto;
+    }
+
+    .lms-v2-btn {
+        padding: 4px 5px 4px 16px;
+        gap: 0.65rem;
+        line-height: 1;
+    }
+
+    .lms-v2-btn-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 0.95rem;
     }
 }
 
