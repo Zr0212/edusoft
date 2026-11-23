@@ -232,6 +232,21 @@ section{
     color:transparent;
 }
 
+/* Title elements with gradient changed to solid #0170F0 */
+h1 .text-gradient,
+h2 .text-gradient,
+h3 .text-gradient,
+h4 .text-gradient,
+.section-title .text-gradient,
+.partners-title .text-gradient,
+.newsletter-title .text-gradient {
+    color: #0170F0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #0170F0 !important;
+}
+
 /* ===================================================
                     HEADER & LOGO
 =================================================== */
@@ -846,6 +861,21 @@ p {
     -webkit-text-fill-color:transparent;
     background-clip:text;
     color:transparent;
+}
+
+/* Title elements with gradient changed to solid #0170F0 */
+h1 .text-gradient,
+h2 .text-gradient,
+h3 .text-gradient,
+h4 .text-gradient,
+.section-title .text-gradient,
+.partners-title .text-gradient,
+.newsletter-title .text-gradient {
+    color: #0170F0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #0170F0 !important;
 }
 
 /* ===================================================

@@ -6,7 +6,7 @@
 
     <title>Quản lý Đào tạo (E-TMS) | Edusoft - Nền tảng Quản trị Giáo dục Toàn diện</title>
     <meta name="description" content="Phần mềm Quản lý Đào tạo Edusoft (E-TMS) - Hoạch định nguồn lực, tự động hóa xếp thời khóa biểu, đăng ký tín chỉ và xét tốt nghiệp cho các trường Đại học, Cao đẳng.">
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="icon" type="image/png" href="images/common/logo.png" />
 
     <!-- Google Fonts Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=2.2">
-    <link rel="stylesheet" href="css/index.css?v=139.0">
-    <link rel="stylesheet" href="css/dao-tao.css?v=4.2">
+    <link rel="stylesheet" href="css/style.css?v=2.4">
+    <link rel="stylesheet" href="css/index.css?v=141.0">
+    <link rel="stylesheet" href="css/dao-tao.css?v=4.6">
 
     <!-- Iconify -->
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
@@ -32,7 +32,7 @@
         <!-- Left Block: Logo & Typographic Branding -->
         <div class="header-left-block flex">
             <a href="index.html" class="logo flex">
-                <img src="images/logo.png" alt="Logo">
+                <img src="images/common/logo.png" alt="Logo">
                 <span class="logo-title">EDUSOFT</span>
             </a>
         </div>
@@ -153,12 +153,12 @@
                             <!-- Column 2: Học tập (LMS) -->
                             <div class="dropdown-mega-col col-purple">
                                 <div class="col-header">
-                                    <h4 class="col-title text-purple">Học tập (LMS)</h4>
+                                    <h4 class="col-title text-purple"><a href="quan-ly-hoc-tap.html" style="color: inherit; text-decoration: none;">Học tập (LMS)</a></h4>
                                     <p class="col-subtitle">Nghiệp vụ & học tập số</p>
                                     <div class="col-bar bar-purple"></div>
                                 </div>
                                 <div class="col-items-list">
-                                    <a href="#" class="mega-item">
+                                    <a href="quan-ly-hoc-tap.html" class="mega-item">
                                         <div class="item-icon-box icon-purple">
                                             <span class="gradient-icon icon-ph-book-open"></span>
                                         </div>
@@ -342,7 +342,7 @@
 <div class="mobile-menu-drawer">
     <div class="mobile-drawer-header">
         <a href="index.html" class="logo flex">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/common/logo.png" alt="Logo">
             <span class="logo-title">EDUSOFT</span>
         </a>
         <button class="mobile-drawer-close" aria-label="Close menu">
@@ -370,8 +370,8 @@
                     <iconify-icon icon="ph:caret-down-bold"></iconify-icon>
                 </div>
                 <div class="mobile-accordion-content">
-                    <a href="#"><span class="acc-dot dot-blue"></span>Core Đào tạo toàn trình</a>
-                    <a href="#"><span class="acc-dot dot-purple"></span>Học tập (LMS)</a>
+                    <a href="quan-ly-dao-tao.html"><span class="acc-dot dot-blue"></span>Core Đào tạo toàn trình</a>
+                    <a href="quan-ly-hoc-tap.html"><span class="acc-dot dot-purple"></span>Học tập (LMS)</a>
                     <a href="#"><span class="acc-dot dot-teal"></span>Quản trị nguồn lực</a>
                     <a href="#"><span class="acc-dot dot-electric"></span>Hành chính & Điều hành</a>
                     <a href="#"><span class="acc-dot dot-amber"></span>Tiện ích hỗ trợ</a>
@@ -398,22 +398,25 @@
                 <!-- Left Hero Content -->
                 <div class="dt-hero-content">
                     <div class="dt-badge-capsule">
-                        <span>Sản phẩm</span>
+                        <span>Tính năng</span>
                     </div>
                     <h1 class="dt-hero-title">Quản lý Đào tạo</h1>
                     <span class="dt-hero-subtitle-code">E - TMS</span>
                     <p class="dt-hero-desc">
                         Bộ tính năng quản lý toàn diện hoạt động đào tạo từ cơ sở dữ liệu, kế hoạch, tiến độ tới kết quả.
                     </p>
-                    <a href="demo.html" class="btn dt-btn-hero">
-                        <span>Đăng ký Demo</span>
+                    <a href="demo.html" class="dt-hero-pill-btn">
+                        <span class="dt-pill-text">Đăng ký Demo</span>
+                        <span class="dt-pill-icon">
+                            <iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+                        </span>
                     </a>
                 </div>
 
                 <!-- Right Hero Visual with images/slide_1.jpg -->
                 <div class="dt-hero-visual">
                     <div class="dt-hero-mockup-wrapper">
-                        <img src="images/v2-pane-0-img.png" alt="Quản lý Đào tạo E-TMS" class="dt-hero-mockup-img" onerror="this.onerror=null; this.src='images/slide_1.png';">
+                        <img src="images/daotao/v2-pane-0-img.png" alt="Quản lý Đào tạo E-TMS" class="dt-hero-mockup-img" onerror="this.onerror=null; this.src='images/daotao/v2-pane-0-img.png';">
                     </div>
                 </div>
             </div>
@@ -437,7 +440,7 @@
                 <!-- Benefit Card 1 -->
                 <div class="dt-benefit-card">
                     <div class="dt-benefit-icon-box">
-                        <img src="images/dt-benefit-icon-box-1.svg" alt="Tổ chức mô hình đào tạo linh hoạt" class="dt-benefit-icon-svg">
+                        <img src="images/daotao/dt-benefit-icon-box-1.svg" alt="Tổ chức mô hình đào tạo linh hoạt" class="dt-benefit-icon-svg">
                     </div>
                     <h4 class="dt-benefit-title">TỔ CHỨC MÔ HÌNH ĐÀO TẠO LINH HOẠT</h4>
                     <p class="dt-benefit-desc">
@@ -448,7 +451,7 @@
                 <!-- Benefit Card 2 -->
                 <div class="dt-benefit-card">
                     <div class="dt-benefit-icon-box">
-                        <img src="images/dt-benefit-icon-box-2.svg" alt="Quản lý nghiệp vụ đào tạo toàn diện" class="dt-benefit-icon-svg">
+                        <img src="images/daotao/dt-benefit-icon-box-2.svg" alt="Quản lý nghiệp vụ đào tạo toàn diện" class="dt-benefit-icon-svg">
                     </div>
                     <h4 class="dt-benefit-title">QUẢN LÝ NGHIỆP VỤ ĐÀO TẠO TOÀN DIỆN</h4>
                     <p class="dt-benefit-desc">
@@ -459,7 +462,7 @@
                 <!-- Benefit Card 3 -->
                 <div class="dt-benefit-card">
                     <div class="dt-benefit-icon-box">
-                        <img src="images/dt-benefit-icon-box-3.svg" alt="Theo dõi tiến độ tự động & trực quan" class="dt-benefit-icon-svg">
+                        <img src="images/daotao/dt-benefit-icon-box-3.svg" alt="Theo dõi tiến độ tự động & trực quan" class="dt-benefit-icon-svg">
                     </div>
                     <h4 class="dt-benefit-title">THEO DÕI TIẾN ĐỘ TỰ ĐỘNG & TRỰC QUAN</h4>
                     <p class="dt-benefit-desc">
@@ -614,7 +617,7 @@
             <!-- Module 1: dt-mockup-1.png (Left), Text (Right) -->
             <div class="dt-feature-row is-mockup-left">
                 <div class="dt-feature-mockup">
-                    <img src="images/dt-mockup-1.png" alt="Quản lý cơ sở dữ liệu đào tạo" class="dt-feature-mockup-img">
+                    <img src="images/daotao/dt-mockup-1.png" alt="Quản lý cơ sở dữ liệu đào tạo" class="dt-feature-mockup-img">
                 </div>
                 <div class="dt-feature-text">
                     <h3 class="dt-feature-title">Quản lý cơ sở dữ liệu đào tạo</h3>
@@ -665,14 +668,14 @@
                     </ul>
                 </div>
                 <div class="dt-feature-mockup">
-                    <img src="images/dt-mockup-2.png" alt="Xây dựng kế hoạch đào tạo khoa học" class="dt-feature-mockup-img">
+                    <img src="images/daotao/dt-mockup-2.png" alt="Xây dựng kế hoạch đào tạo khoa học" class="dt-feature-mockup-img">
                 </div>
             </div>
 
             <!-- Module 3: dt-mockup-3.png (Left), Text (Right) -->
             <div class="dt-feature-row is-mockup-left">
                 <div class="dt-feature-mockup">
-                    <img src="images/dt-mockup-3.png" alt="Theo dõi tiến độ đào tạo chi tiết" class="dt-feature-mockup-img">
+                    <img src="images/daotao/dt-mockup-3.png" alt="Theo dõi tiến độ đào tạo chi tiết" class="dt-feature-mockup-img">
                 </div>
                 <div class="dt-feature-text">
                     <h3 class="dt-feature-title">Theo dõi tiến độ đào tạo chi tiết</h3>
@@ -719,7 +722,7 @@
                     </ul>
                 </div>
                 <div class="dt-feature-mockup">
-                    <img src="images/dt-mockup-4.png" alt="Tổng hợp kết quả đào tạo" class="dt-feature-mockup-img">
+                    <img src="images/daotao/dt-mockup-4.png" alt="Tổng hợp kết quả đào tạo" class="dt-feature-mockup-img">
                 </div>
             </div>
 
@@ -731,7 +734,7 @@
         <div class="container">
             <div class="cta-banner-card">
                 <!-- Fluffy Clouds Layer at Bottom (cloud1.png) -->
-                <img src="images/cloud1.png" alt="Mây trắng" class="cta-banner-cloud-img">
+                <img src="images/common/cloud1.png" alt="Mây trắng" class="cta-banner-cloud-img">
 
                 <!-- Center Content -->
                 <div class="cta-banner-center-content">
@@ -775,7 +778,7 @@
         <!-- Column 1: Brand Info -->
         <div class="footer-col brand-col">
             <a href="index.html" class="footer-brand">
-                <img src="images/logo.png" alt="Edusoft Logo" class="footer-logo">
+                <img src="images/common/logo.png" alt="Edusoft Logo" class="footer-logo">
                 <span class="logo-title">EDUSOFT</span>
             </a>
             
@@ -826,8 +829,8 @@
         <div class="footer-col products-col">
             <h4>Tính năng</h4>
             <ul class="footer-links">
-                <li><a href="#">Core Đào tạo toàn trình</a></li>
-                <li><a href="#">Học tập (LMS)</a></li>
+                <li><a href="quan-ly-dao-tao.html">Core Đào tạo toàn trình</a></li>
+                <li><a href="quan-ly-hoc-tap.html">Học tập (LMS)</a></li>
                 <li><a href="#">Quản trị nguồn lực</a></li>
                 <li><a href="#">Hành chính & Điều hành</a></li>
                 <li><a href="#">Tiện ích hỗ trợ</a></li>

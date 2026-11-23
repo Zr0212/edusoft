@@ -2700,11 +2700,11 @@
 }
 
 .text-gradient-custom {
-    background: linear-gradient(90deg, #0170F0 0%, #30B3FF 50%, #00DBFF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    color: #0170F0;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: #0170F0;
     display: inline-block;
     padding-top: 0.12em;
     padding-bottom: 0.12em;
@@ -8313,14 +8313,16 @@ html, body {
 }
 
 .demo-heading .text-blue-gradient {
-    background: linear-gradient(135deg, #0072FF 0%, #00B4D8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0170F0;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: #0170F0;
     display: inline-block;
 }
 
 .demo-heading .text-blue {
-    color: #008FFF;
+    color: #0170F0;
 }
 
 .demo-subtitle {
@@ -8697,6 +8699,20 @@ html, body {
 .text-gradient {
     font-weight: 600 !important;
     text-transform: none !important;
+}
+
+/* Title elements with gradient changed to solid #0170F0 */
+h1 .text-gradient,
+h2 .text-gradient,
+h3 .text-gradient,
+h4 .text-gradient,
+.partners-title .text-gradient,
+.newsletter-title .text-gradient {
+    color: #0170F0 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #0170F0 !important;
 }
 
 /* ==========================================================================
