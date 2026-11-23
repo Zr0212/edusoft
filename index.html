@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css?v=2.4">
-    <link rel="stylesheet" href="css/index.css?v=150.0">
+    <link rel="stylesheet" href="css/index.css?v=154.0">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 <body>
@@ -3178,7 +3178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoPlay();
     }
 
-    /* ================= INTEGRATED PLATFORM V2 STRICT WHEEL STEPPER ================= */
+    /* ================= INTEGRATED PLATFORM V2 CARDS SLIDER ================= */
     (function initIntegratedV2Slider() {
         const section = document.getElementById('integrated-platform-section-v2');
         if (!section) return;
@@ -3192,45 +3192,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
         const totalSlides = slides.length;
 
-        // Locking & Anti-Blowout States
-        let isSectionLocked = false;
-        let slideLockUntil = 0;
-        let slide4ArrivedAt = 0;
-        let slide0ArrivedAt = 0;
-        let hasWheelStoppedAtSlide4 = false;
-        let hasWheelStoppedAtSlide0 = false;
-        let wheelIdleTimer = null;
+        // Step cooldown so 1 flick = 1 slide (prevents skipping slides)
+        let lastStepTime = 0;
+        const STEP_COOLDOWN = 320; // ms
 
-        // Wheel delta accumulation for precision mice & trackpads
-        let wheelAccumulator = 0;
-        let clearAccumulatorTimer = null;
-        const WHEEL_THRESHOLD = 30;
-        const SLIDE_TRANSITION_DURATION = 480; // ms
+        // Timestamp when the final card item (Slide 4) is 100% fully animated & visible in view
+        let slide4FullyVisibleAt = 0;
 
-        // Ideal scroll position to frame the section comfortably on screen
-        function getIdealScrollY() {
-            const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const pagination = section.querySelector('.integrated-v2-pagination');
-
-            if (mainTrack) {
-                const mRect = mainTrack.getBoundingClientRect();
-                const bottomReserve = Math.min(Math.max(Math.round(windowHeight * 0.045), 28), 48);
-                const paginationExtra = pagination
-                    ? Math.max(0, pagination.getBoundingClientRect().bottom - mRect.bottom)
-                    : 0;
-
-                let desiredSlideBottom = windowHeight - paginationExtra - bottomReserve;
-                const minSlideTop = 75;
-                if (desiredSlideBottom - mRect.height < minSlideTop) {
-                    desiredSlideBottom = minSlideTop + mRect.height;
-                }
-
-                return Math.round(currentScrollY + (mRect.bottom - desiredSlideBottom));
-            }
-
-            const rect = section.getBoundingClientRect();
-            return Math.round(currentScrollY + rect.top);
+        function getTargetY() {
+            const sRect = section.getBoundingClientRect();
+            const currentY = window.pageYOffset || document.documentElement.scrollTop;
+            return Math.max(0, Math.round(currentY + sRect.top - 40));
         }
 
         function updateTrackPosition() {
@@ -3257,6 +3229,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentIndex = index;
 
+            // When arriving at the final card, record timestamp when it will be fully settled & in view
+            if (currentIndex === totalSlides - 1) {
+                slide4FullyVisibleAt = Date.now() + 550; // 480ms transition duration + 70ms settle buffer
+            }
+
             slides.forEach((slide, i) => {
                 if (i === currentIndex) {
                     slide.classList.add('active');
@@ -3277,172 +3254,108 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function handleWheel(e) {
+            // Only on desktop/laptop
             if (window.innerWidth < 768) return;
+
+            // Ignore horizontal trackpad gestures
             if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+
+            // Ignore micro-scrolls
             if (Math.abs(e.deltaY) < 6) return;
 
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const idealY = getIdealScrollY();
             const isScrollingDown = e.deltaY > 0;
             const isScrollingUp = e.deltaY < 0;
-            const rect = section.getBoundingClientRect();
+
+            const sRect = section.getBoundingClientRect();
             const windowHeight = window.innerHeight;
+            const currentY = window.pageYOffset || document.documentElement.scrollTop;
+            const targetY = getTargetY();
 
-            // Detect wheel silence (200ms of no wheel events = the flick gesture has fully stopped!)
-            clearTimeout(wheelIdleTimer);
-            wheelIdleTimer = setTimeout(() => {
-                if (currentIndex === totalSlides - 1) {
-                    hasWheelStoppedAtSlide4 = true;
-                }
+            // ==============================================================
+            // 1. SCROLLING UP: "KO ĐƯỢC CHẶN SCROLL LÊN"
+            // ==============================================================
+            if (isScrollingUp) {
+                // If on Slide 0, NEVER block! Free native scroll upward!
                 if (currentIndex === 0) {
-                    hasWheelStoppedAtSlide0 = true;
-                }
-                wheelAccumulator = 0;
-            }, 200);
-
-            // -------------------------------------------------------------
-            // STATE 1: SECTION IS CURRENTLY LOCKED
-            // -------------------------------------------------------------
-            if (isSectionLocked) {
-                // A. UNLOCK DOWNWARD:
-                // Only allowed when user is on Slide 4 (last slide), has dwelled >= 600ms,
-                // AND has completely stopped the previous flick gesture before scrolling down again!
-                if (currentIndex === totalSlides - 1 && isScrollingDown) {
-                    const hasDwelled = (Date.now() - slide4ArrivedAt >= 600);
-                    if (hasDwelled && hasWheelStoppedAtSlide4) {
-                        // DELIBERATE DOWNWARD SCROLL ON LAST SLIDE:
-                        // UNLOCK and let native browser scroll move smoothly down to next section!
-                        isSectionLocked = false;
-                        wheelAccumulator = 0;
-                        return; // DO NOT preventDefault!
-                    }
-                    // Still dwelling or still in residual flick: absorb completely!
-                    e.preventDefault();
-                    return;
+                    return; // DO NOT preventDefault!
                 }
 
-                // B. UNLOCK UPWARD:
-                // Only allowed when user is on Slide 0 (first slide), has dwelled >= 600ms,
-                // AND has completely stopped the previous flick gesture before scrolling up again!
-                if (currentIndex === 0 && isScrollingUp) {
-                    const hasDwelled = (Date.now() - slide0ArrivedAt >= 600);
-                    if (hasDwelled && hasWheelStoppedAtSlide0) {
-                        // DELIBERATE UPWARD SCROLL ON FIRST SLIDE:
-                        // UNLOCK and let native browser scroll move smoothly up to previous section!
-                        isSectionLocked = false;
-                        wheelAccumulator = 0;
-                        return; // DO NOT preventDefault!
-                    }
-                    // Still dwelling or still in residual flick: absorb completely!
-                    e.preventDefault();
-                    return;
-                }
-
-                // WHILE LOCKED: ALWAYS prevent default vertical scroll!
+                // If on Slide 1, 2, 3, 4: step back to previous slide
                 e.preventDefault();
-
-                // Keep page scroll firmly anchored at idealY without drifting
-                if (Math.abs(currentY - idealY) > 3) {
-                    window.scrollTo({ top: idealY, behavior: 'instant' });
-                }
-
-                // If currently animating slide transition, absorb all trailing ticks (1 flick = 1 slide guarantee!)
-                if (Date.now() < slideLockUntil) {
-                    wheelAccumulator = 0;
-                    return;
-                }
-
-                // Accumulate wheel delta for responsive stepping
-                wheelAccumulator += e.deltaY;
-                clearTimeout(clearAccumulatorTimer);
-                clearAccumulatorTimer = setTimeout(() => { wheelAccumulator = 0; }, 160);
-
-                if (Math.abs(wheelAccumulator) >= WHEEL_THRESHOLD) {
-                    if (wheelAccumulator > 0 && currentIndex < totalSlides - 1) {
-                        // Advance to next slide!
-                        goToSlide(currentIndex + 1);
-                        slideLockUntil = Date.now() + SLIDE_TRANSITION_DURATION;
-                        wheelAccumulator = 0;
-                        if (currentIndex === totalSlides - 1) {
-                            slide4ArrivedAt = Date.now();
-                            hasWheelStoppedAtSlide4 = false;
-                        }
-                    } else if (wheelAccumulator < 0 && currentIndex > 0) {
-                        // Move to prev slide!
-                        goToSlide(currentIndex - 1);
-                        slideLockUntil = Date.now() + SLIDE_TRANSITION_DURATION;
-                        wheelAccumulator = 0;
-                        if (currentIndex === 0) {
-                            slide0ArrivedAt = Date.now();
-                            hasWheelStoppedAtSlide0 = false;
-                        }
-                    }
+                const now = Date.now();
+                if (now - lastStepTime >= STEP_COOLDOWN) {
+                    lastStepTime = now;
+                    goToSlide(currentIndex - 1);
                 }
                 return;
             }
 
-            // -------------------------------------------------------------
-            // STATE 2: SECTION IS NOT LOCKED YET (Approaching)
-            // -------------------------------------------------------------
+            // ==============================================================
+            // 2. SCROLLING DOWN: "BẮT INDEX - CHỈ CHO SCROLL XUỐNG SAU KHI CARD ITEM CUỐI ĐÃ HIỆN ĐỦ"
+            // ==============================================================
+            if (isScrollingDown) {
+                // Check if on the LAST card (Slide 4, index 4):
+                if (currentIndex >= totalSlides - 1) {
+                    // Has the final card finished sliding in and become fully visible in view?
+                    if (Date.now() < slide4FullyVisibleAt) {
+                        // Still in the process of appearing into view: hold position and absorb trailing flick!
+                        e.preventDefault();
+                        if (Math.abs(currentY - targetY) > 2) {
+                            window.scrollTo(0, targetY);
+                        }
+                        return;
+                    }
 
-            // Approach A: Scrolling DOWN from above, haven't finished slides yet
-            if (isScrollingDown && currentIndex < totalSlides - 1) {
-                // If scroll would reach or pass idealY, OR if section is centered in viewport:
-                const wouldCrossIdeal = (currentY + e.deltaY >= idealY - 20) && (rect.top < windowHeight * 0.85);
-                const isOverSection = (rect.top <= windowHeight * 0.45 && rect.bottom >= windowHeight * 0.55);
+                    // Card item cuối đã hiện đủ trong view! Cho phép scroll xuống tự do!
+                    return; // DO NOT preventDefault!
+                }
 
-                if (wouldCrossIdeal || isOverSection) {
+                // CHƯA HẾT CARD ITEM (currentIndex < totalSlides - 1):
+                // Check if scroll has reached this section:
+                const hasReachedSection = (currentY + e.deltaY >= targetY - 20) && (sRect.top < windowHeight * 0.85);
+                const isInsideSection = (sRect.top <= 100 && sRect.bottom >= windowHeight * 0.4);
+
+                if (hasReachedSection || isInsideSection) {
+                    // CATCH IT! BLOCK SCROLLING DOWN!
                     e.preventDefault();
-                    isSectionLocked = true;
-                    window.scrollTo({ top: idealY, behavior: 'instant' });
-                    slideLockUntil = Date.now() + 350; // Absorb entrance flick momentum
-                    goToSlide(0);
-                    slide0ArrivedAt = Date.now();
-                    hasWheelStoppedAtSlide0 = false;
-                    wheelAccumulator = 0;
+
+                    // Lock scroll position to targetY
+                    if (Math.abs(currentY - targetY) > 2) {
+                        window.scrollTo(0, targetY);
+                    }
+
+                    // Advance index to next card
+                    const now = Date.now();
+                    if (now - lastStepTime >= STEP_COOLDOWN) {
+                        lastStepTime = now;
+                        goToSlide(currentIndex + 1);
+                    }
                     return;
                 }
+
+                // If above section, allow native scroll to approach the section
+                return;
             }
-
-            // Approach B: Scrolling UP from below, haven't reversed back to slide 0 yet
-            if (isScrollingUp && currentIndex > 0) {
-                const wouldCrossIdeal = (currentY + e.deltaY <= idealY + 20) && (rect.bottom > windowHeight * 0.15);
-                const isOverSection = (rect.top <= windowHeight * 0.45 && rect.bottom >= windowHeight * 0.55);
-
-                if (wouldCrossIdeal || isOverSection) {
-                    e.preventDefault();
-                    isSectionLocked = true;
-                    window.scrollTo({ top: idealY, behavior: 'instant' });
-                    slideLockUntil = Date.now() + 350;
-                    goToSlide(totalSlides - 1);
-                    slide4ArrivedAt = Date.now();
-                    hasWheelStoppedAtSlide4 = false;
-                    wheelAccumulator = 0;
-                    return;
-                }
-            }
-
-            // Outside section: normal native page scroll
         }
 
         window.addEventListener('wheel', handleWheel, { passive: false });
 
-        // Passive scroll listener: sync slides if user jumps via manual scrollbar dragging
+        // Scroll listener: guarantees user CANNOT scroll past this section downward before index 4 has fully appeared!
+        // NEVER blocks or clamps scrolling up!
         window.addEventListener('scroll', () => {
+            if (window.innerWidth < 768) return;
             const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const idealY = getIdealScrollY();
-            const windowHeight = window.innerHeight;
+            const targetY = getTargetY();
 
-            if (currentY < idealY - windowHeight * 0.9) {
-                if (isSectionLocked) isSectionLocked = false;
-                if (currentIndex !== 0) goToSlide(0, true);
-            } else if (currentY > idealY + windowHeight * 0.9) {
-                if (isSectionLocked) isSectionLocked = false;
-                if (currentIndex !== totalSlides - 1) goToSlide(totalSlides - 1, true);
+            // Clamp downward overshoot if index < 4 OR if final card is still sliding into view:
+            if (currentIndex < totalSlides - 1 || Date.now() < slide4FullyVisibleAt) {
+                if (currentY > targetY + 25) {
+                    window.scrollTo(0, targetY);
+                }
             }
         }, { passive: true });
 
-        // Touch swipe for mobile/tablet
+        // Touch swipe support for mobile/tablets
         let touchStartX = 0;
         let touchStartY = 0;
 
@@ -3471,20 +3384,10 @@ document.addEventListener('DOMContentLoaded', () => {
             touchStartY = 0;
         }, { passive: true });
 
-        // Dots click navigation: centers section and locks
+        // Dots click navigation
         dots.forEach((dot, i) => {
             dot.addEventListener('click', () => {
                 goToSlide(i);
-                isSectionLocked = true;
-                const idealY = getIdealScrollY();
-                window.scrollTo({ top: idealY, behavior: 'smooth' });
-                if (i === totalSlides - 1) {
-                    slide4ArrivedAt = Date.now();
-                    hasWheelStoppedAtSlide4 = true;
-                } else if (i === 0) {
-                    slide0ArrivedAt = Date.now();
-                    hasWheelStoppedAtSlide0 = true;
-                }
             });
         });
 
@@ -3494,20 +3397,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (i !== currentIndex) {
                     e.preventDefault();
                     goToSlide(i);
-                    isSectionLocked = true;
-                    if (i === totalSlides - 1) {
-                        slide4ArrivedAt = Date.now();
-                        hasWheelStoppedAtSlide4 = true;
-                    } else if (i === 0) {
-                        slide0ArrivedAt = Date.now();
-                        hasWheelStoppedAtSlide0 = true;
-                    }
                 }
             });
         });
 
+        // Window resize
         window.addEventListener('resize', updateTrackPosition);
 
+        // Initialize at slide 0
         goToSlide(0, true);
     })();
 
