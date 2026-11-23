@@ -3358,29 +3358,38 @@
 
 /* Number Badge */
 .roadmap-v2-number {
+    position: relative;
     width: 36px;
     height: 36px;
     border-radius: 50%;
     background: #0066FF;
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 0.95rem;
     font-weight: 700;
     flex-shrink: 0;
     box-shadow: 0 3px 10px rgba(0, 102, 255, 0.25);
-    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+    user-select: none;
+    transform: none !important;
+    transition: none !important;
 }
 
-.roadmap-v2-section.roadmap-v2-animated .roadmap-v2-number {
-    transform: scale(0.75);
+.roadmap-v2-number span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    pointer-events: none;
 }
 
-.roadmap-v2-section.roadmap-v2-animated .roadmap-v2-row.is-revealed .roadmap-v2-number,
-.roadmap-v2-section.roadmap-v2-animated.is-revealed .roadmap-v2-row .roadmap-v2-number {
-    transform: scale(1);
-    transition-delay: 0.08s;
+.roadmap-v2-number:hover,
+.roadmap-v2-row:hover .roadmap-v2-number {
+    transform: none !important;
+    box-shadow: 0 3px 10px rgba(0, 102, 255, 0.25) !important;
+    background: #0066FF !important;
 }
 
 /* Step Title */
@@ -3782,11 +3791,6 @@
     height: auto;
     display: block;
     filter: drop-shadow(0 20px 40px rgba(0, 107, 255, 0.16)) drop-shadow(0 8px 18px rgba(15, 23, 42, 0.08));
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.mobile-v2-phone-img:hover {
-    transform: translateY(-6px) scale(1.015);
 }
 
 .mobile-v2-col-right {
@@ -3836,9 +3840,7 @@
     transition: transform 0.3s ease;
 }
 
-.mobile-v2-feature-item:hover {
-    transform: translateY(-2px);
-}
+
 
 .mobile-v2-feature-icon {
     width: 48px;
@@ -3863,16 +3865,7 @@
     transition: fill 0.3s ease;
 }
 
-.mobile-v2-feature-item:hover .mobile-v2-feature-icon {
-    background: #008FFF;
-    color: #FFFFFF;
-    box-shadow: 0 6px 18px rgba(0, 143, 255, 0.35);
-    transform: scale(1.05);
-}
 
-.mobile-v2-feature-item:hover .mobile-v2-feature-icon svg {
-    fill: #FFFFFF;
-}
 
 .mobile-v2-feature-text h4 {
     font-size: var(--h4);
@@ -3949,16 +3942,7 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Preserving high specificity for hover after reveal */
-.mobile-app-v2-section.mobile-app-v2-animated .mobile-v2-feature-item.is-revealed:hover,
-.mobile-app-v2-section.mobile-app-v2-animated.is-revealed .mobile-v2-feature-item:hover {
-    transform: translateY(-4px);
-}
 
-.mobile-app-v2-section.mobile-app-v2-animated .mobile-v2-mockup-wrapper.is-revealed .mobile-v2-phone-img:hover,
-.mobile-app-v2-section.mobile-app-v2-animated.is-revealed .mobile-v2-phone-img:hover {
-    transform: translateY(-6px) scale(1.015);
-}
 
 /* Continuous ambient float & glow pulse after phone is revealed */
 .mobile-app-v2-section.mobile-app-v2-animated .mobile-v2-mockup-wrapper.is-revealed {
@@ -4135,11 +4119,6 @@
 .screenshots-row.active .screenshot-card {
     transform: translateX(0);
     opacity: 1;
-}
-
-.screenshot-card:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.14);
 }
 
 .screenshot-card img {
@@ -7313,8 +7292,8 @@
 
 .faq-layout {
     display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 4.5rem;
+    grid-template-columns: 400px 1fr;
+    gap: 4rem;
     align-items: start;
 }
 
@@ -7731,6 +7710,24 @@ html, body {
     position: relative;
     padding: 20px 0;
     margin: -20px 0;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+}
+
+.lms-v2-slider-viewport.is-dragging {
+    cursor: grabbing !important;
+}
+
+.lms-v2-slider-viewport.is-dragging * {
+    cursor: grabbing !important;
+}
+
+.lms-v2-slider-viewport img {
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .lms-v2-track {
@@ -7738,14 +7735,14 @@ html, body {
     width: 100%;
     transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
     align-items: center;
+    will-change: transform;
 }
 
 .lms-v2-slide {
     width: 100%;
     flex-shrink: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.55s ease, visibility 0.55s ease;
+    opacity: 1;
+    visibility: visible;
     pointer-events: none;
 }
 
@@ -7783,11 +7780,6 @@ html, body {
     display: block;
     filter: none;
     box-shadow: none;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.lms-v2-img:hover {
-    transform: translateY(-4px);
 }
 
 /* Right Content Column */
@@ -8097,10 +8089,6 @@ html, body {
 
 .lms-v2-slide.active .lms-v2-col-media .lms-v2-img {
     transform: scale(1) translateY(0);
-}
-
-.lms-v2-slide.active .lms-v2-col-media .lms-v2-img:hover {
-    transform: scale(1) translateY(-4px);
 }
 
 .lms-v2-slide .lms-v2-col-content {

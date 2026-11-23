@@ -235,11 +235,6 @@
     box-shadow: none !important;
     border-radius: 0 !important;
     overflow: visible !important;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dt-hero-mockup-wrapper:hover {
-    transform: translateY(-4px) scale(1.015);
 }
 
 .dt-hero-mockup-img {
@@ -783,12 +778,9 @@
 .dt-tab-images-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .dt-tab-image-pane {
@@ -805,11 +797,13 @@
     width: 100%;
     height: auto;
     display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 @media (max-width: 768px) {
     .dt-tab-images-wrapper {
-        border-radius: 14px;
         margin-top: 1rem;
     }
 }
@@ -1025,12 +1019,6 @@
     position: relative;
     overflow: hidden;
     padding: 2rem;
-    transition: all 0.3s ease;
-}
-
-.dt-mockup-placeholder:hover {
-    border-color: #93C5FD;
-    box-shadow: 0 16px 40px rgba(0, 102, 255, 0.08);
 }
 
 .dt-mockup-wireframe-preview {
@@ -1337,11 +1325,6 @@
     max-width: 580px;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.dt-feature-mockup-img:hover {
-    transform: translateY(-4px);
 }
 
 @media (max-width: 1024px) {
@@ -1513,5 +1496,110 @@
         width: 38px;
         height: 38px;
         font-size: 1rem;
+    }
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS (HIỆU ỨNG LƯỚT TỚI KHI CUỘN TRANG)
+   ========================================================================== */
+.dt-animated .dt-hero-content {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .dt-hero-visual {
+    opacity: 0;
+    transform: translateY(36px) scale(0.98);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.dt-animated .dt-section-header {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .dt-benefit-card {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.dt-animated .dt-tabs-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .dt-table-preview-card,
+.dt-animated .dt-tab-images-wrapper {
+    opacity: 0;
+    transform: translateY(38px) scale(0.98);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Feature rows: Alternating slide-in from left and right */
+.dt-animated .is-mockup-left .dt-feature-mockup {
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .is-mockup-left .dt-feature-text {
+    opacity: 0;
+    transform: translateX(45px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .is-text-left .dt-feature-text {
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .is-text-left .dt-feature-mockup {
+    opacity: 0;
+    transform: translateX(45px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-animated .cta-banner-card {
+    opacity: 0;
+    transform: translateY(38px) scale(0.98);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Revealed active state */
+.dt-animated .dt-hero-content.is-revealed,
+.dt-animated .dt-hero-visual.is-revealed,
+.dt-animated .dt-section-header.is-revealed,
+.dt-animated .dt-benefits-grid.is-revealed .dt-benefit-card,
+.dt-animated .dt-tabs-container.is-revealed,
+.dt-animated .dt-table-preview-card.is-revealed,
+.dt-animated .dt-tab-images-wrapper.is-revealed,
+.dt-animated .dt-feature-row.is-revealed .dt-feature-mockup,
+.dt-animated .dt-feature-row.is-revealed .dt-feature-text,
+.dt-animated .cta-banner-card.is-revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+}
+
+/* Responsive adjustment: on screens <= 900px, replace horizontal slide with vertical slide */
+@media (max-width: 900px) {
+    .dt-animated .is-mockup-left .dt-feature-mockup,
+    .dt-animated .is-mockup-left .dt-feature-text,
+    .dt-animated .is-text-left .dt-feature-text,
+    .dt-animated .is-text-left .dt-feature-mockup {
+        transform: translateY(30px);
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .dt-animated * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 }
