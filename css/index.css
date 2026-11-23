@@ -1283,6 +1283,7 @@
 }
 
 /* ================= INTEGRATED PLATFORM V2 SECTION ================= */
+
 .integrated-v2-section {
     padding: clamp(6rem, 8vw, 8.5rem) 0 clamp(6.5rem, 9vw, 9rem);
     background: radial-gradient(130% 115% at 50% 90%, #36DAFF 7%, #008BFF 68%, #0B47DE 100%);
@@ -3320,7 +3321,7 @@
     color: #64748B;
     line-height: var(--lh-body);
     margin: 0 auto;
-    max-width: 620px;
+    max-width: 700px;
 }
 
 .roadmap-v2-list {
