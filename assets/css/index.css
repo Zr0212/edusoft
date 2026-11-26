@@ -8762,3 +8762,49 @@ h4 .text-gradient,
     font-weight: 600;
     line-height: 1.4;
 }
+
+
+/* ========================================================
+   SECTION SCROLL MARGIN FOR FIXED FLOATING HEADER
+   Prevents sections from being covered by floating header when navigating to anchors
+   ======================================================== */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+/* ========================================================
+   RESPONSIVE VERTICAL CENTERING FOR INTEGRATED PLATFORM V2
+   Auto compact padding and spacing on laptops and smaller screen heights
+   ======================================================== */
+@media (max-height: 900px) and (min-width: 768px) {
+    .integrated-v2-section {
+        padding: clamp(3rem, 4.5vw, 4.5rem) 0 clamp(3rem, 4.5vw, 4.5rem) !important;
+    }
+    .integrated-v2-header {
+        margin-bottom: clamp(1.25rem, 2vw, 2rem) !important;
+    }
+    .integrated-v2-content {
+        padding: clamp(1.85rem, 2.5vw, 2.5rem) clamp(1.75rem, 3vw, 2.75rem) !important;
+    }
+    .integrated-v2-pagination {
+        margin-top: 1.5rem !important;
+    }
+}
+
+@media (max-height: 750px) and (min-width: 768px) {
+    .integrated-v2-section {
+        padding: 2.25rem 0 2.5rem !important;
+    }
+    .integrated-v2-header {
+        margin-bottom: 0.85rem !important;
+    }
+    .integrated-v2-content {
+        padding: 1.35rem 1.75rem !important;
+    }
+    .v2-bullet-list {
+        margin: 0 0 1.25rem 0 !important;
+    }
+    .integrated-v2-pagination {
+        margin-top: 1rem !important;
+    }
+}

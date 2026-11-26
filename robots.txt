@@ -1,0 +1,6 @@
+# robots.txt for https://edusoft.vn
+User-agent: *
+Allow: /
+Disallow: /egs.html
+
+Sitemap: https://edusoft.vn/sitemap.xml

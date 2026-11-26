@@ -4,16 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Edusoft</title>
-    <link rel="icon" type="image/png" href="images/common/logo.png" />
+        <title>Edusoft - Nền tảng Chuyển đổi số & Quản trị Giáo dục Toàn diện</title>
+    <meta name="description" content="Edusoft cung cấp hệ sinh thái phần mềm quản trị giáo dục đại học, cao đẳng toàn diện: Quản lý đào tạo (E-TMS), Học tập trực tuyến (LMS Plus), khảo thí và tuyển sinh số.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://edusoft.vn/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://edusoft.vn/">
+    <meta property="og:title" content="Edusoft - Nền tảng Chuyển đổi số & Quản trị Giáo dục Toàn diện">
+    <meta property="og:description" content="Hệ sinh thái phần mềm quản trị giáo dục đại học, cao đẳng toàn diện: Quản lý đào tạo E-TMS, LMS Plus, khảo thí và ứng dụng di động.">
+    <meta property="og:image" content="https://edusoft.vn/assets/images/common/logo.png">
+    <meta property="og:site_name" content="Edusoft">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://edusoft.vn/">
+    <meta name="twitter:title" content="Edusoft - Nền tảng Chuyển đổi số & Quản trị Giáo dục Toàn diện">
+    <meta name="twitter:description" content="Hệ sinh thái phần mềm quản trị giáo dục đại học, cao đẳng toàn diện: Quản lý đào tạo E-TMS, LMS Plus, khảo thí và ứng dụng di động.">
+    <meta name="twitter:image" content="https://edusoft.vn/assets/images/common/logo.png">
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://edusoft.vn/#organization",
+          "name": "Edusoft",
+          "url": "https://edusoft.vn/",
+          "logo": "https://edusoft.vn/assets/images/common/logo.png",
+          "description": "Nền tảng chuyển đổi số toàn diện cho Giáo dục Đại học, Cao đẳng và Trường học tại Việt Nam.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+84-911-88-68-01",
+            "contactType": "customer service",
+            "email": "nmhoang@edusoft.vn",
+            "areaServed": "VN",
+            "availableLanguage": "Vietnamese"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://edusoft.vn/#website",
+          "url": "https://edusoft.vn/",
+          "name": "Edusoft",
+          "publisher": {
+            "@id": "https://edusoft.vn/#organization"
+          },
+          "inLanguage": "vi-VN"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://edusoft.vn/#software",
+          "name": "Edusoft ERP & LMS",
+          "applicationCategory": "EducationalSoftware",
+          "operatingSystem": "All, Web, Cloud, iOS, Android",
+          "url": "https://edusoft.vn/",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "VND",
+            "description": "Đăng ký tư vấn và trải nghiệm demo miễn phí"
+          },
+          "description": "Nền tảng tích hợp 30+ phân hệ phần mềm quản trị giáo dục: Quản lý đào tạo, Quản lý học tập LMS, Khảo thí, Cổng sinh viên và ứng dụng di động."
+        }
+      ]
+    }
+    </script>
+    <link rel="icon" type="image/png" href="assets/images/common/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=2.4">
-    <link rel="stylesheet" href="css/index.css?v=154.0">
-    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=2.4">
+    <link rel="stylesheet" href="assets/css/index.css?v=154.0">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
 </head>
 <body>
 
@@ -26,7 +95,7 @@
         <!-- Left Block: Logo & Typographic Branding -->
         <div class="header-left-block flex">
             <a href="index.html" class="logo flex">
-                <img src="images/common/logo.png" alt="Logo">
+                <img src="assets/images/common/logo.png" alt="Logo">
                 <span class="logo-title">EDUSOFT</span>
             </a>
         </div>
@@ -309,6 +378,11 @@
                 </li>
                 <li>
                     <a href="#" class="flex-center">
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#newsletter-section" class="flex-center">
                         <span>Liên hệ</span>
                     </a>
                 </li>
@@ -336,7 +410,7 @@
 <div class="mobile-menu-drawer">
     <div class="mobile-drawer-header">
         <a href="index.html" class="logo flex">
-            <img src="images/common/logo.png" alt="Logo">
+            <img src="assets/images/common/logo.png" alt="Logo">
             <span class="logo-title">EDUSOFT</span>
         </a>
         <button class="mobile-drawer-close" aria-label="Close menu">
@@ -372,7 +446,10 @@
                 </div>
             </li>
             <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Liên hệ</a>
+                <a href="#" class="mobile-nav-link">Blog</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="#newsletter-section" class="mobile-nav-link">Liên hệ</a>
             </li>
         </ul>
         <div class="mobile-drawer-footer">
@@ -504,7 +581,7 @@
                     <!-- Mini Left Sidebar -->
                     <aside class="hero-dash-sidebar">
                         <div class="hero-dash-brand">
-                            <img src="images/common/logo.png" alt="Edusoft" class="hero-dash-logo">
+                            <img src="assets/images/common/logo.png" alt="Edusoft" class="hero-dash-logo">
                             <span class="hero-dash-name">EDUSOFT</span>
                         </div>
                         <nav class="hero-dash-nav">
@@ -789,7 +866,7 @@
 
     <!-- Fluffy Clouds Bottom Melting into Partners Section -->
     <div class="hero-v3-clouds" aria-hidden="true">
-        <img src="images/common/cloud.png" alt="Edusoft Clouds" class="hero-cloud-img" loading="eager">
+        <img src="assets/images/common/cloud.png" alt="Edusoft Clouds" class="hero-cloud-img" loading="eager">
     </div>
 </section>
 
@@ -803,78 +880,78 @@
             <div class="partners-ticker-track">
                 <!-- Set 1 -->
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-truong-dai-hoc-cong-nghe-giao-thong-van-tai-inkythuatso-01 1.png" alt="ĐH Công nghệ Giao thông Vận tải">
+                    <img src="assets/images/common/logo/logo-truong-dai-hoc-cong-nghe-giao-thong-van-tai-inkythuatso-01 1.png" alt="ĐH Công nghệ Giao thông Vận tải" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-truong-dai-hoc-thu-do-ha-noi-inkythuatso-01 1.png" alt="ĐH Thủ đô Hà Nội">
+                    <img src="assets/images/common/logo/logo-truong-dai-hoc-thu-do-ha-noi-inkythuatso-01 1.png" alt="ĐH Thủ đô Hà Nội" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-dai-hoc-hang-hai-inkythuatso 1.png" alt="Đại học Hàng Hải">
+                    <img src="assets/images/common/logo/logo-dai-hoc-hang-hai-inkythuatso 1.png" alt="Đại học Hàng Hải" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Logo ĐH Quảng Bình - QBU 1.png" alt="Đại học Quảng Bình">
+                    <img src="assets/images/common/logo/Logo ĐH Quảng Bình - QBU 1.png" alt="Đại học Quảng Bình" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Logo Đại Học Tân Trào 1.png" alt="Đại học Tân Trào">
+                    <img src="assets/images/common/logo/Logo Đại Học Tân Trào 1.png" alt="Đại học Tân Trào" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/THCS xuân đỉnh 1.png" alt="THCS Xuân Đỉnh">
+                    <img src="assets/images/common/logo/THCS xuân đỉnh 1.png" alt="THCS Xuân Đỉnh" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/bactuliemlogo 1.png" alt="Bắc Từ Liêm">
+                    <img src="assets/images/common/logo/bactuliemlogo 1.png" alt="Bắc Từ Liêm" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Wenet 1.png" alt="WENet">
+                    <img src="assets/images/common/logo/Wenet 1.png" alt="WENet" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-pte-magic 1.png" alt="PTE Magic">
+                    <img src="assets/images/common/logo/logo-pte-magic 1.png" alt="PTE Magic" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Victoria HoaBinh logo 14sep[47]-1 1.png" alt="Victoria Hòa Bình">
+                    <img src="assets/images/common/logo/Victoria HoaBinh logo 14sep[47]-1 1.png" alt="Victoria Hòa Bình" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Logo chon.png" alt="Logo Chơn">
+                    <img src="assets/images/common/logo/Logo chon.png" alt="Logo Chơn" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/lam hồng.png" alt="Lam Hồng">
+                    <img src="assets/images/common/logo/lam hồng.png" alt="Lam Hồng" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Set 2 (Duplicate for Seamless Loop) -->
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-truong-dai-hoc-cong-nghe-giao-thong-van-tai-inkythuatso-01 1.png" alt="ĐH Công nghệ Giao thông Vận tải">
+                    <img src="assets/images/common/logo/logo-truong-dai-hoc-cong-nghe-giao-thong-van-tai-inkythuatso-01 1.png" alt="ĐH Công nghệ Giao thông Vận tải" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-truong-dai-hoc-thu-do-ha-noi-inkythuatso-01 1.png" alt="ĐH Thủ đô Hà Nội">
+                    <img src="assets/images/common/logo/logo-truong-dai-hoc-thu-do-ha-noi-inkythuatso-01 1.png" alt="ĐH Thủ đô Hà Nội" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-dai-hoc-hang-hai-inkythuatso 1.png" alt="Đại học Hàng Hải">
+                    <img src="assets/images/common/logo/logo-dai-hoc-hang-hai-inkythuatso 1.png" alt="Đại học Hàng Hải" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Logo ĐH Quảng Bình - QBU 1.png" alt="Đại học Quảng Bình">
+                    <img src="assets/images/common/logo/Logo ĐH Quảng Bình - QBU 1.png" alt="Đại học Quảng Bình" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Logo Đại Học Tân Trào 1.png" alt="Đại học Tân Trào">
+                    <img src="assets/images/common/logo/Logo Đại Học Tân Trào 1.png" alt="Đại học Tân Trào" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/THCS xuân đỉnh 1.png" alt="THCS Xuân Đỉnh">
+                    <img src="assets/images/common/logo/THCS xuân đỉnh 1.png" alt="THCS Xuân Đỉnh" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/bactuliemlogo 1.png" alt="Bắc Từ Liêm">
+                    <img src="assets/images/common/logo/bactuliemlogo 1.png" alt="Bắc Từ Liêm" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Wenet 1.png" alt="WENet">
+                    <img src="assets/images/common/logo/Wenet 1.png" alt="WENet" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/logo-pte-magic 1.png" alt="PTE Magic">
+                    <img src="assets/images/common/logo/logo-pte-magic 1.png" alt="PTE Magic" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Victoria HoaBinh logo 14sep[47]-1 1.png" alt="Victoria Hòa Bình">
+                    <img src="assets/images/common/logo/Victoria HoaBinh logo 14sep[47]-1 1.png" alt="Victoria Hòa Bình" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/Logo chon.png" alt="Logo Chơn">
+                    <img src="assets/images/common/logo/Logo chon.png" alt="Logo Chơn" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-item">
-                    <img src="images/common/logo/lam hồng.png" alt="Lam Hồng">
+                    <img src="assets/images/common/logo/lam hồng.png" alt="Lam Hồng" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -969,7 +1046,7 @@
                                 <span class="app-subtitle">VIỆN PHÁT TRIỂN CÔNG NGHỆ & GIÁO DỤC EDUSOFT</span>
                             </div>
                             <div class="app-logo">
-                                <img src="images/common/logo.png" alt="Edusoft Logo">
+                                <img src="assets/images/common/logo.png" alt="Edusoft Logo" loading="lazy" decoding="async">
                             </div>
                         </div>
                         
@@ -1236,7 +1313,7 @@
                 <div class="integrated-card is-main" data-card-id="card-1">
                     <div class="integrated-card-inner">
                         <div class="integrated-card-media">
-                            <img src="images/index/slide_1.jpg" alt="Quản lý đào tạo" onerror="this.onerror=null; this.src='images/index/slide_1.png';">
+                            <img src="assets/images/index/slide_1.jpg" alt="Quản lý đào tạo" onerror="this.onerror=null; this.src='assets/images/index/slide_1.png';" loading="lazy" decoding="async">
                         </div>
                         <div class="integrated-card-info">
                             <h3 class="integrated-card-title">Quản lý đào tạo</h3>
@@ -1261,7 +1338,7 @@
                 <div class="integrated-card is-thumb" data-card-id="card-2">
                     <div class="integrated-card-inner">
                         <div class="integrated-card-media">
-                            <img src="images/index/slide_2.jpg" alt="Quản lý khảo thí" onerror="this.onerror=null; this.src='images/index/slide_2.png';">
+                            <img src="assets/images/index/slide_2.jpg" alt="Quản lý khảo thí" onerror="this.onerror=null; this.src='assets/images/index/slide_2.png';" loading="lazy" decoding="async">
                         </div>
                         <div class="integrated-card-info">
                             <h3 class="integrated-card-title">Quản lý khảo thí</h3>
@@ -1283,7 +1360,7 @@
                 <div class="integrated-card is-thumb" data-card-id="card-3">
                     <div class="integrated-card-inner">
                         <div class="integrated-card-media">
-                            <img src="images/index/slide_3.png" alt="Quản lý học tập" onerror="this.onerror=null; this.src='images/index/slide_3.jpg';">
+                            <img src="assets/images/index/slide_3.png" alt="Quản lý học tập" onerror="this.onerror=null; this.src='assets/images/index/slide_3.jpg';" loading="lazy" decoding="async">
                         </div>
                         <div class="integrated-card-info">
                             <h3 class="integrated-card-title">Quản lý học tập</h3>
@@ -1305,7 +1382,7 @@
                 <div class="integrated-card is-thumb" data-card-id="card-4">
                     <div class="integrated-card-inner">
                         <div class="integrated-card-media">
-                            <img src="images/index/slide_4.jpg" alt="Văn bằng - chứng chỉ" onerror="this.onerror=null; this.src='images/index/slide_4.png';">
+                            <img src="assets/images/index/slide_4.jpg" alt="Văn bằng - chứng chỉ" onerror="this.onerror=null; this.src='assets/images/index/slide_4.png';" loading="lazy" decoding="async">
                         </div>
                         <div class="integrated-card-info">
                             <h3 class="integrated-card-title">Văn bằng - chứng chỉ</h3>
@@ -1379,7 +1456,7 @@
                         <!-- Right Column: Image Mockup (1:2 Ratio) -->
                         <div class="integrated-v2-right">
                             <div class="v2-mockup-container">
-                                <img src="images/index/v2-pane-0-img.png" alt="Quản lý đào tạo" class="v2-mockup-img">
+                                <img src="assets/images/index/v2-pane-0-img.png" alt="Quản lý đào tạo" class="v2-mockup-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -1414,7 +1491,7 @@
                         <!-- Right Column: Image Mockup (1:2 Ratio) -->
                         <div class="integrated-v2-right">
                             <div class="v2-mockup-container">
-                                <img src="images/index/v2-pane-1-img.png" alt="Quản lý học tập" class="v2-mockup-img">
+                                <img src="assets/images/index/v2-pane-1-img.png" alt="Quản lý học tập" class="v2-mockup-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -1449,7 +1526,7 @@
                         <!-- Right Column: Image Mockup (1:2 Ratio) -->
                         <div class="integrated-v2-right">
                             <div class="v2-mockup-container">
-                                <img src="images/index/v2-pane-2-img.png" alt="Quản trị nguồn lực" class="v2-mockup-img">
+                                <img src="assets/images/index/v2-pane-2-img.png" alt="Quản trị nguồn lực" class="v2-mockup-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -1484,7 +1561,7 @@
                         <!-- Right Column: Image Mockup (1:2 Ratio) -->
                         <div class="integrated-v2-right">
                             <div class="v2-mockup-container">
-                                <img src="images/index/v2-pane-3-img.png" alt="Hành chính &amp; điều hành" class="v2-mockup-img">
+                                <img src="assets/images/index/v2-pane-3-img.png" alt="Hành chính &amp; điều hành" class="v2-mockup-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -1519,7 +1596,7 @@
                         <!-- Right Column: Image Mockup (1:2 Ratio) -->
                         <div class="integrated-v2-right">
                             <div class="v2-mockup-container">
-                                <img src="images/index/v2-pane-4-img.png" alt="Tiện ích hỗ trợ" class="v2-mockup-img">
+                                <img src="assets/images/index/v2-pane-4-img.png" alt="Tiện ích hỗ trợ" class="v2-mockup-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -1693,7 +1770,7 @@
                             <div class="lms-v2-slide-grid">
                                 <!-- Left Column: Media -->
                                 <div class="lms-v2-col-media">
-                                    <img src="images/index/lms_1.png" alt="Khóa học đào tạo đa dạng" class="lms-v2-img">
+                                    <img src="assets/images/index/lms_1.png" alt="Khóa học đào tạo đa dạng" class="lms-v2-img" loading="lazy" decoding="async">
                                 </div>
                                 <!-- Right Column: Content -->
                                 <div class="lms-v2-col-content">
@@ -1716,7 +1793,7 @@
                         <div class="lms-v2-slide" data-slide="1">
                             <div class="lms-v2-slide-grid">
                                 <div class="lms-v2-col-media">
-                                    <img src="images/index/lms_2.png" alt="Hệ thống thi chuyên nghiệp" class="lms-v2-img">
+                                    <img src="assets/images/index/lms_2.png" alt="Hệ thống thi chuyên nghiệp" class="lms-v2-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="lms-v2-col-content">
                                     <p class="lms-v2-desc">
@@ -1738,7 +1815,7 @@
                         <div class="lms-v2-slide" data-slide="2">
                             <div class="lms-v2-slide-grid">
                                 <div class="lms-v2-col-media">
-                                    <img src="images/index/lms_3.png" alt="Quản lý học liệu & Bài tập" class="lms-v2-img">
+                                    <img src="assets/images/index/lms_3.png" alt="Quản lý học liệu & Bài tập" class="lms-v2-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="lms-v2-col-content">
                                     <p class="lms-v2-desc">
@@ -1760,7 +1837,7 @@
                         <div class="lms-v2-slide" data-slide="3">
                             <div class="lms-v2-slide-grid">
                                 <div class="lms-v2-col-media">
-                                    <img src="images/index/lms_4.png" alt="Chứng chỉ đào tạo" class="lms-v2-img">
+                                    <img src="assets/images/index/lms_4.png" alt="Chứng chỉ đào tạo" class="lms-v2-img" loading="lazy" decoding="async">
                                 </div>
                                 <div class="lms-v2-col-content">
                                     <p class="lms-v2-desc">
@@ -1999,43 +2076,43 @@
                     <!-- Column 1 (Scroll Up) -->
                     <div class="ticker-column">
                         <div class="ticker-track">
-                            <img src="images/index/A4/Dashboard.png" alt="Dashboard">
-                            <img src="images/index/A4/Bảng điểm.png" alt="Bảng điểm">
-                            <img src="images/index/A4/Công việc.png" alt="Công việc">
-                            <img src="images/index/A4/Lớp học giảng dậy.png" alt="Lớp học giảng dạy">
+                            <img src="assets/images/index/A4/Dashboard.png" alt="Dashboard" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Bảng điểm.png" alt="Bảng điểm" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Công việc.png" alt="Công việc" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lớp học giảng dậy.png" alt="Lớp học giảng dạy" loading="lazy" decoding="async">
                             <!-- Duplicate for seamless loop -->
-                            <img src="images/index/A4/Dashboard.png" alt="Dashboard">
-                            <img src="images/index/A4/Bảng điểm.png" alt="Bảng điểm">
-                            <img src="images/index/A4/Công việc.png" alt="Công việc">
-                            <img src="images/index/A4/Lớp học giảng dậy.png" alt="Lớp học giảng dạy">
+                            <img src="assets/images/index/A4/Dashboard.png" alt="Dashboard" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Bảng điểm.png" alt="Bảng điểm" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Công việc.png" alt="Công việc" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lớp học giảng dậy.png" alt="Lớp học giảng dạy" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <!-- Column 2 (Scroll Down) -->
                     <div class="ticker-column">
                         <div class="ticker-track ticker-reverse">
-                            <img src="images/index/A4/Lịch trình.png" alt="Lịch trình">
-                            <img src="images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần">
-                            <img src="images/index/A4/Lịch học - tháng.png" alt="Lịch học tháng">
-                            <img src="images/index/A4/Thông báo.png" alt="Thông báo">
+                            <img src="assets/images/index/A4/Lịch trình.png" alt="Lịch trình" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lịch học - tháng.png" alt="Lịch học tháng" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Thông báo.png" alt="Thông báo" loading="lazy" decoding="async">
                             <!-- Duplicate for seamless loop -->
-                            <img src="images/index/A4/Lịch trình.png" alt="Lịch trình">
-                            <img src="images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần">
-                            <img src="images/index/A4/Lịch học - tháng.png" alt="Lịch học tháng">
-                            <img src="images/index/A4/Thông báo.png" alt="Thông báo">
+                            <img src="assets/images/index/A4/Lịch trình.png" alt="Lịch trình" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lịch học - tháng.png" alt="Lịch học tháng" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Thông báo.png" alt="Thông báo" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <!-- Column 3 (Scroll Up) -->
                     <div class="ticker-column">
                         <div class="ticker-track">
-                            <img src="images/index/A4/Công việc.png" alt="Công việc">
-                            <img src="images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần">
-                            <img src="images/index/A4/Dashboard.png" alt="Dashboard">
-                            <img src="images/index/A4/Thông báo.png" alt="Thông báo">
+                            <img src="assets/images/index/A4/Công việc.png" alt="Công việc" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Dashboard.png" alt="Dashboard" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Thông báo.png" alt="Thông báo" loading="lazy" decoding="async">
                             <!-- Duplicate for seamless loop -->
-                            <img src="images/index/A4/Công việc.png" alt="Công việc">
-                            <img src="images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần">
-                            <img src="images/index/A4/Dashboard.png" alt="Dashboard">
-                            <img src="images/index/A4/Thông báo.png" alt="Thông báo">
+                            <img src="assets/images/index/A4/Công việc.png" alt="Công việc" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Lịch học - tuần.png" alt="Lịch học tuần" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Dashboard.png" alt="Dashboard" loading="lazy" decoding="async">
+                            <img src="assets/images/index/A4/Thông báo.png" alt="Thông báo" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -2082,7 +2159,7 @@
             <div class="mobile-v2-col mobile-v2-col-center">
                 <div class="mobile-v2-mockup-wrapper">
                     <div class="mobile-v2-mockup-glow"></div>
-                    <img src="images/index/mobile-app-phone@2x.png" alt="EduSoft Mobile App" class="mobile-v2-phone-img">
+                    <img src="assets/images/index/mobile-app-phone@2x.png" alt="EduSoft Mobile App" class="mobile-v2-phone-img" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -2117,20 +2194,20 @@
         <!-- Row 1: Top Cards -->
         <div class="screenshots-row">
             <div class="screenshot-card slide-from-left">
-                <img src="images/index/app-screenshots-1.png" alt="Giao diện lớp học">
+                <img src="assets/images/index/app-screenshots-1.png" alt="Giao diện lớp học" loading="lazy" decoding="async">
             </div>
             <div class="screenshot-card slide-from-right">
-                <img src="images/index/app-screenshots-2.png" alt="Giao diện lịch biểu">
+                <img src="assets/images/index/app-screenshots-2.png" alt="Giao diện lịch biểu" loading="lazy" decoding="async">
             </div>
         </div>
         
         <!-- Row 2: Bottom Cards -->
         <div class="screenshots-row">
             <div class="screenshot-card slide-from-left">
-                <img src="images/index/app-screenshots-3.png" alt="Giao diện bảng điểm">
+                <img src="assets/images/index/app-screenshots-3.png" alt="Giao diện bảng điểm" loading="lazy" decoding="async">
             </div>
             <div class="screenshot-card slide-from-right">
-                <img src="images/index/app-screenshots-4.png" alt="Giao diện thời biểu">
+                <img src="assets/images/index/app-screenshots-4.png" alt="Giao diện thời biểu" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -2505,7 +2582,7 @@
     <div class="container">
         <div class="cta-banner-card">
             <!-- Fluffy Clouds Layer at Bottom (cloud1.png) -->
-            <img src="images/common/cloud1.png" alt="Mây trắng" class="cta-banner-cloud-img">
+            <img src="assets/images/common/cloud1.png" alt="Mây trắng" class="cta-banner-cloud-img" loading="lazy" decoding="async">
 
             <!-- Center Content -->
             <div class="cta-banner-center-content">
@@ -2547,14 +2624,19 @@
     <div class="container footer-main">
         <!-- Column 1: Brand Info -->
         <div class="footer-col brand-col">
-            <a href="#" class="footer-brand">
-                <img src="images/common/logo.png" alt="Edusoft Logo" class="footer-logo">
+            <a href="index.html" class="footer-brand">
+                <img src="assets/images/common/logo.png" alt="Edusoft Logo" class="footer-logo" loading="lazy" decoding="async">
                 <span class="logo-title">EDUSOFT</span>
             </a>
             
-            <a href="mailto:info@edusoft.vn" class="footer-email-box">
+            <a href="tel:0911886801" class="footer-email-box">
+                <iconify-icon icon="lucide:phone"></iconify-icon>
+                0911.88.68.01
+            </a>
+            
+            <a href="mailto:nmhoang@edusoft.vn" class="footer-email-box">
                 <iconify-icon icon="lucide:mail"></iconify-icon>
-                info@edusoft.vn
+                nmhoang@edusoft.vn
             </a>
             
             <div class="footer-address-box">
@@ -2614,7 +2696,7 @@
                 <li><a href="#">Về chúng tôi</a></li>
                 <li><a href="#">Tri thức số</a></li>
                 <li><a href="#">Tuyển dụng</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#newsletter-section">Liên hệ</a></li>
                 <li><a href="#">Hỏi đáp & chia sẻ</a></li>
             </ul>
         </div>
@@ -2635,1698 +2717,14 @@
     </div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.platform-tab');
-    const panes = document.querySelectorAll('.preview-pane');
-    
-    let activeIndex = 0;
-    let progress = 0;
-    let timer = null;
-    const duration = 6000; // 6 seconds
-    const intervalTime = 30; // update progress every 30ms
-    const step = (intervalTime / duration) * 100;
-    
-    function switchTab(index) {
-        tabs.forEach(t => t.classList.remove('active'));
-        panes.forEach(p => p.classList.remove('active'));
-        
-        tabs[index].classList.add('active');
-        const tabId = tabs[index].getAttribute('data-tab');
-        const targetPane = document.getElementById(`preview-${tabId}`);
-        if (targetPane) {
-            targetPane.classList.add('active');
-        }
-        
-        // Reset all progress values
-        document.querySelectorAll('.tab-progress-value').forEach(bar => {
-            bar.style.width = '0%';
-        });
-        
-        progress = 0;
-        activeIndex = index;
-    }
-    
-    function startTimer() {
-        if (timer) clearInterval(timer);
-        timer = setInterval(() => {
-            progress += step;
-            const activeProgressBar = tabs[activeIndex].querySelector('.tab-progress-value');
-            if (activeProgressBar) {
-                activeProgressBar.style.width = `${progress}%`;
-            }
-            
-            if (progress >= 100) {
-                progress = 0;
-                let nextIndex = (activeIndex + 1) % tabs.length;
-                switchTab(nextIndex);
-            }
-        }, intervalTime);
-    }
-    
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', (e) => {
-            const isLucideX = e.target.closest('iconify-icon[icon="lucide:x"]') || 
-                              (tab.classList.contains('active') && e.target.closest('.tab-toggle-icon'));
-            
-            clearInterval(timer);
-            if (isLucideX) {
-                let nextIndex = (index + 1) % tabs.length;
-                switchTab(nextIndex);
-            } else {
-                switchTab(index);
-            }
-            startTimer();
-        });
-    });
-    
-    // Start autoplay cycle
-    switchTab(0);
-    startTimer();
-    
-    // Integrated Platform Slider Controller (if slider present)
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slider-slide');
-    const dots = document.querySelectorAll('.slider-dot');
-    const prevBtn = document.querySelector('.arrow-prev');
-    const nextBtn = document.querySelector('.arrow-next');
-    
-    if (track && slides.length > 0 && prevBtn && nextBtn) {
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-        let sliderAutoplay = null;
-        
-        function updateSlider(index) {
-            currentSlide = index;
-            track.style.transform = `translateX(-${currentSlide * 20}%)`;
-            
-            dots.forEach(d => d.classList.remove('active'));
-            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
-        }
-        
-        function startSliderAutoplay() {
-            if (sliderAutoplay) clearInterval(sliderAutoplay);
-            sliderAutoplay = setInterval(() => {
-                let nextIndex = (currentSlide + 1) % totalSlides;
-                updateSlider(nextIndex);
-            }, 8000);
-        }
-        
-        prevBtn.addEventListener('click', () => {
-            clearInterval(sliderAutoplay);
-            let index = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider(index);
-            startSliderAutoplay();
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            clearInterval(sliderAutoplay);
-            let index = (currentSlide + 1) % totalSlides;
-            updateSlider(index);
-            startSliderAutoplay();
-        });
-        
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                clearInterval(sliderAutoplay);
-                updateSlider(index);
-                startSliderAutoplay();
-            });
-        });
-        
-        startSliderAutoplay();
-    }
-    
-    // Roadmap Scroll-Driven Timeline Controller
-    const timelineRows = document.querySelectorAll('.timeline-row');
-    function updateScrollTimeline() {
-        const viewportHeight = window.innerHeight;
-        const Y_trigger = viewportHeight * 0.65;
-        const rows = Array.from(timelineRows);
-        
-        // Calculate center Y for each card relative to viewport
-        const Ys = rows.map(row => {
-            const card = row.querySelector('.timeline-number-card');
-            if (!card) return null;
-            const rect = card.getBoundingClientRect();
-            return rect.top + rect.height / 2;
-        });
-
-        // 1. Calculate vertical connector line progress for each row
-        const lineProgresses = [];
-        for (let i = 0; i < rows.length; i++) {
-            let lineP = 0;
-            if (i < rows.length - 1 && Ys[i] !== null && Ys[i+1] !== null) {
-                if (Ys[i] <= Y_trigger && Ys[i+1] > Y_trigger) {
-                    lineP = (Y_trigger - Ys[i]) / (Ys[i+1] - Ys[i]);
-                } else if (Ys[i+1] <= Y_trigger) {
-                    lineP = 1;
-                }
-            }
-            lineProgresses.push(lineP);
-        }
-
-        // 2. Calculate card progress for each row
-        const cardProgresses = [];
-        for (let i = 0; i < rows.length; i++) {
-            let cardP = 0;
-            if (i === 0) {
-                // First card turns blue as it approaches the viewport trigger line
-                const startY = viewportHeight * 0.85;
-                const endY = Y_trigger;
-                if (Ys[0] !== null) {
-                    if (Ys[0] <= startY && Ys[0] >= endY) {
-                        cardP = (startY - Ys[0]) / (startY - endY);
-                    } else if (Ys[0] < endY) {
-                        cardP = 1;
-                    }
-                }
-            } else {
-                // Subsequent cards turn blue ONLY when the line from the previous card has fully reached them
-                if (lineProgresses[i - 1] === 1) {
-                    cardP = 1;
-                }
-            }
-            cardProgresses.push(cardP);
-        }
-
-        // 3. Apply styles & trigger active states
-        rows.forEach((row, i) => {
-            const maxCardP = Math.max(parseFloat(row.dataset.maxCardP || '0'), cardProgresses[i]);
-            const maxLineP = Math.max(parseFloat(row.dataset.maxLineP || '0'), lineProgresses[i]);
-            
-            row.dataset.maxCardP = maxCardP;
-            row.dataset.maxLineP = maxLineP;
-            
-            row.style.setProperty('--card-progress', maxCardP);
-            row.style.setProperty('--line-progress', maxLineP);
-            
-            if (Ys[i] !== null && Ys[i] <= Y_trigger) {
-                row.classList.add('active');
-            }
-            
-            if (row.classList.contains('active')) {
-                row.style.setProperty('--card-progress', '1');
-                row.dataset.maxCardP = '1';
-            }
-        });
-    }
-    window.addEventListener('scroll', updateScrollTimeline);
-    window.addEventListener('resize', updateScrollTimeline);
-    updateScrollTimeline(); // run once on load
-    
-    // ===== ROADMAP V2 SCROLL-TRIGGERED PROGRESSIVE ITEM REVEAL =====
-    const roadmapV2Section = document.querySelector('.roadmap-v2-section');
-    if (roadmapV2Section) {
-        const header = roadmapV2Section.querySelector('.roadmap-v2-header');
-        const rows = roadmapV2Section.querySelectorAll('.roadmap-v2-row');
-
-        if (!('IntersectionObserver' in window)) {
-            if (header) header.classList.add('is-revealed');
-            rows.forEach(r => r.classList.add('is-revealed'));
-        } else {
-            roadmapV2Section.classList.add('roadmap-v2-animated');
-
-            // Header reveal
-            if (header) {
-                const headerObserver = new IntersectionObserver((entries, obs) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-revealed');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.12 });
-                headerObserver.observe(header);
-            }
-
-            // Each row reveals progressively as user scrolls down to it
-            const rowObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-revealed');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { 
-                threshold: 0.15,
-                rootMargin: '0px 0px -40px 0px'
-            });
-
-            rows.forEach(row => rowObserver.observe(row));
-        }
-    }
-
-    // ===== MOBILE APP V2 PROGRESSIVE SCROLL-TRIGGERED ITEM REVEAL =====
-    const mobileAppV2Section = document.getElementById('mobile-app-section-v2');
-    if (mobileAppV2Section) {
-        const headerBlock = mobileAppV2Section.querySelector('.mobile-v2-header-block');
-        const topDesc = mobileAppV2Section.querySelector('.mobile-v2-top-desc');
-        const mockupWrapper = mobileAppV2Section.querySelector('.mobile-v2-mockup-wrapper');
-        const featureItems = mobileAppV2Section.querySelectorAll('.mobile-v2-feature-item');
-
-        const elementsToReveal = [headerBlock, topDesc, mockupWrapper, ...featureItems].filter(Boolean);
-
-        if (!('IntersectionObserver' in window)) {
-            elementsToReveal.forEach(el => el.classList.add('is-revealed'));
-        } else {
-            mobileAppV2Section.classList.add('mobile-app-v2-animated');
-
-            const mobileItemObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-revealed');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.15,
-                rootMargin: '0px 0px -40px 0px'
-            });
-
-            elementsToReveal.forEach(el => mobileItemObserver.observe(el));
-        }
-    }
-
-    // ===== FAQ SECTION SCROLL-TRIGGERED ENTRANCE & INTERACTION ANIMATION =====
-    const faqSection = document.getElementById('faq-section');
-    if (faqSection) {
-        const faqItemsList = faqSection.querySelectorAll('.faq-item');
-        if (!('IntersectionObserver' in window)) {
-            faqSection.classList.add('is-revealed');
-            faqItemsList.forEach(item => item.classList.add('is-revealed'));
-        } else {
-            faqSection.classList.add('faq-animated');
-            const faqObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-revealed');
-                        obs.unobserve(entry.target);
-
-                        setTimeout(() => {
-                            faqItemsList.forEach(item => {
-                                item.style.transitionDelay = '0s';
-                            });
-                        }, 900);
-                    }
-                });
-            }, {
-                threshold: 0.12,
-                rootMargin: '0px 0px -40px 0px'
-            });
-            faqObserver.observe(faqSection);
-        }
-    }
-    
-    // App Screenshots Slide-in Observer (one-time trigger per row)
-    const screenshotRows = document.querySelectorAll('.screenshots-row');
-    if (screenshotRows.length > 0) {
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    obs.unobserve(entry.target); // trigger only once per row
-                }
-            });
-        }, { threshold: 0.15 });
-        screenshotRows.forEach(row => observer.observe(row));
-    }
-    
-    // CTA Cards Slide-in Observer (one-time trigger)
-    const ctaCards = document.querySelectorAll('.cta-main-card, .cta-side-card');
-    if (ctaCards.length > 0) {
-        const ctaObserver = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    obs.unobserve(entry.target); // trigger only once
-                }
-            });
-        }, { threshold: 0.15 });
-        ctaCards.forEach(card => ctaObserver.observe(card));
-    }
-    
-    // Mobile Drawer Toggle
-    const burgerBtn = document.querySelector('.mobile-burger-btn');
-    const drawerCloseBtn = document.querySelector('.mobile-drawer-close');
-    const drawer = document.querySelector('.mobile-menu-drawer');
-    const drawerBackdrop = document.querySelector('.mobile-drawer-backdrop');
-    
-    function openDrawer() {
-        if (drawer && drawerBackdrop) {
-            drawer.classList.add('active');
-            drawerBackdrop.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-    }
-    
-    function closeDrawer() {
-        if (drawer && drawerBackdrop) {
-            drawer.classList.remove('active');
-            drawerBackdrop.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-    
-    if (burgerBtn) burgerBtn.addEventListener('click', openDrawer);
-    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
-    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
-
-    // Mobile Accordion Toggle
-    const accordionTitles = document.querySelectorAll('.mobile-nav-item.has-accordion .accordion-title');
-    accordionTitles.forEach(title => {
-        title.addEventListener('click', () => {
-            const item = title.parentElement;
-            item.classList.toggle('open');
-        });
-    });
-
-    // Close drawer when clicking a mobile nav link
-    const mobileLinks = document.querySelectorAll('.mobile-accordion-content a, .mobile-nav-item:not(.has-accordion) .mobile-nav-link');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', closeDrawer);
-    });
-
-    // LMS Section Slot-Based Diagonal Coverflow Carousel (Top-Right -> Center -> Bottom-Left)
-    const lmsViewport = document.getElementById('lmsStreamViewport');
-    const lmsContainer = document.getElementById('lmsStreamContainer');
-    const lmsPrevBtn = document.getElementById('lmsPrevBtn');
-    const lmsNextBtn = document.getElementById('lmsNextBtn');
-
-    if (lmsViewport && lmsContainer) {
-        const lmsCards = Array.from(lmsContainer.querySelectorAll('.lms-card'));
-        const totalCards = lmsCards.length;
-        let activeIndex = 0;
-        let autoPlayTimer = null;
-        const AUTO_PLAY_INTERVAL = 3000; // 3.0s interval (0.9s ease slide + 2.1s hold pause)
-
-        let xSpacing = 330;
-        let ySpacing = 90;
-
-        function updateSlotSpacing() {
-            const w = lmsViewport.clientWidth;
-            if (w < 768) {
-                xSpacing = Math.min(w * 0.41, 295);
-                ySpacing = Math.round(xSpacing * 0.16);
-            } else if (w < 1100) {
-                xSpacing = Math.min(w * 0.39, 400);
-                ySpacing = Math.round(xSpacing * 0.16);
-            } else {
-                // Shifted outward by ~10% (~475px spacing span)
-                xSpacing = Math.min(w * 0.40, 475);
-                ySpacing = Math.round(xSpacing * 0.16);
-            }
-        }
-
-        function getSlotConfig(slotOffset) {
-            const w = lmsViewport.clientWidth;
-            const isMobile = w < 768;
-
-            // Relative diagonal slots along Top-Right (x>0, y<0) to Bottom-Left (x<0, y>0)
-            switch(slotOffset) {
-                case 2:  // farRight (Top-Right offscreen)
-                    return { x: xSpacing * 2.0, y: -ySpacing * 2.0, scale: 0.45, opacity: 0, zIndex: 1 };
-                case 1:  // right (Shifted 10% outward)
-                    return { 
-                        x: isMobile ? xSpacing * 1.3 : xSpacing * 1.05, 
-                        y: isMobile ? -ySpacing * 0.55 : -ySpacing * 0.65, 
-                        scale: isMobile ? 0.64 : 0.78, 
-                        opacity: isMobile ? 0.4 : 0.95, 
-                        zIndex: 10 
-                    };
-                case 0:  // center (Active focal slot)
-                    return { x: 0, y: 0, scale: 1.0, opacity: 1, zIndex: 50 };
-                case -1: // left (Shifted 10% outward)
-                    return { 
-                        x: isMobile ? -xSpacing * 1.3 : -xSpacing * 1.05, 
-                        y: isMobile ? ySpacing * 0.55 : ySpacing * 0.65, 
-                        scale: isMobile ? 0.64 : 0.78, 
-                        opacity: isMobile ? 0.4 : 0.95, 
-                        zIndex: 10 
-                    };
-                case -2: // farLeft (Bottom-Left offscreen)
-                    return { x: -xSpacing * 2.0, y: ySpacing * 2.0, scale: 0.45, opacity: 0, zIndex: 1 };
-                default:
-                    return { x: 0, y: 0, scale: 0.45, opacity: 0, zIndex: 0 };
-            }
-        }
-
-        function renderCarousel(isInitial = false) {
-            updateSlotSpacing();
-
-            lmsCards.forEach((card, i) => {
-                let diff = (i - activeIndex) % totalCards;
-                if (diff < -2) diff += totalCards;
-                if (diff > 2) diff -= totalCards;
-
-                const slotOffset = diff; // -2, -1, 0, 1, 2
-                const config = getSlotConfig(slotOffset);
-
-                const prevOffset = card.dataset.slotOffset !== undefined ? parseInt(card.dataset.slotOffset) : slotOffset;
-
-                // Teleport silently if wrapping between farLeft (-2) and farRight (2)
-                if (!isInitial && Math.abs(slotOffset - prevOffset) > 2) {
-                    card.style.transition = 'none';
-                    card.style.transform = `translate3d(${config.x.toFixed(1)}px, ${config.y.toFixed(1)}px, 0px) scale(${config.scale})`;
-                    card.style.opacity = config.opacity;
-                    card.style.zIndex = config.zIndex;
-                    
-                    // Force DOM reflow to apply instant teleport before re-enabling transition
-                    void card.offsetHeight;
-                    card.style.transition = '';
-                } else {
-                    card.style.transform = `translate3d(${config.x.toFixed(1)}px, ${config.y.toFixed(1)}px, 0px) scale(${config.scale})`;
-                    card.style.opacity = config.opacity;
-                    card.style.zIndex = config.zIndex;
-                }
-
-                card.dataset.slotOffset = slotOffset;
-
-                if (slotOffset === 0) {
-                    card.classList.add('is-featured');
-                    card.classList.remove('is-left', 'is-right');
-                } else if (slotOffset === -1) {
-                    card.classList.add('is-left');
-                    card.classList.remove('is-featured', 'is-right');
-                } else if (slotOffset === 1) {
-                    card.classList.add('is-right');
-                    card.classList.remove('is-featured', 'is-left');
-                } else {
-                    card.classList.remove('is-featured', 'is-left', 'is-right');
-                }
-            });
-        }
-
-        function nextStep() {
-            activeIndex = (activeIndex + 1) % totalCards;
-            renderCarousel();
-        }
-
-        function prevStep() {
-            activeIndex = (activeIndex - 1 + totalCards) % totalCards;
-            renderCarousel();
-        }
-
-        function startAutoPlay() {
-            stopAutoPlay();
-            autoPlayTimer = setInterval(nextStep, AUTO_PLAY_INTERVAL);
-        }
-
-        function stopAutoPlay() {
-            if (autoPlayTimer) {
-                clearInterval(autoPlayTimer);
-                autoPlayTimer = null;
-            }
-        }
-
-        // Event listeners
-        if (lmsNextBtn) {
-            lmsNextBtn.addEventListener('click', () => {
-                nextStep();
-                startAutoPlay();
-            });
-        }
-        if (lmsPrevBtn) {
-            lmsPrevBtn.addEventListener('click', () => {
-                prevStep();
-                startAutoPlay();
-            });
-        }
-
-        // Allow clicking side cards to focus them
-        lmsCards.forEach((card, i) => {
-            card.addEventListener('click', (e) => {
-                const offset = card.dataset.slotOffset ? parseInt(card.dataset.slotOffset) : 0;
-                if (offset === 1) {
-                    nextStep();
-                    startAutoPlay();
-                } else if (offset === -1) {
-                    prevStep();
-                    startAutoPlay();
-                }
-            });
-        });
-
-        // Pause on hover
-        lmsViewport.addEventListener('mouseenter', stopAutoPlay);
-        lmsViewport.addEventListener('mouseleave', startAutoPlay);
-
-        window.addEventListener('resize', () => renderCarousel(true));
-
-        // Initial setup
-        renderCarousel(true);
-        startAutoPlay();
-    }
-
-    /* ================= INTEGRATED PLATFORM V2 CARDS SLIDER ================= */
-    (function initIntegratedV2Slider() {
-        const section = document.getElementById('integrated-platform-section-v2');
-        if (!section) return;
-
-        const mainTrack = document.getElementById('v2MainTrack');
-        const slides = section.querySelectorAll('.integrated-v2-slide');
-        const dots = section.querySelectorAll('.v2-dot');
-
-        if (!slides.length || !mainTrack) return;
-
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-
-        // Step cooldown so 1 flick = 1 slide (prevents skipping slides)
-        let lastStepTime = 0;
-        const STEP_COOLDOWN = 320; // ms
-
-        // Timestamp when the final card item (Slide 4) is 100% fully animated & visible in view
-        let slide4FullyVisibleAt = 0;
-
-        function getTargetY() {
-            const sRect = section.getBoundingClientRect();
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            return Math.max(0, Math.round(currentY + sRect.top - 40));
-        }
-
-        function updateTrackPosition() {
-            if (!slides.length || !mainTrack) return;
-            const currentSlide = slides[currentIndex];
-            if (!currentSlide) return;
-
-            const sliderViewport = section.querySelector('.integrated-v2-slider-viewport') || mainTrack.parentElement;
-            const viewportWidth = sliderViewport ? sliderViewport.offsetWidth : window.innerWidth;
-            const slideWidth = currentSlide.offsetWidth;
-            const trackStyle = window.getComputedStyle(mainTrack);
-            const gap = parseFloat(trackStyle.gap) || parseFloat(trackStyle.getPropertyValue('--slide-gap')) || 36;
-
-            const centerOffset = (viewportWidth - slideWidth) / 2;
-            const translateX = centerOffset - currentIndex * (slideWidth + gap);
-
-            mainTrack.style.transform = `translateX(${translateX}px)`;
-        }
-
-        function goToSlide(index, force) {
-            if (index < 0) index = 0;
-            if (index >= totalSlides) index = totalSlides - 1;
-            if (index === currentIndex && !force) return;
-
-            currentIndex = index;
-
-            // When arriving at the final card, record timestamp when it will be fully settled & in view
-            if (currentIndex === totalSlides - 1) {
-                slide4FullyVisibleAt = Date.now() + 550; // 480ms transition duration + 70ms settle buffer
-            }
-
-            slides.forEach((slide, i) => {
-                if (i === currentIndex) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-
-            dots.forEach((dot, i) => {
-                if (i === currentIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-
-            updateTrackPosition();
-        }
-
-        function handleWheel(e) {
-            // Only on desktop/laptop
-            if (window.innerWidth < 768) return;
-
-            // Ignore horizontal trackpad gestures
-            if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-
-            // Ignore micro-scrolls
-            if (Math.abs(e.deltaY) < 6) return;
-
-            const isScrollingDown = e.deltaY > 0;
-            const isScrollingUp = e.deltaY < 0;
-
-            const sRect = section.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const targetY = getTargetY();
-
-            // ==============================================================
-            // 1. SCROLLING UP: "KO ĐƯỢC CHẶN SCROLL LÊN"
-            // ==============================================================
-            if (isScrollingUp) {
-                // If on Slide 0, NEVER block! Free native scroll upward!
-                if (currentIndex === 0) {
-                    return; // DO NOT preventDefault!
-                }
-
-                // If on Slide 1, 2, 3, 4: step back to previous slide
-                e.preventDefault();
-                const now = Date.now();
-                if (now - lastStepTime >= STEP_COOLDOWN) {
-                    lastStepTime = now;
-                    goToSlide(currentIndex - 1);
-                }
-                return;
-            }
-
-            // ==============================================================
-            // 2. SCROLLING DOWN: "BẮT INDEX - CHỈ CHO SCROLL XUỐNG SAU KHI CARD ITEM CUỐI ĐÃ HIỆN ĐỦ"
-            // ==============================================================
-            if (isScrollingDown) {
-                // Check if on the LAST card (Slide 4, index 4):
-                if (currentIndex >= totalSlides - 1) {
-                    // Has the final card finished sliding in and become fully visible in view?
-                    if (Date.now() < slide4FullyVisibleAt) {
-                        // Still in the process of appearing into view: hold position and absorb trailing flick!
-                        e.preventDefault();
-                        if (Math.abs(currentY - targetY) > 2) {
-                            window.scrollTo(0, targetY);
-                        }
-                        return;
-                    }
-
-                    // Card item cuối đã hiện đủ trong view! Cho phép scroll xuống tự do!
-                    return; // DO NOT preventDefault!
-                }
-
-                // CHƯA HẾT CARD ITEM (currentIndex < totalSlides - 1):
-                // Check if scroll has reached this section:
-                const hasReachedSection = (currentY + e.deltaY >= targetY - 20) && (sRect.top < windowHeight * 0.85);
-                const isInsideSection = (sRect.top <= 100 && sRect.bottom >= windowHeight * 0.4);
-
-                if (hasReachedSection || isInsideSection) {
-                    // CATCH IT! BLOCK SCROLLING DOWN!
-                    e.preventDefault();
-
-                    // Lock scroll position to targetY
-                    if (Math.abs(currentY - targetY) > 2) {
-                        window.scrollTo(0, targetY);
-                    }
-
-                    // Advance index to next card
-                    const now = Date.now();
-                    if (now - lastStepTime >= STEP_COOLDOWN) {
-                        lastStepTime = now;
-                        goToSlide(currentIndex + 1);
-                    }
-                    return;
-                }
-
-                // If above section, allow native scroll to approach the section
-                return;
-            }
-        }
-
-        window.addEventListener('wheel', handleWheel, { passive: false });
-
-        // Scroll listener: guarantees user CANNOT scroll past this section downward before index 4 has fully appeared!
-        // NEVER blocks or clamps scrolling up!
-        window.addEventListener('scroll', () => {
-            if (window.innerWidth < 768) return;
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const targetY = getTargetY();
-
-            // Clamp downward overshoot if index < 4 OR if final card is still sliding into view:
-            if (currentIndex < totalSlides - 1 || Date.now() < slide4FullyVisibleAt) {
-                if (currentY > targetY + 25) {
-                    window.scrollTo(0, targetY);
-                }
-            }
-        }, { passive: true });
-
-        // Touch swipe support for mobile/tablets
-        let touchStartX = 0;
-        let touchStartY = 0;
-
-        section.addEventListener('touchstart', (e) => {
-            if (e.touches.length === 1) {
-                touchStartX = e.touches[0].clientX;
-                touchStartY = e.touches[0].clientY;
-            }
-        }, { passive: true });
-
-        section.addEventListener('touchend', (e) => {
-            if (!touchStartX) return;
-            const touchEndX = e.changedTouches[0].clientX;
-            const touchEndY = e.changedTouches[0].clientY;
-            const diffX = touchEndX - touchStartX;
-            const diffY = touchEndY - touchStartY;
-
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
-                if (diffX < 0) {
-                    goToSlide(currentIndex + 1);
-                } else {
-                    goToSlide(currentIndex - 1);
-                }
-            }
-            touchStartX = 0;
-            touchStartY = 0;
-        }, { passive: true });
-
-        // Dots click navigation
-        dots.forEach((dot, i) => {
-            dot.addEventListener('click', () => {
-                goToSlide(i);
-            });
-        });
-
-        // Clicking inactive peeking slides
-        slides.forEach((slide, i) => {
-            slide.addEventListener('click', (e) => {
-                if (i !== currentIndex) {
-                    e.preventDefault();
-                    goToSlide(i);
-                }
-            });
-        });
-
-        // Window resize
-        window.addEventListener('resize', updateTrackPosition);
-
-        // Initialize at slide 0
-        goToSlide(0, true);
-    })();
-
-    /* ================= INTEGRATED PLATFORM FLIP CAROUSEL ================= */
-    (function initIntegratedFlipCarousel() {
-        const carousel = document.getElementById('integratedCarousel');
-        const mainSlot = document.getElementById('integratedMainSlot');
-        const thumbsRow = document.getElementById('integratedThumbsRow');
-
-        if (!carousel || !mainSlot || !thumbsRow) return;
-
-        let isAnimating = false;
-        let autoPlayTimer = null;
-        const AUTO_HOLD_DURATION = 5500; // 5.5s interval (gives users comfortable time to read content)
-
-        function getCards() {
-            const mainCard = mainSlot.querySelector('.integrated-card');
-            const thumbCards = Array.from(thumbsRow.querySelectorAll('.integrated-card'));
-            return { mainCard, thumbCards };
-        }
-
-        function switchCard(targetThumbCard) {
-            if (isAnimating) return;
-            const { mainCard, thumbCards } = getCards();
-            if (!targetThumbCard || !thumbCards.includes(targetThumbCard)) return;
-
-            isAnimating = true;
-
-            const allCards = [mainCard, ...thumbCards];
-
-            // 1. FIRST: Get bounding client rects of all cards
-            const firstRects = new Map();
-            allCards.forEach(card => {
-                firstRects.set(card, card.getBoundingClientRect());
-            });
-
-            // 2. LAST: Move DOM nodes & update state classes
-            // Move target thumbnail up to main slot
-            mainSlot.appendChild(targetThumbCard);
-            targetThumbCard.classList.add('is-main');
-            targetThumbCard.classList.remove('is-thumb');
-
-            // Move former main card down to thumbnail row at the END
-            thumbsRow.appendChild(mainCard);
-            mainCard.classList.remove('is-main');
-            mainCard.classList.add('is-thumb');
-
-            // Force layout recalculation & measure new bounding client rects
-            const lastRects = new Map();
-            allCards.forEach(card => {
-                lastRects.set(card, card.getBoundingClientRect());
-            });
-
-            // 3. INVERT: Calculate delta & scale, apply transform instantly without transition
-            allCards.forEach(card => {
-                const first = firstRects.get(card);
-                const last = lastRects.get(card);
-                if (!first || !last) return;
-
-                const deltaX = first.left - last.left;
-                const deltaY = first.top - last.top;
-                const scaleX = first.width / last.width;
-                const scaleY = first.height / last.height;
-
-                card.style.transition = 'none';
-                card.style.transformOrigin = 'top left';
-                card.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scaleX}, ${scaleY})`;
-                card.style.zIndex = (card === targetThumbCard || card === mainCard) ? '10' : '2';
-            });
-
-            // 4. PLAY: Animate to transform: none using cubic-bezier(0.22, 1, 0.36, 1) over 850ms
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    allCards.forEach(card => {
-                        card.style.transition = 'transform 850ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 850ms cubic-bezier(0.22, 1, 0.36, 1), background 850ms ease, border-color 850ms ease';
-                        card.style.transform = 'translate(0px, 0px) scale(1, 1)';
-                    });
-
-                    setTimeout(() => {
-                        allCards.forEach(card => {
-                            card.style.transition = '';
-                            card.style.transform = '';
-                            card.style.transformOrigin = '';
-                            card.style.zIndex = '';
-                        });
-                        isAnimating = false;
-                    }, 860);
-                });
-            });
-        }
-
-        // Thumbnail click handler
-        thumbsRow.addEventListener('click', (e) => {
-            const clickedCard = e.target.closest('.integrated-card');
-            if (clickedCard && thumbsRow.contains(clickedCard)) {
-                switchCard(clickedCard);
-                resetAutoPlay();
-            }
-        });
-
-        // AutoPlay cycle
-        function startAutoPlay() {
-            stopAutoPlay();
-            autoPlayTimer = setInterval(() => {
-                const { thumbCards } = getCards();
-                if (thumbCards.length > 0) {
-                    switchCard(thumbCards[0]);
-                }
-            }, AUTO_HOLD_DURATION);
-        }
-
-        function stopAutoPlay() {
-            if (autoPlayTimer) {
-                clearInterval(autoPlayTimer);
-                autoPlayTimer = null;
-            }
-        }
-
-        function resetAutoPlay() {
-            stopAutoPlay();
-            startAutoPlay();
-        }
-
-        // Pause auto-play on hover
-        carousel.addEventListener('mouseenter', stopAutoPlay);
-        carousel.addEventListener('mouseleave', startAutoPlay);
-
-        // Start auto play
-        startAutoPlay();
-    })();
-
-    /* ===== FAQ ACCORDION TOGGLE (FLAWLESS & EXACT HEIGHT) ===== */
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        if (!questionBtn || !answer) return;
-
-        if (item.classList.contains('active')) {
-            answer.style.height = 'auto';
-            questionBtn.setAttribute('aria-expanded', 'true');
-        } else {
-            answer.style.height = '0px';
-            questionBtn.setAttribute('aria-expanded', 'false');
-        }
-
-        questionBtn.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-
-            // Close all other active items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
-                    const otherAnswer = otherItem.querySelector('.faq-answer');
-                    const otherBtn = otherItem.querySelector('.faq-question');
-                    otherItem.classList.remove('active');
-                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-                    if (otherAnswer) {
-                        const curH = otherAnswer.getBoundingClientRect().height;
-                        otherAnswer.style.height = curH + 'px';
-                        otherAnswer.offsetHeight; // reflow
-                        otherAnswer.style.height = '0px';
-                    }
-                }
-            });
-
-            if (isActive) {
-                // Collapse current item
-                const curH = answer.getBoundingClientRect().height;
-                answer.style.height = curH + 'px';
-                answer.offsetHeight; // reflow
-                answer.style.height = '0px';
-                item.classList.remove('active');
-                questionBtn.setAttribute('aria-expanded', 'false');
-            } else {
-                // Expand current item
-                item.classList.add('active');
-                questionBtn.setAttribute('aria-expanded', 'true');
-                const curH = answer.getBoundingClientRect().height;
-                answer.style.height = curH + 'px';
-                answer.offsetHeight; // reflow
-                answer.style.height = answer.scrollHeight + 'px';
-
-                const onEnd = (e) => {
-                    if (e.target !== answer) return;
-                    if (item.classList.contains('active')) {
-                        answer.style.height = 'auto';
-                    }
-                    answer.removeEventListener('transitionend', onEnd);
-                };
-                answer.addEventListener('transitionend', onEnd);
-            }
-        });
-    });
-
-    /* ===== LMS SECTION V2 SLIDER ===== */
-    (function initLmsV2Slider() {
-        const section = document.getElementById('lms-section-v2');
-        if (!section) return;
-
-        const track = document.getElementById('lmsV2Track');
-        const slides = section.querySelectorAll('.lms-v2-slide');
-        const dots = section.querySelectorAll('.lms-v2-dot');
-        const stepNav = document.getElementById('lmsV2StepNav');
-        const stepBtns = stepNav ? stepNav.querySelectorAll('.lms-v2-step-btn') : [];
-        const stepDividers = stepNav ? stepNav.querySelectorAll('.lms-v2-step-divider') : [];
-        const prevBtn = document.getElementById('lmsV2PrevBtn');
-        const nextBtn = document.getElementById('lmsV2NextBtn');
-        const dotsContainer = document.getElementById('lmsV2Dots');
-
-        if (!slides.length || !track) return;
-
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-        let autoPlayTimer = null;
-        const AUTO_PLAY_INTERVAL = 6000;
-
-        function updateStepNav(index) {
-            stepBtns.forEach((btn, idx) => {
-                btn.classList.toggle('active', idx === index);
-            });
-            stepDividers.forEach((div, idx) => {
-                div.classList.toggle('active', index < (totalSlides - 1) && idx === index);
-            });
-        }
-
-        function goToSlide(index) {
-            const targetIndex = (index + totalSlides) % totalSlides;
-            currentIndex = targetIndex;
-
-            // Slide entire cluster track horizontally as ONE unit (just like integrated-platform-section-v2)
-            track.style.transition = 'transform 0.55s cubic-bezier(0.25, 1, 0.5, 1)';
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-            // Switch Slides Active Class
-            slides.forEach((slide, idx) => {
-                slide.classList.toggle('active', idx === currentIndex);
-            });
-
-            // Dots update
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === currentIndex);
-            });
-
-            // Step Nav update
-            updateStepNav(currentIndex);
-        }
-
-        if (stepNav) {
-            stepNav.addEventListener('click', (e) => {
-                const btn = e.target.closest('.lms-v2-step-btn');
-                if (btn) {
-                    const idx = parseInt(btn.getAttribute('data-index'), 10);
-                    if (!isNaN(idx)) {
-                        goToSlide(idx);
-                        resetAutoPlay();
-                    }
-                }
-            });
-        }
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                goToSlide(currentIndex - 1);
-                resetAutoPlay();
-            });
-        }
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                goToSlide(currentIndex + 1);
-                resetAutoPlay();
-            });
-        }
-
-        if (dotsContainer) {
-            dotsContainer.addEventListener('click', (e) => {
-                const dot = e.target.closest('.lms-v2-dot');
-                if (dot) {
-                    const idx = parseInt(dot.getAttribute('data-index'), 10);
-                    if (!isNaN(idx)) {
-                        goToSlide(idx);
-                        resetAutoPlay();
-                    }
-                }
-            });
-        }
-
-        // ===== MOUSE DRAG & TOUCH SWIPE SUPPORT =====
-        let isDragging = false;
-        let isPointerDown = false;
-        let startX = 0;
-        let startY = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-        let dragDistance = 0;
-        let hasMoved = false;
-
-        const viewport = section.querySelector('.lms-v2-slider-viewport');
-        if (viewport) {
-            function getPositionX(e) {
-                return e.type.includes('mouse') ? e.pageX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
-            }
-
-            function getPositionY(e) {
-                return e.type.includes('mouse') ? e.pageY : (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
-            }
-
-            function dragStart(e) {
-                if (e.type === 'mousedown' && e.button !== 0) return;
-
-                isPointerDown = true;
-                hasMoved = false;
-                dragDistance = 0;
-                startX = getPositionX(e);
-                startY = getPositionY(e);
-                
-                const width = viewport.offsetWidth || 1;
-                prevTranslate = -currentIndex * width;
-                currentTranslate = prevTranslate;
-
-                stopAutoPlay();
-            }
-
-            function dragMove(e) {
-                if (!isPointerDown) return;
-
-                const currentX = getPositionX(e);
-                const currentY = getPositionY(e);
-                const diffX = currentX - startX;
-                const diffY = currentY - startY;
-
-                // For touch: if user is scrolling vertically more than horizontally, cancel horizontal drag
-                if (!isDragging && e.type.includes('touch')) {
-                    if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 8) {
-                        isPointerDown = false;
-                        return;
-                    }
-                }
-
-                dragDistance = diffX;
-
-                // Activate dragging state once moved past threshold (6px)
-                if (Math.abs(dragDistance) > 6) {
-                    if (!isDragging) {
-                        isDragging = true;
-                        viewport.classList.add('is-dragging');
-                        track.style.transition = 'none';
-                    }
-                    hasMoved = true;
-                    if (e.cancelable && e.type.includes('touch')) {
-                        e.preventDefault();
-                    }
-
-                    // Calculate live position with boundary resistance
-                    let targetX = prevTranslate + dragDistance;
-                    const maxTranslate = 0;
-                    const minTranslate = -(totalSlides - 1) * viewport.offsetWidth;
-
-                    // Rubber-band resistance at track ends
-                    if (targetX > maxTranslate) {
-                        targetX = maxTranslate + (targetX - maxTranslate) * 0.3;
-                    } else if (targetX < minTranslate) {
-                        targetX = minTranslate + (targetX - minTranslate) * 0.3;
-                    }
-
-                    currentTranslate = targetX;
-                    track.style.transform = `translateX(${currentTranslate}px)`;
-                }
-            }
-
-            function dragEnd() {
-                if (!isPointerDown) return;
-                isPointerDown = false;
-
-                if (isDragging) {
-                    isDragging = false;
-                    viewport.classList.remove('is-dragging');
-                    track.style.transition = 'transform 0.55s cubic-bezier(0.25, 1, 0.5, 1)';
-
-                    const threshold = 55; // pixels to trigger slide change
-                    if (dragDistance < -threshold) {
-                        // Dragged left -> Next slide
-                        if (currentIndex < totalSlides - 1) {
-                            goToSlide(currentIndex + 1);
-                        } else {
-                            goToSlide(0);
-                        }
-                    } else if (dragDistance > threshold) {
-                        // Dragged right -> Prev slide
-                        if (currentIndex > 0) {
-                            goToSlide(currentIndex - 1);
-                        } else {
-                            goToSlide(totalSlides - 1);
-                        }
-                    } else {
-                        // Snap back to current slide
-                        goToSlide(currentIndex);
-                    }
-                } else {
-                    goToSlide(currentIndex);
-                }
-
-                resetAutoPlay();
-            }
-
-            // Prevent native browser image drag
-            viewport.addEventListener('dragstart', (e) => e.preventDefault());
-
-            // Suppress link click if dragging occurred
-            viewport.addEventListener('click', (e) => {
-                if (hasMoved && Math.abs(dragDistance) > 10) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            }, true);
-
-            // Mouse event listeners
-            viewport.addEventListener('mousedown', dragStart);
-            window.addEventListener('mousemove', dragMove);
-            window.addEventListener('mouseup', dragEnd);
-
-            // Touch event listeners
-            viewport.addEventListener('touchstart', dragStart, { passive: true });
-            viewport.addEventListener('touchmove', dragMove, { passive: false });
-            viewport.addEventListener('touchend', dragEnd, { passive: true });
-            viewport.addEventListener('touchcancel', dragEnd, { passive: true });
-        }
-
-        function startAutoPlay() {
-            stopAutoPlay();
-            autoPlayTimer = setInterval(() => {
-                goToSlide(currentIndex + 1);
-            }, AUTO_PLAY_INTERVAL);
-        }
-
-        function stopAutoPlay() {
-            if (autoPlayTimer) {
-                clearInterval(autoPlayTimer);
-                autoPlayTimer = null;
-            }
-        }
-
-        function resetAutoPlay() {
-            stopAutoPlay();
-            startAutoPlay();
-        }
-
-        section.addEventListener('mouseenter', stopAutoPlay);
-        section.addEventListener('mouseleave', startAutoPlay);
-
-        // Initial setup
-        updateStepNav(0);
-        startAutoPlay();
-    })();
-
-    /* ===== LMS V2 SCROLL-TRIGGERED ENTRANCE ANIMATION ===== */
-    (function initLmsV2ScrollReveal() {
-        const lmsSection = document.getElementById('lms-section-v2');
-        if (!lmsSection) return;
-
-        const header = lmsSection.querySelector('.lms-v2-header');
-        const showcase = lmsSection.querySelector('.lms-v2-showcase-container');
-
-        if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-            if (header) header.classList.add('is-revealed');
-            if (showcase) showcase.classList.add('is-revealed');
-            return;
-        }
-
-        // Header progressive reveal on scroll
-        if (header) {
-            header.classList.add('lms-v2-header-animated');
-            const headerObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        header.classList.add('is-revealed');
-                        obs.unobserve(header);
-                    }
-                });
-            }, {
-                threshold: 0.15,
-                rootMargin: '0px 0px -30px 0px'
-            });
-            headerObserver.observe(header);
-        }
-
-        // Slide Showcase progressive reveal (fires when user scrolls specifically to the slide)
-        if (showcase) {
-            showcase.classList.add('lms-v2-showcase-animated');
-            const showcaseObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        showcase.classList.add('is-revealed');
-                        obs.unobserve(showcase);
-
-                        setTimeout(() => {
-                            const animatedEls = showcase.querySelectorAll('.lms-v2-step-nav, .lms-v2-col-media, .lms-v2-col-content, .lms-v2-controls');
-                            animatedEls.forEach(el => {
-                                el.style.willChange = 'auto';
-                            });
-                        }, 1200);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -40px 0px'
-            });
-            showcaseObserver.observe(showcase);
-        }
-    })();
-
-});
-
-    /* ===== SCROLL REVEAL ENTRANCE FOR FEATURES & SOLUTIONS CARDS ===== */
-    (function initCardScrollReveal() {
-        const featureCards = document.querySelectorAll('.features-section .feature-card');
-        const solutionCards = document.querySelectorAll('#solutions-section .solution-card');
-        const allCards = [...featureCards, ...solutionCards];
-
-        if (!allCards.length) return;
-
-        // Fallback for browsers without IntersectionObserver
-        if (!('IntersectionObserver' in window)) {
-            allCards.forEach(c => c.classList.add('is-revealed'));
-            return;
-        }
-
-        // Apply staggered delay to features grid
-        featureCards.forEach((card, idx) => {
-            const delay = (idx % 3) * 0.12 + Math.floor(idx / 3) * 0.06;
-            card.style.transitionDelay = `${delay.toFixed(2)}s`;
-        });
-
-        // Apply staggered delay to solutions bento grid
-        solutionCards.forEach((card, idx) => {
-            card.style.transitionDelay = `${(idx * 0.1).toFixed(2)}s`;
-        });
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    el.classList.add('is-revealed');
-                    obs.unobserve(el);
-
-                    // Once animation completes, reset transitionDelay so hover is immediate
-                    const currentDelay = parseFloat(el.style.transitionDelay || '0') * 1000;
-                    setTimeout(() => {
-                        el.style.transitionDelay = '0s';
-                        el.style.willChange = 'auto';
-                    }, currentDelay + 800);
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.12
-        });
-
-        allCards.forEach(card => observer.observe(card));
-    })();
-
-    /* ===== HERO V3 MOCKUP DYNAMIC ANIMATIONS CONTROLLER ===== */
-    (function initHeroV3Animations() {
-        function triggerHeroAnimations() {
-            const hero = document.getElementById('hero-section');
-            if (!hero) return;
-            hero.classList.add('is-animated');
-
-            // 1. Spline Wave Line Chart Initial Draw
-            const splinePath = hero.querySelector('.hero-chart-path');
-            if (splinePath) {
-                try {
-                    const totalLength = splinePath.getTotalLength() || 400;
-                    splinePath.style.strokeDasharray = `${totalLength} ${totalLength}`;
-                    splinePath.style.strokeDashoffset = totalLength;
-                    void splinePath.getBoundingClientRect();
-                    
-                    setTimeout(() => {
-                        splinePath.style.transition = 'stroke-dashoffset 1.6s cubic-bezier(0.16, 1, 0.3, 1)';
-                        splinePath.style.strokeDashoffset = '0';
-                    }, 200);
-                } catch (e) {
-                    splinePath.style.strokeDashoffset = '0';
-                }
-
-                // Spline Area Gradient Fade-in
-                const chartArea = hero.querySelector('.hero-chart-area');
-                if (chartArea) {
-                    setTimeout(() => {
-                        chartArea.style.opacity = '1';
-                    }, 900);
-                }
-
-                // Spline Data Dots Staggered Pop-in (Animate 'r' instead of scale to maintain exact coordinates)
-                const dots = hero.querySelectorAll('.hero-chart-dot');
-                dots.forEach((dot, idx) => {
-                    dot.setAttribute('r', '0');
-                    setTimeout(() => {
-                        dot.style.transition = 'r 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), stroke-width 0.2s ease';
-                        const isAct = dot.classList.contains('is-active');
-                        dot.setAttribute('r', isAct ? '6.5' : '4.5');
-                    }, 350 + idx * 120);
-                });
-            }
-
-            // 2. Horizontal Bars Growth
-            const bars = hero.querySelectorAll('.hero-bars-box .bar-fill');
-            bars.forEach((bar, idx) => {
-                const targetW = bar.getAttribute('data-width') || '0%';
-                setTimeout(() => {
-                    bar.style.width = targetW;
-                }, 350 + idx * 130);
-            });
-
-            // 3. Donut Chart Segments Draw-in
-            const segments = hero.querySelectorAll('.donut-segment');
-            segments.forEach((seg, idx) => {
-                const targetDash = seg.getAttribute('data-target-dash');
-                if (targetDash) {
-                    setTimeout(() => {
-                        seg.style.strokeDasharray = targetDash;
-                    }, 300 + idx * 140);
-                }
-            });
-
-            // 4. Metric Numbers Count-Up (148, 8862, 12524, 96%)
-            const counters = hero.querySelectorAll('.hero-counter');
-            counters.forEach((counter) => {
-                const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
-                const suffix = counter.getAttribute('data-suffix') || '';
-                const duration = 1600;
-                let startTime = null;
-
-                function step(timestamp) {
-                    if (!startTime) startTime = timestamp;
-                    const elapsed = timestamp - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-                    const currentVal = Math.round(target * ease);
-                    counter.textContent = currentVal.toLocaleString('vi-VN') + suffix;
-
-                    if (progress < 1) {
-                        requestAnimationFrame(step);
-                    } else {
-                        counter.textContent = target.toLocaleString('vi-VN') + suffix;
-                    }
-                }
-
-                setTimeout(() => {
-                    requestAnimationFrame(step);
-                }, 250);
-            });
-
-            // 5. "CHẠY LỊCH" - LIVE CALENDAR RUNNER (Tự động chạy lịch qua các ngày làm việc)
-            const calDayBtns = hero.querySelectorAll('.cal-day-btn');
-            const calEventCard = hero.querySelector('#calEventCard');
-            const calEventDate = hero.querySelector('#calEventDate');
-            const calEventTarget = hero.querySelector('#calEventTarget');
-            const calEventTime = hero.querySelector('#calEventTime');
-            const calEventTitle = hero.querySelector('#calEventTitle');
-            const calCard = hero.querySelector('#heroCardRight');
-
-            const calEvents = [
-                {
-                    day: 2,
-                    dateStr: '2 thg 11, 2026',
-                    target: 'Ban giám hiệu',
-                    time: '07:30 - 9:00',
-                    title: 'Họp giao ban đầu tuần'
-                },
-                {
-                    day: 3,
-                    dateStr: '3 thg 11, 2026',
-                    target: 'Phòng Đào tạo',
-                    time: '09:00 - 11:30',
-                    title: 'Xét duyệt đề cương môn học mới'
-                },
-                {
-                    day: 4,
-                    dateStr: '4 thg 11, 2026',
-                    target: 'Hội đồng Khoa học',
-                    time: '14:00 - 16:30',
-                    title: 'Nghiệm thu đề tài NCKH cấp Trường'
-                },
-                {
-                    day: 5,
-                    dateStr: '5 thg 11, 2026',
-                    target: 'Ban Khảo thí',
-                    time: '08:30 - 10:00',
-                    title: 'Kiểm tra công tác thi học kỳ I'
-                },
-                {
-                    day: 6,
-                    dateStr: '6 thg 11, 2026',
-                    target: 'Toàn thể Cán bộ',
-                    time: '15:00 - 17:00',
-                    title: 'Tổng kết tuần & Kế hoạch tuần tới'
-                }
-            ];
-
-            let currentCalIndex = 0;
-            let calTimer = null;
-            let isCalPaused = false;
-
-            function setCalendarEvent(index) {
-                if (index < 0 || index >= calEvents.length) return;
-                currentCalIndex = index;
-                const ev = calEvents[index];
-
-                calDayBtns.forEach((btn, i) => {
-                    btn.classList.toggle('is-active', i === index);
-                });
-
-                if (calEventCard) {
-                    calEventCard.classList.add('switching');
-                    setTimeout(() => {
-                        if (calEventDate) calEventDate.textContent = ev.dateStr;
-                        if (calEventTarget) calEventTarget.textContent = ev.target;
-                        if (calEventTime) calEventTime.textContent = ev.time;
-                        if (calEventTitle) calEventTitle.textContent = ev.title;
-                        calEventCard.classList.remove('switching');
-                    }, 180);
-                }
-            }
-
-            function startCalendarRunner() {
-                if (calTimer) clearInterval(calTimer);
-                calTimer = setInterval(() => {
-                    if (!isCalPaused) {
-                        const nextIdx = (currentCalIndex + 1) % calEvents.length;
-                        setCalendarEvent(nextIdx);
-                    }
-                }, 3200);
-            }
-
-            calDayBtns.forEach((btn, idx) => {
-                btn.addEventListener('click', () => {
-                    setCalendarEvent(idx);
-                    isCalPaused = true;
-                    setTimeout(() => { isCalPaused = false; }, 6000);
-                });
-            });
-
-            if (calCard) {
-                calCard.addEventListener('mouseenter', () => { isCalPaused = true; });
-                calCard.addEventListener('mouseleave', () => { isCalPaused = false; });
-            }
-
-            startCalendarRunner();
-
-            // 6. "CHẠY BIỂU ĐỒ" - LIVE SPLINE CHART RUNNER (Chạy điểm dữ liệu và tooltip động)
-            const chartDots = hero.querySelectorAll('.hero-chart-dot');
-            const chartTooltip = hero.querySelector('#chartTooltip');
-            const chartTooltipVal = hero.querySelector('#chartTooltipVal');
-            const chartCard = hero.querySelector('#heroCardLeft');
-            const chartWrap = hero.querySelector('.hero-spline-chart-wrap');
-            const svgElem = hero.querySelector('.hero-spline-svg');
-
-            const chartData = [
-                { month: 'Tháng 1', val: '60 giờ', x: 28, y: 76 },
-                { month: 'Tháng 2', val: '31 giờ', x: 88, y: 116.6 },
-                { month: 'Tháng 3', val: '50 giờ', x: 149, y: 90 },
-                { month: 'Tháng 4', val: '28 giờ', x: 210, y: 120.8 },
-                { month: 'Tháng 5', val: '55 giờ', x: 271, y: 83 },
-                { month: 'Tháng 6', val: '100 giờ', x: 332, y: 20 }
-            ];
-
-            let currentChartIdx = 0;
-            let chartTimer = null;
-            let isChartPaused = false;
-
-            function setChartMonth(index) {
-                if (index < 0 || index >= chartData.length) return;
-                currentChartIdx = index;
-                const d = chartData[index];
-
-                chartDots.forEach((dot, i) => {
-                    const isAct = (i === index);
-                    dot.classList.toggle('is-active', isAct);
-                    dot.setAttribute('r', isAct ? '6.5' : '4.5');
-                    dot.setAttribute('stroke-width', isAct ? '3.5' : '2.5');
-                });
-
-                const halo = hero.querySelector('#chartActiveHalo');
-                if (halo) {
-                    halo.setAttribute('cx', d.x);
-                    halo.setAttribute('cy', d.y);
-                }
-
-                const activeDot = chartDots[index];
-
-                if (chartTooltip && chartWrap) {
-                    let xPos, yPos;
-
-                    // 1. First priority: Exact SVG screen coordinate transformation
-                    if (svgElem && svgElem.getScreenCTM && svgElem.createSVGPoint) {
-                        try {
-                            const ctm = svgElem.getScreenCTM();
-                            if (ctm) {
-                                const pt = svgElem.createSVGPoint();
-                                pt.x = d.x;
-                                pt.y = d.y;
-                                const screenPt = pt.matrixTransform(ctm);
-                                const wrapRect = chartWrap.getBoundingClientRect();
-                                xPos = screenPt.x - wrapRect.left;
-                                yPos = screenPt.y - wrapRect.top;
-                            }
-                        } catch (err) {
-                            // ignore and fallback
-                        }
-                    }
-
-                    // 2. Fallback: Center of the active dot circle element
-                    if (xPos === undefined || isNaN(xPos)) {
-                        if (activeDot) {
-                            const dotRect = activeDot.getBoundingClientRect();
-                            const wrapRect = chartWrap.getBoundingClientRect();
-                            if (dotRect.width > 0 && wrapRect.width > 0) {
-                                xPos = (dotRect.left + dotRect.width / 2) - wrapRect.left;
-                                yPos = (dotRect.top + dotRect.height / 2) - wrapRect.top;
-                            }
-                        }
-                    }
-
-                    // 3. Mathematical proportional fallback
-                    if (xPos === undefined || isNaN(xPos)) {
-                        const wrapRect = chartWrap.getBoundingClientRect();
-                        const w = wrapRect.width || 295;
-                        const h = wrapRect.height || 165;
-                        xPos = (d.x / 340) * w;
-                        yPos = (d.y / 190) * h;
-                    }
-
-                    chartTooltip.style.left = `${Math.round(xPos)}px`;
-                    chartTooltip.style.top = `${Math.round(yPos)}px`;
-
-                    if (chartTooltipVal) {
-                        chartTooltipVal.textContent = `${d.month}: ${d.val}`;
-                    }
-                }
-            }
-
-            function startChartRunner() {
-                if (chartTimer) clearInterval(chartTimer);
-
-                // Initial position calibration
-                setTimeout(() => { setChartMonth(0); }, 450);
-                setTimeout(() => { setChartMonth(0); }, 1100);
-
-                // Start live cycle after initial entrance animation
-                setTimeout(() => {
-                    chartTimer = setInterval(() => {
-                        if (!isChartPaused) {
-                            const nextIdx = (currentChartIdx + 1) % chartData.length;
-                            setChartMonth(nextIdx);
-                        }
-                    }, 2400);
-                }, 1800);
-            }
-
-            chartDots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => {
-                    setChartMonth(idx);
-                    isChartPaused = true;
-                    setTimeout(() => { isChartPaused = false; }, 5000);
-                });
-                dot.addEventListener('mouseenter', () => {
-                    setChartMonth(idx);
-                    isChartPaused = true;
-                });
-            });
-
-            if (chartCard) {
-                chartCard.addEventListener('mouseenter', () => { isChartPaused = true; });
-                chartCard.addEventListener('mouseleave', () => { isChartPaused = false; });
-            }
-
-            window.addEventListener('resize', () => {
-                setChartMonth(currentChartIdx);
-            }, { passive: true });
-
-            startChartRunner();
-        }
-
-        // Run as soon as DOM is ready or after window load
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', triggerHeroAnimations);
-        } else {
-            setTimeout(triggerHeroAnimations, 120);
-        }
-    })();
-
-    /* ===== HERO MOCKUP STAGE FLUID SCALER ===== */
-    (function initHeroStageScaler() {
-        const stage = document.querySelector('.hero-v3-stage');
-        const inner = document.querySelector('.hero-v3-stage-inner');
-        if (!stage || !inner) return;
-
-        const baseWidth = 1140;
-        const baseHeight = 540;
-
-        function updateScale() {
-            const container = stage.closest('.hero-v3-container') || stage.parentElement;
-            const containerWidth = container ? container.clientWidth : window.innerWidth;
-            const availableWidth = Math.max(280, containerWidth);
-            const scale = Math.min(1, availableWidth / baseWidth);
-            stage.style.setProperty('--hero-scale', scale.toFixed(4));
-            stage.style.height = `${Math.round(baseHeight * scale)}px`;
-        }
-
-        window.addEventListener('resize', updateScale, { passive: true });
-        window.addEventListener('orientationchange', updateScale, { passive: true });
-        if (window.ResizeObserver) {
-            new ResizeObserver(updateScale).observe(stage.parentElement || document.body);
-        }
-        updateScale();
-        setTimeout(updateScale, 60);
-        setTimeout(updateScale, 300);
-    })();
-
-</script>
+  <!-- Core Scripts & Feature Modules -->
+  <script src="assets/js/modules/navigation.js" defer></script>
+  <script src="assets/js/modules/hero-animations.js" defer></script>
+  <script src="assets/js/modules/platform-slider.js" defer></script>
+  <script src="assets/js/modules/timeline.js" defer></script>
+  <script src="assets/js/modules/lms-slider.js" defer></script>
+  <script src="assets/js/modules/card-reveals.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 
 </body>
 </html>

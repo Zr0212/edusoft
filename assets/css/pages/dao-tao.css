@@ -52,7 +52,7 @@
     height: min(calc(100vh - var(--dt-header-offset) - var(--dt-hero-pad-top) - var(--dt-hero-pad-bottom)), 720px);
     height: min(calc(100dvh - var(--dt-header-offset) - var(--dt-hero-pad-top) - var(--dt-hero-pad-bottom)), 720px);
     min-height: 540px;
-    background: url('../images/daotao/dt-hero-section.png') no-repeat center center;
+    background: url('../../images/daotao/dt-hero-section.png') no-repeat center center;
     background-size: cover;
     border-radius: 32px;
     padding: 0;
