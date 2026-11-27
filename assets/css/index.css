@@ -2190,9 +2190,9 @@
 .integrated-v2-pagination {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.75rem;
     position: relative;
     z-index: 2;
 }
@@ -2201,11 +2201,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.22);
     color: #FFFFFF;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -2213,10 +2213,12 @@
     padding: 0;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 3;
 }
 
 .v2-nav-btn iconify-icon {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #FFFFFF;
     transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -2246,6 +2248,9 @@
 }
 
 .v2-dots-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 12px;
@@ -3673,7 +3678,7 @@
 
 /* ================= MOBILE APP SECTION V2 (NEW ACCORDING TO DESIGN) ================= */
 .mobile-app-v2-section {
-    padding: clamp(6.5rem, 9vw, 9.5rem) 0;
+    padding: clamp(2rem, 3.5vw, 3.5rem) 0 clamp(4.5rem, 7vw, 7.5rem);
     background: #FFFFFF;
     position: relative;
     overflow: hidden;
@@ -7693,7 +7698,7 @@ html, body {
 
 /* ================= LMS SECTION V2 ================= */
 .lms-v2-section {
-    padding: clamp(6.5rem, 9vw, 9.5rem) 0;
+    padding: clamp(4.5rem, 7vw, 7.5rem) 0 clamp(2rem, 3.5vw, 3.5rem);
     background: #FFFFFF;
     position: relative;
     overflow: hidden;
@@ -8875,10 +8880,10 @@ section[id] {
         padding: 3.25rem 0 !important;
     }
     .lms-v2-section {
-        padding: 4.25rem 0 !important;
+        padding: 3.75rem 0 2rem !important;
     }
     .mobile-app-v2-section {
-        padding: 4.25rem 0 !important;
+        padding: 2rem 0 3.75rem !important;
     }
     .roadmap-v2-section {
         padding: 4.25rem 0 3.75rem !important;
@@ -8914,10 +8919,10 @@ section[id] {
         padding: 2.5rem 0 !important;
     }
     .lms-v2-section {
-        padding: 3.25rem 0 !important;
+        padding: 3rem 0 1.5rem !important;
     }
     .mobile-app-v2-section {
-        padding: 3.25rem 0 !important;
+        padding: 1.5rem 0 3rem !important;
     }
     .roadmap-v2-section {
         padding: 3.25rem 0 3rem !important;
@@ -8956,10 +8961,10 @@ section[id] {
         padding: 2rem 0 !important;
     }
     .lms-v2-section {
-        padding: 2.5rem 0 !important;
+        padding: 2.25rem 0 1.25rem !important;
     }
     .mobile-app-v2-section {
-        padding: 2.5rem 0 !important;
+        padding: 1.25rem 0 2.25rem !important;
     }
     .roadmap-v2-section {
         padding: 2.5rem 0 2.25rem !important;
@@ -9001,10 +9006,10 @@ section[id] {
         padding: 1.75rem 0 !important;
     }
     .lms-v2-section {
-        padding: 2rem 0 !important;
+        padding: 1.85rem 0 1rem !important;
     }
     .mobile-app-v2-section {
-        padding: 2rem 0 !important;
+        padding: 1rem 0 1.85rem !important;
     }
     .roadmap-v2-section {
         padding: 2rem 0 1.75rem !important;
