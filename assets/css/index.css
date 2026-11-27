@@ -1,5 +1,5 @@
 :root {
-    --section-padding: clamp(5.5rem, 8.5vw, 9rem);
+    --section-padding: clamp(3.5rem, 6vw, 6.5rem);
 }
 
 /* ===== Floating Header Navigation Centering ===== */
@@ -2195,6 +2195,54 @@
     margin-top: 1.5rem;
     position: relative;
     z-index: 2;
+}
+
+.v2-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.v2-nav-btn iconify-icon {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.v2-nav-btn:hover {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #0170F0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    transform: scale(1.08);
+}
+
+.v2-nav-btn:hover iconify-icon {
+    color: #0170F0;
+}
+
+.v2-nav-btn:active {
+    transform: scale(0.95);
+}
+
+.v2-prev-btn:hover iconify-icon {
+    transform: translateX(-1px);
+}
+
+.v2-next-btn:hover iconify-icon {
+    transform: translateX(1px);
 }
 
 .v2-dots-container {
@@ -8806,5 +8854,180 @@ section[id] {
     }
     .integrated-v2-pagination {
         margin-top: 1rem !important;
+    }
+}
+
+/* ========================================================
+   RESPONSIVE SECTION SPACING ACROSS ALL SCREEN SIZES
+   Reduces oversized gap between sections on laptops, tablets, and mobile
+   ======================================================== */
+@media (max-width: 1200px) {
+    :root {
+        --section-padding: clamp(3rem, 5vw, 4.25rem);
+    }
+    .integrated-v2-section {
+        padding: 4.25rem 0 4.5rem !important;
+    }
+    .features-section {
+        padding: 4rem 0 !important;
+    }
+    .partners {
+        padding: 3.25rem 0 !important;
+    }
+    .lms-v2-section {
+        padding: 4.25rem 0 !important;
+    }
+    .mobile-app-v2-section {
+        padding: 4.25rem 0 !important;
+    }
+    .roadmap-v2-section {
+        padding: 4.25rem 0 3.75rem !important;
+    }
+    .faq-section {
+        padding: 3.75rem 0 !important;
+    }
+    #cta-banner-section {
+        padding: 3.25rem 0 !important;
+    }
+    .roadmap-header {
+        margin-bottom: 3.5rem !important;
+    }
+    .edu-digital-header {
+        margin-bottom: 3.25rem !important;
+    }
+    .newsletter-header {
+        margin-bottom: 3.25rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --section-padding: clamp(2.5rem, 4vw, 3.25rem);
+    }
+    .integrated-v2-section {
+        padding: 3.25rem 0 3.5rem !important;
+    }
+    .features-section {
+        padding: 3rem 0 !important;
+    }
+    .partners {
+        padding: 2.5rem 0 !important;
+    }
+    .lms-v2-section {
+        padding: 3.25rem 0 !important;
+    }
+    .mobile-app-v2-section {
+        padding: 3.25rem 0 !important;
+    }
+    .roadmap-v2-section {
+        padding: 3.25rem 0 3rem !important;
+    }
+    .faq-section {
+        padding: 3rem 0 !important;
+    }
+    #cta-banner-section {
+        padding: 2.75rem 0 !important;
+    }
+    .roadmap-header {
+        margin-bottom: 2.75rem !important;
+    }
+    .edu-digital-header {
+        margin-bottom: 2.5rem !important;
+    }
+    .newsletter-header {
+        margin-bottom: 2.5rem !important;
+    }
+    .solutions-header {
+        margin-bottom: 2.25rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: clamp(2rem, 3.5vw, 2.5rem);
+    }
+    .integrated-v2-section {
+        padding: 2.5rem 0 2.75rem !important;
+    }
+    .features-section {
+        padding: 2.5rem 0 !important;
+    }
+    .partners {
+        padding: 2rem 0 !important;
+    }
+    .lms-v2-section {
+        padding: 2.5rem 0 !important;
+    }
+    .mobile-app-v2-section {
+        padding: 2.5rem 0 !important;
+    }
+    .roadmap-v2-section {
+        padding: 2.5rem 0 2.25rem !important;
+    }
+    .faq-section {
+        padding: 2.5rem 0 !important;
+    }
+    #cta-banner-section {
+        padding: 2.25rem 0 !important;
+    }
+    .roadmap-header {
+        margin-bottom: 2.25rem !important;
+    }
+    .edu-digital-header {
+        margin-bottom: 2rem !important;
+    }
+    .newsletter-header {
+        margin-bottom: 2rem !important;
+    }
+    .solutions-header {
+        margin-bottom: 1.85rem !important;
+    }
+    .partners .container {
+        gap: 1.75rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --section-padding: clamp(1.75rem, 3vw, 2rem);
+    }
+    .integrated-v2-section {
+        padding: 2rem 0 2.25rem !important;
+    }
+    .features-section {
+        padding: 2rem 0 !important;
+    }
+    .partners {
+        padding: 1.75rem 0 !important;
+    }
+    .lms-v2-section {
+        padding: 2rem 0 !important;
+    }
+    .mobile-app-v2-section {
+        padding: 2rem 0 !important;
+    }
+    .roadmap-v2-section {
+        padding: 2rem 0 1.75rem !important;
+    }
+    .faq-section {
+        padding: 2rem 0 !important;
+    }
+    #cta-banner-section {
+        padding: 1.75rem 0 !important;
+    }
+    .roadmap-header {
+        margin-bottom: 1.75rem !important;
+    }
+    .edu-digital-header {
+        margin-bottom: 1.5rem !important;
+    }
+    .newsletter-header {
+        margin-bottom: 1.5rem !important;
+    }
+    .solutions-header {
+        margin-bottom: 1.5rem !important;
+    }
+    .partners .container {
+        gap: 1.25rem !important;
     }
 }

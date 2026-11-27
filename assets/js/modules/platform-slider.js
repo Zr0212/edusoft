@@ -1,6 +1,6 @@
 /**
  * Platform Slider Module - EduSoft
- * Integrated Platform V2 Wheel Slider (with scroll-lock index control)
+ * Integrated Platform V2 Cards Slider (Left/Right Nav, Dots, Click & Touch Swipe)
  * and Integrated Platform Flip Carousel.
  */
 (function initPlatformSliderModule() {
@@ -12,59 +12,13 @@
         const mainTrack = document.getElementById('v2MainTrack');
         const slides = section.querySelectorAll('.integrated-v2-slide');
         const dots = section.querySelectorAll('.v2-dot');
+        const prevBtn = document.getElementById('v2PrevBtn');
+        const nextBtn = document.getElementById('v2NextBtn');
 
         if (!slides.length || !mainTrack) return;
 
         let currentIndex = 0;
         const totalSlides = slides.length;
-
-        // Step cooldown so 1 flick = 1 slide (prevents skipping slides)
-        let lastStepTime = 0;
-        const STEP_COOLDOWN = 320; // ms
-
-        // Timestamp when the final card item (Slide 4) is 100% fully animated & visible in view
-        let slide4FullyVisibleAt = 0;
-
-        // Flag to allow programmatic smooth scrolling to anchors below this section (e.g. #newsletter-section)
-        let isNavigatingToAnchor = false;
-        let navigationTimer = null;
-
-        /**
-         * Calculates the ideal scroll position to center the visual content (header + card + dots)
-         * vertically in the viewport across all screen sizes (laptops, smaller resolutions, large displays).
-         */
-        function getTargetY() {
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const headerEl = section.querySelector('.integrated-v2-header');
-            const paginationEl = section.querySelector('.integrated-v2-pagination') || section;
-
-            const headerRect = headerEl ? headerEl.getBoundingClientRect() : section.getBoundingClientRect();
-            const paginationRect = paginationEl.getBoundingClientRect();
-
-            const contentTopInDoc = currentY + headerRect.top;
-            const contentBottomInDoc = currentY + paginationRect.bottom;
-            const contentHeight = Math.max(150, contentBottomInDoc - contentTopInDoc);
-            const windowHeight = window.innerHeight;
-
-            // Clearance for floating capsule header (~80px height)
-            const minHeaderClearance = 85;
-
-            // Calculate vertical center offset: (windowHeight - contentHeight) / 2
-            let topOffset = (windowHeight - contentHeight) / 2;
-
-            if (windowHeight >= contentHeight + minHeaderClearance * 1.5) {
-                // Generous vertical room: center visual block cleanly, keeping header below floating nav
-                topOffset = Math.max(minHeaderClearance, Math.round(topOffset));
-            } else if (windowHeight > contentHeight) {
-                // Moderate vertical room: position title just below floating header
-                topOffset = Math.max(76, Math.min(topOffset, minHeaderClearance));
-            } else {
-                // Content is taller than viewport: align header right under floating header
-                topOffset = 76;
-            }
-
-            return Math.max(0, Math.round(contentTopInDoc - topOffset));
-        }
 
         function updateTrackPosition() {
             if (!slides.length || !mainTrack) return;
@@ -90,11 +44,6 @@
 
             currentIndex = index;
 
-            // When arriving at the final card, record timestamp when it will be fully settled & in view
-            if (currentIndex === totalSlides - 1) {
-                slide4FullyVisibleAt = Date.now() + 550; // 480ms transition duration + 70ms settle buffer
-            }
-
             slides.forEach((slide, i) => {
                 if (i === currentIndex) {
                     slide.classList.add('active');
@@ -114,172 +63,32 @@
             updateTrackPosition();
         }
 
-        function handleWheel(e) {
-            // Only on desktop/laptop
-            if (window.innerWidth < 768) return;
-
-            // If user wheels manually, clear any programmatic navigation lock bypass
-            if (isNavigatingToAnchor) {
-                isNavigatingToAnchor = false;
-                if (navigationTimer) clearTimeout(navigationTimer);
-            }
-
-            // Ignore horizontal trackpad gestures
-            if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-
-            // Ignore micro-scrolls
-            if (Math.abs(e.deltaY) < 6) return;
-
-            const isScrollingDown = e.deltaY > 0;
-            const isScrollingUp = e.deltaY < 0;
-
-            const sRect = section.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const targetY = getTargetY();
-
-            // ==============================================================
-            // 1. SCROLLING UP: "KO ĐƯỢC CHẶN SCROLL LÊN"
-            // ==============================================================
-            if (isScrollingUp) {
-                // If on Slide 0, NEVER block! Free native scroll upward!
-                if (currentIndex === 0) {
-                    return; // DO NOT preventDefault!
-                }
-
-                // If on Slide 1, 2, 3, 4: step back to previous slide
+        // Previous button click
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const now = Date.now();
-                if (now - lastStepTime >= STEP_COOLDOWN) {
-                    lastStepTime = now;
-                    goToSlide(currentIndex - 1);
-                }
-                return;
-            }
-
-            // ==============================================================
-            // 2. SCROLLING DOWN: "BẮT INDEX - CHỈ CHO SCROLL XUỐNG SAU KHI CARD ITEM CUỐI ĐÃ HIỆN ĐỦ"
-            // ==============================================================
-            if (isScrollingDown) {
-                // Check if on the LAST card (Slide 4, index 4):
-                if (currentIndex >= totalSlides - 1) {
-                    // Has the final card finished sliding in and become fully visible in view?
-                    if (Date.now() < slide4FullyVisibleAt) {
-                        // Still in the process of appearing into view: hold position and absorb trailing flick!
-                        e.preventDefault();
-                        if (Math.abs(currentY - targetY) > 2) {
-                            window.scrollTo(0, targetY);
-                        }
-                        return;
-                    }
-
-                    // Card item cuối đã hiện đủ trong view! Cho phép scroll xuống tự do!
-                    return; // DO NOT preventDefault!
-                }
-
-                // CHƯA HẾT CARD ITEM (currentIndex < totalSlides - 1):
-                // Check if scroll has reached this section:
-                const hasReachedSection = (currentY + e.deltaY >= targetY - 20) && (sRect.top < windowHeight * 0.85);
-                const isInsideSection = (sRect.top <= 120 && sRect.bottom >= windowHeight * 0.35);
-
-                if (hasReachedSection || isInsideSection) {
-                    // CATCH IT! BLOCK SCROLLING DOWN!
-                    e.preventDefault();
-
-                    // Lock scroll position to targetY (perfectly centered)
-                    if (Math.abs(currentY - targetY) > 2) {
-                        window.scrollTo(0, targetY);
-                    }
-
-                    // Advance index to next card
-                    const now = Date.now();
-                    if (now - lastStepTime >= STEP_COOLDOWN) {
-                        lastStepTime = now;
-                        goToSlide(currentIndex + 1);
-                    }
-                    return;
-                }
-
-                // If above section, allow native scroll to approach the section
-                return;
-            }
+                goToSlide(currentIndex > 0 ? currentIndex - 1 : totalSlides - 1);
+            });
         }
 
-        window.addEventListener('wheel', handleWheel, { passive: false });
-
-        // Scroll listener: guarantees user CANNOT scroll past this section downward before index 4 has fully appeared!
-        // NEVER blocks or clamps scrolling up!
-        // DOES NOT BLOCK when navigating to an anchor link (e.g. Liên hệ / #newsletter-section)!
-        window.addEventListener('scroll', () => {
-            if (isNavigatingToAnchor) return;
-            if (window.innerWidth < 768) return;
-            // Only clamp if index < 4 OR if final card is still sliding into view:
-            if (currentIndex < totalSlides - 1 || Date.now() < slide4FullyVisibleAt) {
-                const currentY = window.pageYOffset || document.documentElement.scrollTop;
-                const targetY = getTargetY();
-                if (currentY > targetY + 25) {
-                    window.scrollTo(0, targetY);
-                }
-            }
-        }, { passive: true });
-
-        // Handle anchor clicks (e.g. Header "Liên hệ" -> #newsletter-section):
-        // Bypasses the slider scroll lock so user smoothly glides straight to the target section!
-        function handleAnchorClick(e) {
-            const anchor = e.target.closest('a[href*="#"]');
-            if (!anchor) return;
-            const href = anchor.getAttribute('href');
-            if (!href || href === '#' || href.startsWith('javascript:')) return;
-
-            const hashIndex = href.indexOf('#');
-            if (hashIndex === -1) return;
-            const hash = href.slice(hashIndex);
-            if (!hash || hash === '#') return;
-
-            const targetEl = document.querySelector(hash);
-            if (!targetEl) return;
-
-            const targetRect = targetEl.getBoundingClientRect();
-            const sectionRect = section.getBoundingClientRect();
-            const currentY = window.pageYOffset || document.documentElement.scrollTop;
-            const targetTopInDoc = currentY + targetRect.top;
-            const sectionBottomInDoc = currentY + sectionRect.bottom;
-
-            // If the target element is below integrated-platform-section-v2:
-            if (targetTopInDoc > sectionBottomInDoc - 100) {
-                isNavigatingToAnchor = true;
-                // Pre-advance to the last slide so it doesn't try to clamp afterwards
-                goToSlide(totalSlides - 1, true);
-                slide4FullyVisibleAt = 0; // immediately marked fully visible
-
-                if (navigationTimer) clearTimeout(navigationTimer);
-                navigationTimer = setTimeout(() => {
-                    isNavigatingToAnchor = false;
-                }, 1800);
-            }
+        // Next button click
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                goToSlide(currentIndex < totalSlides - 1 ? currentIndex + 1 : 0);
+            });
         }
 
-        document.addEventListener('click', handleAnchorClick, { capture: true });
-
-        // Also check on page load with hash or hashchange:
-        function checkInitialHash() {
-            if (!window.location.hash) return;
-            const hashTarget = document.querySelector(window.location.hash);
-            if (!hashTarget) return;
-            const hTop = hashTarget.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
-            const sBottom = section.getBoundingClientRect().bottom + (window.pageYOffset || document.documentElement.scrollTop);
-            if (hTop > sBottom - 100) {
-                isNavigatingToAnchor = true;
-                goToSlide(totalSlides - 1, true);
-                slide4FullyVisibleAt = 0;
-                setTimeout(() => {
-                    isNavigatingToAnchor = false;
-                }, 1800);
+        // Keyboard arrow navigation
+        section.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                goToSlide(currentIndex > 0 ? currentIndex - 1 : totalSlides - 1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                goToSlide(currentIndex < totalSlides - 1 ? currentIndex + 1 : 0);
             }
-        }
-
-        checkInitialHash();
-        window.addEventListener('hashchange', checkInitialHash);
+        });
 
         // Touch swipe support for mobile/tablets
         let touchStartX = 0;
@@ -301,9 +110,9 @@
 
             if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
                 if (diffX < 0) {
-                    goToSlide(currentIndex + 1);
+                    goToSlide(currentIndex < totalSlides - 1 ? currentIndex + 1 : 0);
                 } else {
-                    goToSlide(currentIndex - 1);
+                    goToSlide(currentIndex > 0 ? currentIndex - 1 : totalSlides - 1);
                 }
             }
             touchStartX = 0;
